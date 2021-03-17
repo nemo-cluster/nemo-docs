@@ -10,6 +10,8 @@ Welcome to NEMO's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   LICENSE
+
 
 
 Indices and tables
