@@ -33,4 +33,4 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: Documentation
-        path: docs/_build/latex/pdfexample.pdf
+        path: docs/_build/latex/nemo.pdf
