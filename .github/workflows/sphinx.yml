@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     # Standard drop-in approach that should work for most people.
-    - uses: ammaraskar/sphinx-action@master
+    - uses: ammaraskar/sphinx-action@main
       with:
         docs-folder: "/"
     # Grabbing custom dependencies and building as a pdf.
-    #- uses: ammaraskar/sphinx-action@master
+    #- uses: ammaraskar/sphinx-action@main
     #  with:
     #    pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
     #    build-command: "make latexpdf"
