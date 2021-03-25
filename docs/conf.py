@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'NEMO'
-copyright = '2021, Michael Janczyk'
-author = 'Michael Janczyk'
+copyright = '2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg'
+author = 'Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '0.3.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,7 +31,8 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser'
+    'myst_parser',
+    'sphinx_rtd_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -42,13 +43,14 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+language = 'de'
 
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
