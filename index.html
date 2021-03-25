@@ -1,120 +1,275 @@
 
+
 <!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Betriebskonzept bwForCluster NEMO &mdash; NEMO 0.3.2 Dokumentation</title>
+  
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>Welcome to NEMO’s documentation! &#8212; NEMO 0.0.1 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MIT License" href="LICENSE.html" />
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Betriebskonzept bwForCluster NEMO" href="betriebskonzept.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="#" class="icon icon-home"> NEMO
+          
+
+          
+          </a>
+
+          
             
-  <div class="section" id="welcome-to-nemo-s-documentation">
-<h1>Welcome to NEMO’s documentation!<a class="headerlink" href="#welcome-to-nemo-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Inhalt:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html">Betriebskonzept bwForCluster NEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#einleitung">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#dienstbeschreibung-bwforcluster-nemo">Dienstbeschreibung bwForCluster NEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#generelles-sicherheitskonzept">Generelles Sicherheitskonzept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#betriebsmodell">Betriebsmodell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#verantwortlichkeiten">Verantwortlichkeiten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#erwartete-ergebnisse">Erwartete Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#ziele-im-sinne-der-informationssicherheit">Ziele im Sinne der Informationssicherheit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#bezuge-zu-konzepten-richtlinien-und-verordnungen">Bezüge zu Konzepten, Richtlinien und Verordnungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">MIT License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">NEMO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Betriebskonzept bwForCluster NEMO</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="betriebskonzept-bwforcluster-nemo">
+<h1>Betriebskonzept bwForCluster NEMO<a class="headerlink" href="#betriebskonzept-bwforcluster-nemo" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Inhalt:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html">Betriebskonzept bwForCluster NEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#einleitung">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#dienstbeschreibung-bwforcluster-nemo">Dienstbeschreibung bwForCluster NEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#generelles-sicherheitskonzept">Generelles Sicherheitskonzept</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#security-domains">Security-Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#sicherheitszone-0-physische-absicherung">Sicherheitszone 0: Physische Absicherung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#sicherheitszone-1-zugangsverwaltung-fur-adminstration">Sicherheitszone 1: Zugangsverwaltung für Adminstration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#sicherheitszone-2-persistenter-und-abgesicherter-speicher">Sicherheitszone 2: Persistenter und abgesicherter Speicher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#sicherheitszone-3-dienste">Sicherheitszone 3: Dienste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#sicherheitszone-4-hpc-user">Sicherheitszone 4: HPC-User</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#betriebsmodell">Betriebsmodell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#administrative-infrastruktur">Administrative Infrastruktur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#knoten-server-und-dienste">Knoten, Server und Dienste</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="betriebskonzept.html#dienste">Dienste</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#deployment">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#changemanagement">Changemanagement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#wissenschafts-und-home-speicher">Wissenschafts- und HOME-Speicher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#netze">Netze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#zugang-zur-ressource">Zugang zur Ressource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#kontingentierung">Kontingentierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#administration">Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#monitoring-1">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#verantwortlichkeiten">Verantwortlichkeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#maschinensaal-ii-msii">Maschinensaal II (MSII)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#erwartete-ergebnisse">Erwartete Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#ziele-im-sinne-der-informationssicherheit">Ziele im Sinne der Informationssicherheit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#vertraulichkeit">Vertraulichkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#integritat">Integrität</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#verfugbarkeit-belastbarkeit">Verfügbarkeit, Belastbarkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="betriebskonzept.html#regelmaszige-uberprufung-bewertung-evaluation">Regelmäßige Überprüfung, Bewertung, Evaluation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="betriebskonzept.html#bezuge-zu-konzepten-richtlinien-und-verordnungen">Bezüge zu Konzepten, Richtlinien und Verordnungen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LICENSE.html">MIT License</a></li>
 </ul>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link zu dieser Überschrift">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Modulindex</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Suche</span></a></p></li>
 </ul>
 </div>
 
 
+           </div>
+           
           </div>
-          
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="betriebskonzept.html" class="btn btn-neutral float-right" title="Betriebskonzept bwForCluster NEMO" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg.
+
+    </p>
+  </div>
+    
+    
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">NEMO</a></h1>
 
+    </section>
 
+  </div>
+  
 
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
 
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">MIT License</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="LICENSE.html" title="next chapter">MIT License</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2021, Michael Janczyk.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/index.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
+  
+  
     
+   
 
-    
-  </body>
+</body>
 </html>
