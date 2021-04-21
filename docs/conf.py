@@ -22,7 +22,7 @@ copyright = '2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg
 author = 'Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)'
 
 # The full version, including alpha/beta/rc tags
-release = '0.3.2'
+release = '0.4.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,7 +32,9 @@ release = '0.3.2'
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'pydata_sphinx_theme',
+    'sphinx_book_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,9 +52,22 @@ language = 'de'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
+html_favicon = 'img/nemo-favicon.png'
+html_logo = 'img/nemo-logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Theme options
+html_theme_options = {
+    "repository_url": "https://github.com/nemo-cluster/nemo-docs",
+    "repository_branch": "main",
+    "path_to_docs": "docs",
+    "toc_title": "Inhalt",
+    "use_edit_page_button": True,
+    "use_download_button": True,
+}
+
