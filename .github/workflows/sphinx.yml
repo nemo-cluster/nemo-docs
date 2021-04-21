@@ -15,12 +15,12 @@ jobs:
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "pip install myst-parser sphinx-rtd-theme"
+        pre-build-command: "pip install myst-parser sphinx-rtd-theme sphinx-book-theme"
         docs-folder: "docs/"
     # Grabbing custom dependencies and building as a pdf.
     - uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && pip install myst-parser sphinx-rtd-theme"
+        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && pip install myst-parser sphinx-rtd-theme sphinx-book-theme"
         build-command: "make latexpdf"
         docs-folder: "docs/"
     # Great extra actions to compose with:
