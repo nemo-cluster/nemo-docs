@@ -12,9 +12,6 @@ Betriebskonzept bwForCluster NEMO
 
    betriebskonzept
 
-   LICENSE
-
-
 
 Indices and tables
 ==================
