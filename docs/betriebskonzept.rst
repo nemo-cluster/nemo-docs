@@ -517,10 +517,10 @@ Die Verantwortung für den Betrieb des bwForClusters NEMO liegt bei
 dem/der Leiter*in der Abteilung eScience. Diese/r berichtet der/dem
 Leiter*in des Rechenzentrums der Universität Freiburg.
 
-Maschinensaal  (MS )
---------------------
+Maschinensaal II (MSII)
+-----------------------
 
-Der MS  sowie die darüber bereitgestellten Schränke werden innerhalb von
+Der MSII sowie die darüber bereitgestellten Schränke werden innerhalb von
 der Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
 sowie die organisatorischen Schnittstellen innerhalb des RZ sowie zu
 Nutzer*innen, die Ressourcen im Maschinensaal betreiben, werden in der
