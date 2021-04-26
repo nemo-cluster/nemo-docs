@@ -7,15 +7,16 @@ Betriebskonzept bwForCluster NEMO
 =================================
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Inhalt:
+   :caption: Dokumente
+   :titlesonly:
 
    betriebskonzept
+   betriebskonzept-md
 
 
-Indices and tables
-==================
+Indizes und Tabellen
+====================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
