@@ -514,13 +514,13 @@ diesen Rechenknoten ausgeführt, wie reguläre Cluster-Jobs. Auf den
 Rechenknoten (ausgenommen Knoten für interaktive Nutzung) werden immer
 nur Jobs eines/einer Nutzers/Nutzerin ausgeführt. Zugang zum Cluster
 erfolgt über sogenannte Login-Knoten,</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>login1.nemo.uni-freiburg.de <span class="o">(</span><span class="nb">alias</span> login.nemo.uni-freiburg.de<span class="o">)</span>
-login2.nemo.uni-freiburg.de
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">login1</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span> <span class="p">(</span><span class="n">alias</span> <span class="n">login</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span><span class="p">)</span>
+<span class="n">login2</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
 </pre></div>
 </div>
 <p>den Visualisierungsknoten (Vis),</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vis1.nemo.uni-freiburg.de
-vis2.nemo.uni-freiburg.de
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vis1</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
+<span class="n">vis2</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
 </pre></div>
 </div>
 <p>und über das Openstack-Dashboard. Die Zugangsknoten sind im öffentlichen
@@ -713,17 +713,17 @@ ATLAS-Cluster und die Isilon sind voneinander getrennt und lassen nur
 Zugriff von zum Betrieb notwendigen Netzen zu. Welche dies im einzelnen
 sind, müssen vom jeweiligen Dienst erfragt werden.</p>
 <p>Das bwForCluster NEMO verwendet folgende Netze:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">10</span>.16.0.0/16          NEMO: Rechenknoten, Server und Parallelspeicher
-                            Login- und Vis-Knoten über interne Netzwerkschnittstelle
-<span class="m">132</span>.230.222.0/24      NEMO: Login- und Visualisierungsknoten
-<span class="m">10</span>.17.0.0/16          NEMO: CMS-VFU
-<span class="m">10</span>.18.0.0/16          NEMO: ATLAS-VFU
-<span class="m">10</span>.20.0.0/21          NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
-<span class="m">10</span>.20.8.0/21          NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
-<span class="m">10</span>.20.16.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
-<span class="m">10</span>.20.24.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
-<span class="m">10</span>.20.32.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
-<span class="m">10</span>.20.40.0/21         NEMO: ATLAS-TEST-VFU
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">10.16</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">Rechenknoten</span><span class="p">,</span> <span class="n">Server</span> <span class="n">und</span> <span class="n">Parallelspeicher</span>
+                            <span class="n">Login</span><span class="o">-</span> <span class="n">und</span> <span class="n">Vis</span><span class="o">-</span><span class="n">Knoten</span> <span class="n">über</span> <span class="n">interne</span> <span class="n">Netzwerkschnittstelle</span>
+<span class="mf">132.230</span><span class="o">.</span><span class="mf">222.0</span><span class="o">/</span><span class="mi">24</span>      <span class="n">NEMO</span><span class="p">:</span> <span class="n">Login</span><span class="o">-</span> <span class="n">und</span> <span class="n">Visualisierungsknoten</span>
+<span class="mf">10.17</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">CMS</span><span class="o">-</span><span class="n">VFU</span>
+<span class="mf">10.18</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">ATLAS</span><span class="o">-</span><span class="n">VFU</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">21</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">8.0</span><span class="o">/</span><span class="mi">21</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">16.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">24.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">32.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
+<span class="mf">10.20</span><span class="o">.</span><span class="mf">40.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">ATLAS</span><span class="o">-</span><span class="n">TEST</span><span class="o">-</span><span class="n">VFU</span>
 </pre></div>
 </div>
 <p>Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
