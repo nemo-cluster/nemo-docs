@@ -23,6 +23,7 @@ author = 'Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS),
 
 # The full version, including alpha/beta/rc tags
 release = '0.4.0'
+version = '0.4.0'
 
 
 # -- General configuration ---------------------------------------------------
