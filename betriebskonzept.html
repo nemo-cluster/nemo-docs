@@ -1,376 +1,178 @@
 
+
 <!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Betriebskonzept bwForCluster NEMO &mdash; NEMO 0.4.0 Dokumentation</title>
+  
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <title>Betriebskonzept bwForCluster NEMO &#8212; NEMO 0.4.0 Dokumentation</title>
-    
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
-
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/translations.js"></script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+  
+  
     <link rel="shortcut icon" href="_static/nemo-favicon.png"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="prev" title="Betriebskonzept bwForCluster NEMO" href="index.html" />
+    <link rel="prev" title="Betriebskonzept bwForCluster NEMO" href="index.html" /> 
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+<body class="wy-body-for-nav">
 
-
-
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+   
+  <div class="wy-grid-for-nav">
     
-
-    <div class="container-xl">
-      <div class="row">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/nemo-logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">NEMO 0.4.0 Dokumentation</h1>
-  
-</a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Durchsuchen Sie die Dokumente ..." aria-label="Durchsuchen Sie die Dokumente ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
- <span class="caption-text">
-  Inhalt:
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Betriebskonzept bwForCluster NEMO
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#einleitung">
-   Einleitung
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#ziele-im-sinne-der-informationssicherheit">
-   Ziele im Sinne der Informationssicherheit
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#erwartete-ergebnisse">
-   Erwartete Ergebnisse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#dienstbeschreibung-hpc">
-   Dienstbeschreibung HPC
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#betriebsmodell-bwforcluster-nemo">
-   Betriebsmodell bwForCluster NEMO
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#verantwortlichkeiten">
-   Verantwortlichkeiten
-  </a>
- </li>
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO
+          
+
+          
+            
+            <img src="_static/nemo-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Dokumente</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Betriebskonzept bwForCluster NEMO</a></li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
+            
+          
+        </div>
+        
+      </div>
+    </nav>
 
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-</div>
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO</a>
+        
+      </nav>
 
 
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
           
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
-                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/betriebskonzept.rst.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
+      <li>Betriebskonzept bwForCluster NEMO</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
         
+          
+            <a href="_sources/betriebskonzept.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+          
         
-        <a class="edit-button" href="https://github.com/nemo-cluster/nemo-docs/edit/main/docs/betriebskonzept.rst"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
-    </div>
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
-                    title="Vollbildmodus"><i
-                        class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Inhalt
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Betriebskonzept bwForCluster NEMO
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#einleitung">
-   Einleitung
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ziele-im-sinne-der-informationssicherheit">
-   Ziele im Sinne der Informationssicherheit
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#erwartete-ergebnisse">
-   Erwartete Ergebnisse
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dienstbeschreibung-hpc">
-   Dienstbeschreibung HPC
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#betriebsmodell-bwforcluster-nemo">
-   Betriebsmodell bwForCluster NEMO
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hardware-und-dienste">
-     Hardware und Dienste
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ausgewahlte-dienste">
-       Ausgewählte Dienste
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ssh">
-         SSH
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#scheduler">
-         Scheduler
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#http-s">
-         HTTP(S)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#dnbd3">
-         DNBD3
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ansible">
-         Ansible
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#openstack">
-         OpenStack
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#dhcp">
-         DHCP
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#monitoring">
-         Monitoring
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deployment">
-     Deployment
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changemanagement">
-     Changemanagement
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#updates-und-sicherheit">
-     Updates und Sicherheit
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parallel-und-home-speicher">
-     Parallel- und HOME-Speicher
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#workspaces">
-       Workspaces
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#netze">
-     Netze
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zugang-zur-ressource">
-     Zugang zur Ressource
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kontingentierung">
-     Kontingentierung
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#administration">
-     Administration
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#monitoring-1">
-     Monitoring
-    </a>
-   </li>
+      </li>
+    
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#verantwortlichkeiten">
-   Verantwortlichkeiten
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maschinensaal-ii-msii">
-     Maschinensaal II (MSII)
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-        </nav>
-        
-        </div>
-    </div>
+  
+  <hr/>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="betriebskonzept-bwforcluster-nemo">
 <h1>Betriebskonzept bwForCluster NEMO<a class="headerlink" href="#betriebskonzept-bwforcluster-nemo" title="Link zu dieser Überschrift">¶</a></h1>
-<p>eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg</p>
-<p>Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)</p>
 <table class="table">
 <colgroup>
 <col style="width: 57%" />
 <col style="width: 43%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Vorlage an:</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Vorgelegt am:</p></td>
-<td></td>
-</tr>
 <tr class="row-odd"><td><p>Gültig ab:</p></td>
 <td></td>
 </tr>
@@ -382,8 +184,8 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warnung</p>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
 <dl class="simple">
 <dt>TLP:AMBER</dt><dd><p>Limited disclosure, restricted to participants‘ organizations. Distribution outside this audience requires written permission from the originator.</p>
 </dd>
@@ -441,13 +243,12 @@
 </tr>
 </tbody>
 </table>
-</div>
 <div class="section" id="einleitung">
-<h1>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h1>
+<h2>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Konzept, auf dessen Grundlage das bwForCluster NEMO betrieben wird,
 geht auf Überlegungen in der Abteilung eScience des Rechenzentrums der
 Universität Freiburg (RZ) zurück und wurde in verschiedenen Projekten
-iterativ entwickelt. <a class="footnote-reference brackets" href="#id25" id="id1">1</a> Die für den bwForCluster NEMO beschaffte
+iterativ entwickelt. <a class="footnote-reference brackets" href="#id30" id="id1">1</a> Die für den bwForCluster NEMO beschaffte
 Hardware – Rechenknoten, Speichersystem für wissenschaftliche Daten und
 Infrastrukturserver – wird in Datenschränken untergebracht, die vom RZ
 in hierfür dedizierten Räumlichkeiten betrieben werden. Die
@@ -466,7 +267,8 @@ Verarbeitungskontexten reproduzierbar zu halten, führte zu einer
 Komplementierung des traditionellen Betriebsmodells von HPC-Systemen um
 virtuelle Maschinen und Container. In diesen Virtualisierten (VFU) und
 Containerisieten (CFU) Forschungsumgebungen laufen die Anwendungen oder
-Umgebungen, die von den Wissenschafter*innen kontrolliert werden. <a class="footnote-reference brackets" href="#id26" id="id2">2</a></p>
+Umgebungen, die von den Wissenschafter*innen kontrolliert
+werden <a class="footnote-reference brackets" href="#id31" id="id2">2</a> <a class="footnote-reference brackets" href="#id32" id="id3">3</a> <a class="footnote-reference brackets" href="#id33" id="id4">4</a>.</p>
 <p>Innerhalb dieser Forschungsumgebungen haben Wissenschaftler*innen die
 Freiheit, Forschungsdaten und deren Kontext so zu abstrahieren, dass sie
 auf anderen Systemen weiter ausgeführt und reproduziert werden können.
@@ -474,21 +276,22 @@ Mit VFUs und CFUs werden Hardware, Software und Dienste so entkoppelt,
 dass für den bwForCluster NEMO ein verbessertes Management von
 Ressourcen erreicht wird. Ein Grundgedanke dieser konzeptionellen
 Vorüberlegungen ist die Aufteilung in Schichten. Der hier vorgestellte
-Dienst des bwForClusters NEMO deckt im Modell, das in <a class="footnote-reference brackets" href="#id27" id="id3">3</a> vorgestellt
-wurde, die Ebene der IT-Ressourcen ab. Für die Betriebsorganisation wird
-sie innerhalb des bwForClusters NEMO weiter differenziert in Schrank,
-Hardware und Dienste. Dieses Konzeptpapier beschreibt den Betrieb des
-bwForClusters NEMO.</p>
+Dienst des bwForClusters NEMO deckt im Modell, das in <a class="footnote-reference brackets" href="#id34" id="id5">5</a> <a class="footnote-reference brackets" href="#id35" id="id6">6</a>
+vorgestellt wurde, die Ebene der IT-Ressourcen ab. Für die
+Betriebsorganisation wird sie innerhalb des bwForClusters NEMO weiter
+differenziert in Schrank, Hardware und Dienste. Dieses Konzeptpapier
+beschreibt den Betrieb des bwForClusters NEMO.</p>
 </div>
 <div class="section" id="ziele-im-sinne-der-informationssicherheit">
-<h1>Ziele im Sinne der Informationssicherheit<a class="headerlink" href="#ziele-im-sinne-der-informationssicherheit" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Kernanliegen von bwForcluster NEMO ist, Forscher*innen den Zugang zu
+<h2>Ziele im Sinne der Informationssicherheit<a class="headerlink" href="#ziele-im-sinne-der-informationssicherheit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Kernanliegen des bwForClusters NEMO ist, Forscher*innen den Zugang zu
 Rechen- und Speicherkapazitäten zu geben. Als Schutzziel betrachtet ist
 dies die Sicherstellung der <em>Verfügbarkeit</em> von Rechenressourcen, auf
 denen Forscher*innen ihre Rechenjobs ausführen. Als Dienstanbieter muss
-das bwForCluster NEMO eine Verfügbarkeit bieten, die Forscher*innen
-Big-Data-Analysen über das Maß selbst gemanagter oder dezentral in
-Forschungseinrichtung administrierten IT-Cluster hinaus ermöglicht.</p>
+das bwForCluster NEMO eine Verfügbarkeit bieten, die
+Wissenschaftler*innen Big-Data-Analysen über das Maß selbst gemanagter
+oder dezentral in Forschungseinrichtung administrierten IT-Cluster
+hinaus ermöglicht.</p>
 <p>Für die Forscher*innen ist, um ihre Datenverarbeitung und Ergebnisse
 reproduzierbar zu halten, eine <em>Integrität</em> von Daten auf Speicherebene
 notwendig. Für Integrität von Daten auf der von ihnen betriebenen
@@ -515,7 +318,7 @@ Organisatorische Maßnahmen – bwForCluster NEMO” geht auf die einzelnen
 Schutzziele detaillierter ein.</p>
 </div>
 <div class="section" id="erwartete-ergebnisse">
-<h1>Erwartete Ergebnisse<a class="headerlink" href="#erwartete-ergebnisse" title="Link zu dieser Überschrift">¶</a></h1>
+<h2>Erwartete Ergebnisse<a class="headerlink" href="#erwartete-ergebnisse" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit dem Aufbau der Teildienste in technischen Schichten und der
 flexiblen Boot-Prozedur können die strategischen Ziele des bwForClusters
 NEMO mit den gegebenen Ressourcen erreicht und die
@@ -532,58 +335,52 @@ Betriebsschicht, die durch Ereignisse auf der Ebene der
 Wissenschaftler*innen eröffnet werden.</p>
 </div>
 <div class="section" id="dienstbeschreibung-hpc">
-<span id="sec-hpc"></span><h1>Dienstbeschreibung HPC<a class="headerlink" href="#dienstbeschreibung-hpc" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="sec-hpc"></span><h2>Dienstbeschreibung HPC<a class="headerlink" href="#dienstbeschreibung-hpc" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es liegt eine Dienstbeschreibung für das HPC-Computing-Angebot des
 Rechenzentrums im Rahmen des allgemeinen Servicekatalogs vor. Diese kann
-online von den Seiten des Rechenzentrums abgerufen werden. <a class="footnote-reference brackets" href="#id28" id="id4">4</a> Diese
+online von den Seiten des Rechenzentrums abgerufen werden <a class="footnote-reference brackets" href="#id36" id="id7">7</a>. Diese
 Dienstbeschreibung wird einem regelmäßigen Review-Prozess in der Runde
 der Abteilungsleiter*innen unterzogen.</p>
 </div>
 <div class="section" id="betriebsmodell-bwforcluster-nemo">
-<h1>Betriebsmodell bwForCluster NEMO<a class="headerlink" href="#betriebsmodell-bwforcluster-nemo" title="Link zu dieser Überschrift">¶</a></h1>
+<h2>Betriebsmodell bwForCluster NEMO<a class="headerlink" href="#betriebsmodell-bwforcluster-nemo" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das Betriebsmodell beschreibt konkrete Schritte des Deployments und der
 täglichen Produktion des HPC-Clusters. Hierzu wird eine Kombination aus
 administrativen Infrastruktur (Server) und von den
 Wisschenschaftler*inenn zu Berechnungen verwendeten Rechenknoten
 eingesetzt.</p>
 <div class="section" id="hardware-und-dienste">
-<h2>Hardware und Dienste<a class="headerlink" href="#hardware-und-dienste" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Hardware und Dienste<a class="headerlink" href="#hardware-und-dienste" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die installierte Hardware des bwForClusters NEMO besteht aus über 900
-Rechenknoten und einigen dedizierten Servern für NEMO-Dienste. <a class="footnote-reference brackets" href="#id29" id="id5">5</a>
+Rechenknoten und einigen dedizierten Servern für NEMO-Dienste <a class="footnote-reference brackets" href="#id37" id="id8">8</a>.
 Virtuelle Maschinen als VFUs und Container (CFUs) werden ebenfalls auf
 diesen Rechenknoten ausgeführt, wie reguläre Cluster-Jobs. Auf den
-regulären Rechenknoten (ausgenommen Knoten für interaktive Nutzung)
-werden immer nur Jobs eines/einer Nutzers/Nutzerin ausgeführt. Zugang
-zum Cluster erfolgt über sogenannte Login-Knoten,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-  <span class="n">language</span><span class="o">=</span><span class="n">bash</span><span class="p">,</span>
-  <span class="p">]</span>
-<span class="n">login1</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span> <span class="p">(</span><span class="n">alias</span> <span class="n">login</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span><span class="p">)</span>
-<span class="n">login2</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
+Rechenknoten (ausgenommen Knoten für interaktive Nutzung) werden immer
+nur Jobs eines/einer Nutzers/Nutzerin ausgeführt. Zugang zum Cluster
+erfolgt über sogenannte Login-Knoten,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>login1.nemo.uni-freiburg.de <span class="o">(</span><span class="nb">alias</span> login.nemo.uni-freiburg.de<span class="o">)</span>
+login2.nemo.uni-freiburg.de
 </pre></div>
 </div>
 <p>den Visualisierungsknoten (Vis),</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-  <span class="n">language</span><span class="o">=</span><span class="n">bash</span><span class="p">,</span>
-  <span class="p">]</span>
-<span class="n">vis1</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
-<span class="n">vis2</span><span class="o">.</span><span class="n">nemo</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">freiburg</span><span class="o">.</span><span class="n">de</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vis1.nemo.uni-freiburg.de
+vis2.nemo.uni-freiburg.de
 </pre></div>
 </div>
 <p>und über das Openstack-Dashboard. Die Zugangsknoten sind im öffentlichen
 Internet exponiert, welches jedoch auf das Belwü-Netz eingeschränkt
-wurde. <a class="footnote-reference brackets" href="#id30" id="id6">6</a> Der Zugriff erfolgt primär über den SSH-Dienst. Beim
+wurde. <a class="footnote-reference brackets" href="#id38" id="id9">9</a> Der Zugriff erfolgt primär über den SSH-Dienst. Beim
 Openstack-Dashboard wird der Transport mit HTTPS abgesichert.</p>
 <div class="section" id="ausgewahlte-dienste">
-<h3>Ausgewählte Dienste<a class="headerlink" href="#ausgewahlte-dienste" title="Link zu dieser Überschrift">¶</a></h3>
+<h4>Ausgewählte Dienste<a class="headerlink" href="#ausgewahlte-dienste" title="Link zu dieser Überschrift">¶</a></h4>
 <div class="section" id="ssh">
-<h4>SSH<a class="headerlink" href="#ssh" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>SSH<a class="headerlink" href="#ssh" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Dieser Dienst läuft auf allen Knoten und Servern und erlaubt den Login
 von Wisschenschaftler*innen und Administrator*innen auf diesen über
 Nutzername und Dienst-Passwort oder SSH-Key.</p>
 </div>
 <div class="section" id="scheduler">
-<h4>Scheduler<a class="headerlink" href="#scheduler" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>Scheduler<a class="headerlink" href="#scheduler" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Dieser Dienst ist auf dem Management-Server von NEMO aktiv und dient zum
 “Scheduling” (Verteilen nach vorgegebenem Algorithmus) von Jobs auf dem
 Cluster. Dazu sind auf den Rechenknoten Clients installiert, die Jobs
@@ -591,7 +388,7 @@ und Ressourcenverbrauch protokollieren und diese Information an den
 Scheduler zurückmelden.</p>
 </div>
 <div class="section" id="http-s">
-<h4>HTTP(S)<a class="headerlink" href="#http-s" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>HTTP(S)<a class="headerlink" href="#http-s" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Das OpenStack-Dashboard ist als Webschnittstelle umgesetzt und setzt für
 den Zugriff auf HTTPS, um eine Absicherung bei der Nutzung über das
 öffentliche Belwü-Netz zu erreichen. Der Zugang erfolgt über Nutzername
@@ -601,7 +398,7 @@ iPXE-basierten Boot-Ablaufs und der individuellen Knotenkonfiguration).
 Die Deployment-Server sind nur im internen NEMO-Netz erreichbar.</p>
 </div>
 <div class="section" id="dnbd3">
-<h4>DNBD3<a class="headerlink" href="#dnbd3" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>DNBD3<a class="headerlink" href="#dnbd3" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Auf den Deployment-Servern laufen zwei
 Distributed-Network-Block-Device-3-Instanzen. Dieser Dienst stellt das
 Betriebssystem für Login-, Vis- und Rechenknoten zur Verfügung. Eine
@@ -610,23 +407,23 @@ ausfällt, das Cluster weiterhin mit dem Betriebssystem-Image versorgt
 wird.</p>
 </div>
 <div class="section" id="ansible">
-<h4>Ansible<a class="headerlink" href="#ansible" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>Ansible<a class="headerlink" href="#ansible" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Auf dem Management-Server übernimmt Ansible das Ausrollen der Dienste
 und deren Konfiguration.</p>
 </div>
 <div class="section" id="openstack">
-<h4>OpenStack<a class="headerlink" href="#openstack" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>OpenStack<a class="headerlink" href="#openstack" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Mehrere Openstack-Server und -Dienste sind Cluster-intern für die
 Nutzung von VFUs zuständig.</p>
 </div>
 <div class="section" id="dhcp">
-<h4>DHCP<a class="headerlink" href="#dhcp" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>DHCP<a class="headerlink" href="#dhcp" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Die IP-Adressen werden bei Rechen-, Login-, sowie Visualisierungsknoten
 über DHCP verteilt. Dieser Dienst wird von der Abteilung “Netze und
-Kommunikationsdienste” mithilfe der Appliance Infoblox betrieben. <a class="footnote-reference brackets" href="#id31" id="id7">7</a></p>
+Kommunikationsdienste” mithilfe der Appliance Infoblox betrieben. <a class="footnote-reference brackets" href="#id39" id="id10">10</a></p>
 </div>
 <div class="section" id="monitoring">
-<h4>Monitoring<a class="headerlink" href="#monitoring" title="Link zu dieser Überschrift">¶</a></h4>
+<h5>Monitoring<a class="headerlink" href="#monitoring" title="Link zu dieser Überschrift">¶</a></h5>
 <p>Der Monitoring-Server empfängt und speichert alle Log- und
 Protokoll-Dateien. Hierbei werden Login-Versuche, kritische Fehler und
 Hardware-Parameter protokolliert und teilweise visualisiert. Für
@@ -637,14 +434,14 @@ Clusters per Mail verständigt.</p>
 </div>
 </div>
 <div class="section" id="deployment">
-<span id="sub-deploy"></span><h2>Deployment<a class="headerlink" href="#deployment" title="Link zu dieser Überschrift">¶</a></h2>
+<span id="sub-deploy"></span><h3>Deployment<a class="headerlink" href="#deployment" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Dienste beim bwForCluster NEMO werden über Ansible-Rollen auf den
 Serverknoten aufgesetzt. Das ermöglicht ein schnelles und einfaches
 ausrollen auf neuen Servern. Es müssen nur wenige Anpassungen
 durchgeführt werden.</p>
 <p>Die Rechenknoten werden ebenfalls mittels Ansible erzeugt. Hierzu wird
 das CentOS-Vorlagen-Image mit Ansible konfiguriert und in in ein
-lesbares QCOW2-Image konvertiert. <a class="footnote-reference brackets" href="#id32" id="id8">8</a> Mit dem in der Abteilung
+lesbares QCOW2-Image konvertiert. <a class="footnote-reference brackets" href="#id40" id="id11">11</a> Mit dem in der Abteilung
 “eScience” entwickelten Boot-Framework wird dann das Image über das
 Netzwerk gestartet. Das Image wird dabei über das nur lesbare
 Blockdevice DNBD3 eingebunden. Für Schreiboperationen wird eine
@@ -652,11 +449,11 @@ copy-on-write Schicht darüber gelegt, die bei jedem Boot eines Knotens
 frisch initialisiert wird. Alle neu generierten Images bekommen eine
 inkrementierte Revisionsnummer, so dass die Umgebung zum einen
 reproduzierbar ist, zum anderen bei Problemen mit einer Revision einfach
-auf eine ältere zurück gegriffen werden kann.</p>
+auf eine Ältere zurück gegriffen werden kann.</p>
 <p>Die Entscheidung, welche Systemversion, Revision und Konfiguation
 geladen wird, trifft der sogenannte Bootauswahlserver anhand der
 Zugehörigkeit der MAC-Adresse der Netzwerkkarte, über die der initiale
-Start lief, zu einer Boot-Gruppe. <a class="footnote-reference brackets" href="#id33" id="id9">9</a> Diese Information wird jedesmal
+Start lief, zu einer Boot-Gruppe <a class="footnote-reference brackets" href="#id41" id="id12">12</a>. Diese Information wird jedesmal
 beim Boot ausgewertet. Die Boot-Gruppe entscheidet über die
 Konfiguration des Knotens. Sie wird verwendet, um spezielle Knoten zu
 konfigurieren, beispielsweise bei GPU-Knoten. Bei neuer Hardware durch
@@ -666,7 +463,7 @@ ebenfalls schnell eingerichtet werden, da nur die zur Basisgruppe
 unterschiedliche Konfiguration vorgenommen werden muss.</p>
 </div>
 <div class="section" id="changemanagement">
-<span id="sub-change"></span><h2>Changemanagement<a class="headerlink" href="#changemanagement" title="Link zu dieser Überschrift">¶</a></h2>
+<span id="sub-change"></span><h3>Changemanagement<a class="headerlink" href="#changemanagement" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Deploymentprozess erleichtert das Changemanagement. Die
 Bereitstellung des Basissystems erlaubt schnelle Funktionstests, da beim
 Netzwerk-Boot lediglich die neuere Version angefahren werden muss. Die
@@ -683,45 +480,45 @@ Patches auf den reservierten Knoten durchgetestet wurden, werden diese
 Änderungen auf den produktiven Knoten ausgerollt.</p>
 </div>
 <div class="section" id="updates-und-sicherheit">
-<h2>Updates und Sicherheit<a class="headerlink" href="#updates-und-sicherheit" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Bei allen Servern, die keinen direkten Zugriff durch die Nutzer*innen
-erlauben, werden Updates bei den größeren Wartungen eingespielt, die
-üblicherweise ein bis zwei Mal im Jahr statt finden. Sollte eine
-außerordentliche Sicherheitslücke bestimmte Dienste betreffen, wird das
-Update sobald es verfügbar ist, eingespielt. Sollte hierzu ein
-Herunterfahren des Clusters notwendig werden, kann sich das Update um
-bis zu vier Tage verzögern. Das Vorgehen wird dann im eScience-Team
-unter Zuhilfenahme zusätzlicher IT-Experten diskutiert. Diese Wartungen
-werden an die Wissenschaftler*innen vorab kommuniziert.</p>
+<h3>Updates und Sicherheit<a class="headerlink" href="#updates-und-sicherheit" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Bei allen Servern, die keinen direkten Zugriff durch die
+Wissenschaftler*innen erlauben, werden Updates bei den größeren
+Wartungen eingespielt, die üblicherweise ein bis zwei Mal im Jahr statt
+finden. Sollte eine außerordentliche Sicherheitslücke bestimmte Dienste
+betreffen, wird das Update sobald es verfügbar ist, eingespielt. Sollte
+hierzu ein Herunterfahren des Clusters notwendig werden, kann sich das
+Update um bis zu vier Tage verzögern. Das Vorgehen wird dann im
+eScience-Team unter Zuhilfenahme zusätzlicher IT-Experten diskutiert.
+Diese Wartungen werden an die Wissenschaftler*innen vorab kommuniziert.</p>
 <p>Bei den Login-, Vis- und Rechenknoten werden monatliche Updates
 eingespielt. Dabei findet ein Rolling-Update statt. Das Cluster wird
 offline genommen und neue Jobs können erst wieder starten, wenn die
 Rechenknoten mit der neuen Systemversion gebootet sind. Damit können
 alte Jobs noch zu Ende laufen, neue Jobs jedoch nur noch in der neuen
-Umgebung starten. Durch das Deployment () und Changemanagement () kann
+Umgebung starten. Durch das <a class="reference internal" href="#deployment">Deployment</a> und <a class="reference internal" href="#changemanagement">Changemanagement</a> kann
 bei Problemen auf eine ältere Version gewechselt werden. Bei
 außerordentlichen Sicherheitslücken wird das Update, sobald es verfügbar
 ist, eingespielt und ausgerollt. Durch dieses Rolling-Update sind die
-Updates bei allen Knoten eingespielt, wenn der Job, der zum Zeitpunkt
+Patches bei allen Knoten eingespielt, wenn der Job, der zum Zeitpunkt
 des Ausrollens noch die längste Restlaufzeit besitzt, endet und die vom
 Job verwendeten Knoten neu booten können. Da die derzeitige maximale
 Laufzeit der Jobs vier Tage beträgt, ist ein reguläres Update spätestens
 nach vier Tagen beendet.</p>
 </div>
 <div class="section" id="parallel-und-home-speicher">
-<h2>Parallel- und HOME-Speicher<a class="headerlink" href="#parallel-und-home-speicher" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Parallel- und HOME-Speicher<a class="headerlink" href="#parallel-und-home-speicher" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die HOME-Verzeichnisse der Nutzer*innen liegen auf dem Isilon-Speicher
-der Universität. <a class="footnote-reference brackets" href="#id34" id="id10">10</a> Für die aktuell verarbeiteten wissenschaftlichen
+der Universität <a class="footnote-reference brackets" href="#id42" id="id13">13</a>. Für die aktuell verarbeiteten wissenschaftlichen
 Daten dient ein zentraler Parallelspeicher, der auf BeeGFS
-aufsetzt. <a class="footnote-reference brackets" href="#id35" id="id11">11</a> Anders als der Isilon-Speicher ist der parallele
+aufsetzt. <a class="footnote-reference brackets" href="#id43" id="id14">14</a> Anders als der Isilon-Speicher ist der parallele
 Speicher nur durch ein RAID6 abgesichert und bietet keine weiteren
 Backups. Auf diesem Speicher sollten nur Daten liegen, die unmittelbar
 für Berechnungen benötigt werden. Für eine anschließende Speicherung der
 auf dem Cluster nicht mehr benötigten Daten wird bis Ende 2021 eine
-Lösung auf dem bwSFS angeboten. <a class="footnote-reference brackets" href="#id36" id="id12">12</a></p>
+Lösung auf dem bwSFS angeboten. <a class="footnote-reference brackets" href="#id44" id="id15">15</a></p>
 <p>Der Parallelspeicher ist neben dem bwForCluster NEMO ebenfalls in der
 ATLAS-Umgebung eingebunden. Diese beinhaltet das ATLAS-Cluster und die
-ATLAS-VFU. <a class="footnote-reference brackets" href="#id37" id="id13">13</a> Dadurch können zusätzlich Nutzer*innen und
+ATLAS-VFU. <a class="footnote-reference brackets" href="#id45" id="id16">16</a> Dadurch können zusätzlich Nutzer*innen und
 Administrator*innen der Freiburger ATLAS-Gruppen auf diesen Speicher
 zugreifen.</p>
 <p>Nutzer*innen können in der Standardeinstellung nur ihre eigenen Daten
@@ -729,15 +526,15 @@ einsehen und bearbeiten. Administrator*innen können alle Daten, sofern
 sie nicht Nutzer- oder Client-seitig verschlüsselt wurden, einsehen und
 bearbeiten. Beide Speicher werden nicht standardmäßig verschlüsselt.</p>
 <div class="section" id="workspaces">
-<h3>Workspaces<a class="headerlink" href="#workspaces" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Die Daten auf dem parallelen Speicher werden für die Berechnungen der
-Wissenschaftler*innen benötigt. Das Management der Daten wird durch
-Wissenschaftler*innen in sogenannten “Workspaces” durchgeführt. <a class="footnote-reference brackets" href="#id38" id="id14">14</a>
-Die Nutzer*innen müssen Workspaces anlegen, um den parallelen Speicher
-nutzen zu können. Dabei kann ein Workspace maximal gültig sein. Es
-besteht jedoch die Möglichkeit jeden Workspace 99 Mal zu verlängern. Die
-Wissenschaftler*innen werden vor Ablauf eines Workspaces per Mail
-informiert.</p>
+<h4>Workspaces<a class="headerlink" href="#workspaces" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Die Daten, die auf dem parallelen Speicher liegen, werden für die
+Berechnungen der Wissenschaftler*innen benötigt. Das Management der
+Daten wird durch die Forscher*innen in sogenannten “Workspaces”
+durchgeführt. <a class="footnote-reference brackets" href="#id46" id="id17">17</a> Die Nutzer*innen müssen Workspaces anlegen, um den
+parallelen Speicher verwenden zu können. Dabei kann ein Workspace
+maximal gültig sein. Es besteht jedoch die Möglichkeit jeden Workspace
+99 mal zu verlängern. Die Wissenschaftler*innen werden vor Ablauf eines
+Workspaces per Mail informiert.</p>
 <p>Es wird empfohlen für unterschiedliche Unterprojekte und separate
 Berechnungen eigene Workspaces anzulegen. Jeder Workspace kann damit in
 einem späteren Schritt als separate Einheit oder Objekt mit Metadaten
@@ -747,7 +544,7 @@ selbst definiert werden.</p>
 </div>
 </div>
 <div class="section" id="netze">
-<h2>Netze<a class="headerlink" href="#netze" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Netze<a class="headerlink" href="#netze" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Netzwerkanbindung der Serverschränke im Maschinensaal und der
 zentralen Switche wird von der Abteilung “eScience” in Zusammenarbeit
 mit der Abteilung “Netze und Kommunikationsdienste” (Netzwerkabteilung)
@@ -760,60 +557,57 @@ ATLAS-Cluster und die Isilon sind voneinander getrennt und lassen nur
 Zugriff von zum Betrieb notwendigen Netzen zu. Welche dies im einzelnen
 sind, müssen vom jeweiligen Dienst erfragt werden.</p>
 <p>Das bwForCluster NEMO verwendet folgende Netze:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-  <span class="n">language</span><span class="o">=</span><span class="n">bash</span><span class="p">,</span>
-  <span class="p">]</span>
-  <span class="mf">10.16</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">Rechenknoten</span><span class="p">,</span> <span class="n">Server</span> <span class="n">und</span> <span class="n">Parallelspeicher</span>
-                              <span class="n">Login</span><span class="o">-</span> <span class="n">und</span> <span class="n">Vis</span><span class="o">-</span><span class="n">Knoten</span> <span class="n">über</span> <span class="n">interne</span> <span class="n">Netzwerkschnittstelle</span>
-  <span class="mf">132.230</span><span class="o">.</span><span class="mf">222.0</span><span class="o">/</span><span class="mi">24</span>      <span class="n">NEMO</span><span class="p">:</span> <span class="n">Login</span><span class="o">-</span> <span class="n">und</span> <span class="n">Visualisierungsknoten</span>
-  <span class="mf">10.17</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">CMS</span><span class="o">-</span><span class="n">VFU</span>
-  <span class="mf">10.18</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">ATLAS</span><span class="o">-</span><span class="n">VFU</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">21</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">8.0</span><span class="o">/</span><span class="mi">21</span>          <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">16.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">24.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">32.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">NEMO</span><span class="o">-</span><span class="n">VFU</span> <span class="p">(</span><span class="n">unused</span><span class="p">)</span>
-  <span class="mf">10.20</span><span class="o">.</span><span class="mf">40.0</span><span class="o">/</span><span class="mi">21</span>         <span class="n">NEMO</span><span class="p">:</span> <span class="n">ATLAS</span><span class="o">-</span><span class="n">TEST</span><span class="o">-</span><span class="n">VFU</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">10</span>.16.0.0/16          NEMO: Rechenknoten, Server und Parallelspeicher
+                            Login- und Vis-Knoten über interne Netzwerkschnittstelle
+<span class="m">132</span>.230.222.0/24      NEMO: Login- und Visualisierungsknoten
+<span class="m">10</span>.17.0.0/16          NEMO: CMS-VFU
+<span class="m">10</span>.18.0.0/16          NEMO: ATLAS-VFU
+<span class="m">10</span>.20.0.0/21          NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
+<span class="m">10</span>.20.8.0/21          NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
+<span class="m">10</span>.20.16.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
+<span class="m">10</span>.20.24.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
+<span class="m">10</span>.20.32.0/21         NEMO: NEMO-VFU <span class="o">(</span>unused<span class="o">)</span>
+<span class="m">10</span>.20.40.0/21         NEMO: ATLAS-TEST-VFU
 </pre></div>
 </div>
 <p>Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
 und ATLAS-TEST-VFU können zusätzlich auf das NEMO-Netz <code class="docutils literal notranslate"><span class="pre">10.16.0.0/16</span></code>
 zugreifen. Das Cluster kann ansonsten nur über die öffentliche
 IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
-sind mit mindestens versorgt, Server, die Dienste anbieten, sind mit
+sind mit mindestens versorgt. Server, die Dienste anbieten, sind mit
 mindestens zwei Anschlüssen mit über das Link Aggregation Control
-Protocol (LACP) an zwei Top-Level-Switche angebunden. <a class="footnote-reference brackets" href="#id39" id="id15">15</a> Zusätzlich
+Protocol (LACP) an zwei Top-Level-Switche angebunden. <a class="footnote-reference brackets" href="#id47" id="id18">18</a> Zusätzlich
 sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
 mit miteinander und dem wissenschaftlichen Parallelspeicher
-verbunden. <a class="footnote-reference brackets" href="#id40" id="id16">16</a></p>
+verbunden. <a class="footnote-reference brackets" href="#id48" id="id19">19</a></p>
 </div>
 <div class="section" id="zugang-zur-ressource">
-<h2>Zugang zur Ressource<a class="headerlink" href="#zugang-zur-ressource" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Zugang zum bwForCluster NEMO haben lediglich registrierte Nutzer*innen
-des bwForClusters NEMO. Antragsberechtigt sind nur Wissenschaftler*innen
-aus Baden-Württemberg. Die genauen Zugangskriterien und die einzelnen
+<h3>Zugang zur Ressource<a class="headerlink" href="#zugang-zur-ressource" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zugang zum bwForCluster NEMO haben lediglich registrierte
+Forscher*innen. Antragsberechtigt sind nur Wissenschaftler*innen aus
+Baden-Württemberg. Die genauen Zugangskriterien und die einzelnen
 Schritte der Registrierungsprozedur sind im bwHPC-Wiki
-beschreiben. <a class="footnote-reference brackets" href="#id41" id="id17">17</a> Für das bwForCluster NEMO muss von dem/der
-Wissenschaftler/in ein separates Dienst-Passwort angelegt werden.</p>
+beschreiben. <a class="footnote-reference brackets" href="#id49" id="id20">20</a> Für das bwForCluster NEMO muss von dem/der
+Wissenschaftler*in ein separates Dienst-Passwort angelegt werden.</p>
 <p>Das Auslaufen und die Invalidierung von Accounts regelt jede Universität
 selbst. Der Nutzer hat danach keinen Zugriff mehr auf die Ressourcen.
 Die Daten der Nutzer*innen verbleiben jedoch so lange auf dem Cluster,
-bis die Ressource abgeschaltet wird oder die eine Anfrage einer
-berechtigten Person erfolgt. Es gibt derzeit keine festen Regeln
-diesbezüglich, so dass diese Frage einer genaueren Ausarbeitung Bedarf.
-Für das Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb
-gehen wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu
-die folgenden Ordnungen zur Verfügung:. <a class="footnote-reference brackets" href="#id42" id="id18">18</a></p>
+bis die Ressource abgeschaltet wird oder die Anfrage einer berechtigten
+Person erfolgt. Es gibt derzeit keine festen Regeln diesbezüglich, so
+dass diese Frage einer genaueren Ausarbeitung Bedarf. Für das
+Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb gehen
+wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu die
+folgenden Ordnungen zur Verfügung: <a class="footnote-reference brackets" href="#id50" id="id21">21</a> <a class="footnote-reference brackets" href="#id51" id="id22">22</a> <a class="footnote-reference brackets" href="#id52" id="id23">23</a>.</p>
 </div>
 <div class="section" id="kontingentierung">
-<h2>Kontingentierung<a class="headerlink" href="#kontingentierung" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Kontingentierung<a class="headerlink" href="#kontingentierung" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Wissenschaftler*innen sind im Sinne der gemeinschaftlichen
 DFG-Beantragung Stakeholder des bwForClusters NEMO. Zusätzlich gibt es
 Shareholder die mit eigenen Mitteln Teile des Clusters mitfininaziert
-haben. <a class="footnote-reference brackets" href="#id43" id="id19">19</a> Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
+haben <a class="footnote-reference brackets" href="#id53" id="id24">24</a>. Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
 Die Regelung, wer wie viele Ressourcen des Clusters nutzen kann, wird
-über einen “Fairshare-Mechanismus” geregelt. <a class="footnote-reference brackets" href="#id44" id="id20">20</a> Dieser bestimmt wann
-ein Job eines/r Wissenschaftler*in starten kann. Hierzu wird von einer
+über einen “Fairshare-Mechanismus” geregelt <a class="footnote-reference brackets" href="#id54" id="id25">25</a>. Dieser bestimmt wann
+ein Job eines/r Wissenschaftlers/in starten kann. Hierzu wird von einer
 Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem “Share”
 verglichen. Ist der Verbrauch höher als der Share, der der Arbeitsgruppe
 zur Verfügung steht, werden die Jobs niedriger priorisiert, ist er
@@ -825,7 +619,7 @@ maximale Anzahl an Ressourcen, die ein/e Wissenschaftler*in gleichzeitig
 in die Warteschlange stellen kann.</p>
 </div>
 <div class="section" id="administration">
-<h2>Administration<a class="headerlink" href="#administration" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Administration<a class="headerlink" href="#administration" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Administrator*innen verfügen über erweiterte Rechte. Sie haben Zugriff
 auf alle Daten der Nutzer*innen, sofern diese nicht zusätzlich
 verschlüsselt werden. Der administrative Zugang wird bei Bedarf manuell
@@ -836,7 +630,7 @@ des Protokolls zum Ein- beziehungsweise Austritt von Administrator*innen
 ist für den Start des bwForClusters NEMO2 2022 geplant.</p>
 </div>
 <div class="section" id="monitoring-1">
-<span id="id21"></span><h2>Monitoring<a class="headerlink" href="#monitoring-1" title="Link zu dieser Überschrift">¶</a></h2>
+<span id="id26"></span><h3>Monitoring<a class="headerlink" href="#monitoring-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Monitoring überwacht den dauerhaften Betrieb mit Verfolgung der
 Ziele Verfügbarkeit, Vertraulichkeit und Integrität der Daten. Beim
 Monitoring werden Schränke, Infrastrukturkomponenten wie Netzwerk,
@@ -846,265 +640,259 @@ zusätzlich bei Schränken die Luftfeuchtigkeit kontrolliert. Die
 Nachverfolgung des Netzwerks findet in der Netzwerkabteilung und bei
 Schränken in der Abteilung “Allgemeiner Betrieb” statt. Strom und
 Kühlung werden zudem vom “Technischen Gebäugemanagement” (TGM)
-überwacht. Zusätzlich misst der Monitoring-Server des Clusters mit Hilfe
-von Zabbix Hardwaredaten wie Temperatur und Defekte auf Knotenebene und
-schlägt per Mail Alarm beim Überschreiben von Grenzwerten. <a class="footnote-reference brackets" href="#id45" id="id22">21</a> Zabbix
-überprüft laufend, ob die Dienste, die auf den Servern laufen müssen,
-noch aktiv sind. Es wird allerdings nicht geprüft, ob die Dienste noch
-korrekt funktionieren.</p>
+überwacht. Zusätzlich protokolliert der Monitoring-Server des Clusters
+mit Hilfe von Zabbix Hardwaredaten wie Temperatur und Defekte auf
+Knotenebene und schlägt beim Überschreiten von Grenzwerten per Mail
+Alarm. <a class="footnote-reference brackets" href="#id55" id="id27">26</a> Zabbix überprüft laufend, ob die Dienste, die auf den
+Servern laufen müssen, noch aktiv sind. Es wird allerdings nicht
+geprüft, ob die Dienste noch korrekt funktionieren.</p>
 <p>Außerdem werden Hardware- sowie Softwareprobleme, Login- und
 Zugriffsversuche über <code class="docutils literal notranslate"><span class="pre">rsyslog</span></code> lokal auf der SSD und für die von den
 Wissenschaftler*innen erreichbaren Knoten wie Login-, Vis- und
 Rechenknoten zusätzlich auf dem Monitoringserver in Dateien gespeichert.</p>
 <p>Der Speicherverbrauch im parallelen Dateisystem und den
-Home-Verzeichnissen wird mittels Quotas durchgesetzt. Die Auslastung
-wird jeweils von den zuständigen Betreibern ermittelt. Bei Isilon ist
-das die Abteilung “Virtualisierung und Speichersysteme,” beim BeeGFS
-machen das die Administrator*innen des bwForClusters NEMO. “Workspaces”
-auf dem parallelen Wissenschaftsspeicher BeeGFS haben einen Laufzeit von
-und müssen von den Wissenschaftler*innen mit einem Kommando manuell
-verlängert werden. Erfolgt das nicht, werden die Daten endgültig nach
-einer Wartezeit von sieben Tagen gelöscht.</p>
+Home-Verzeichnissen wird mittels Quotas auf Nutzerebene durchgesetzt.
+Die Auslastung wird jeweils von den zuständigen Betreibern ermittelt.
+Bei Isilon ist das die Abteilung “Virtualisierung und Speichersysteme”,
+beim BeeGFS machen das die Administrator*innen des bwForClusters NEMO.
+“Workspaces” auf dem parallelen Wissenschaftsspeicher BeeGFS haben einen
+Laufzeit von und müssen von den Wissenschaftler*innen mit einem Kommando
+manuell verlängert werden. Erfolgt das nicht, werden die Daten endgültig
+nach einer Wartezeit von sieben Tagen gelöscht.</p>
 </div>
 </div>
 <div class="section" id="verantwortlichkeiten">
-<h1>Verantwortlichkeiten<a class="headerlink" href="#verantwortlichkeiten" title="Link zu dieser Überschrift">¶</a></h1>
+<h2>Verantwortlichkeiten<a class="headerlink" href="#verantwortlichkeiten" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Verantwortung für den Betrieb des bwForClusters NEMO liegt bei
 dem/der Leiter*in der Abteilung eScience. Diese/r berichtet der/dem
 Leiter*in des Rechenzentrums der Universität Freiburg.</p>
 <div class="section" id="maschinensaal-ii-msii">
-<h2>Maschinensaal II (MSII)<a class="headerlink" href="#maschinensaal-ii-msii" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Der MSII sowie die darüber bereitgestellten Schränke werden innerhalb von
-der Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
+<h3>Maschinensaal II (MSII)<a class="headerlink" href="#maschinensaal-ii-msii" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Der MSII sowie die darüber bereitgestellten Schränke werden von der
+Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
 sowie die organisatorischen Schnittstellen innerhalb des RZ sowie zu
 Nutzer*innen, die Ressourcen im Maschinensaal betreiben, werden in der
-“Maschinensaalbenutzungsordnung” <a class="footnote-reference brackets" href="#id46" id="id23">22</a> für den Maschinensaal
+“Maschinensaalbenutzungsordnung” <a class="footnote-reference brackets" href="#id56" id="id28">27</a> für den Maschinensaal
 beschrieben. Die Nutzung der Server-Schränke wird im Dienstkatalog
-“Machine-Hosting” <a class="footnote-reference brackets" href="#id47" id="id24">23</a> spezifiziert. Die Maschinensaalbenutzungsordnung
+“Machine-Hosting” <a class="footnote-reference brackets" href="#id57" id="id29">28</a> spezifiziert. Die Maschinensaalbenutzungsordnung
 bestimmt ebenfalls den physikalischen Zugriff der Administrator*innen
 des Clusters auf die Schränke und die darin eingebauten Maschinen.</p>
-<div class="references csl-bib-body docutils container" id="refs">
-<div class="csl-entry docutils container" id="ref-dfn-forum-2017">
-<p>1.MEIER, Konrad, GRÜNING, Björn, BLANK, Clemens, JANCZYK, Michael
-and SUCHODOLETZ, Dirk von. Virtualisierte wissenschaftliche
-forschungsumgebungen und die zukünftige rolle der rechenzentren.
-In : <em>10. DFN-forum kommunikationstechnologien, 30.-31. Mai 2017,
-berlin, gesellschaft für informatik eV (GI)</em>. 2017. p. 145–154.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-bwhpc2018-vicevre">
-<p>2.BAUER, Jonathan, SUCHODOLETZ, Dirk von, VOLLMER, Jeannette and
-RASCHE, Helena. Game of templates: Deploying and (re-)using
-virtualized research environments in high-performance and
-high-throughput computing. In : JANCZYK, Michael, SUCHODOLETZ,
-Dirk von and WIEBELT, Bernd (eds.), <em>Proceedings of the 5th bwHPC
-symposium: HPC activities in
-ba:raw-latex:`-`den-würt:raw-latex:`-`tem:raw-latex:`-`berg.
-Freiburg, september 2018</em>. TLP, Tübingen, 2019. p. 245–262.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-vice2019">
-<p>3.SUCHODOLETZ, Dirk von, BAUER, Jonathan, ZHARKOV, Oleg, MOCKEN,
-Susanne and GRÜNING, Björn. Lessons learned from virtualized
-research environments in today’s scientific compute
-infrastructures. In : <em>E-science-tage 2019: Data to knowledge</em>.
-Heidelberg : heiBOOKS, March 2020. p. 88–81.
-ISBN <a class="reference external" href="https://worldcat.org/isbn/978-3-948083-14-4">978-3-948083-14-4</a>.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-vice2019a">
-<p>4.SUCHODOLETZ, Dirk von and BAUER, Jonathan. ViCE – creating
-uniform approach to large-scale research infrastructures. In :
-<em>E-science-tage 2019: Data to knowledge</em>. Heidelberg : heiBOOKS,
-March 2020. p. 218–222.
-ISBN <a class="reference external" href="https://worldcat.org/isbn/978-3-948083-14-4">978-3-948083-14-4</a>.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-konrad-werk">
-<p>5.MEIER, Konrad. <em>Infrastrukturkonzepte für virtualisierte
-wissenschaftliche forschungsumgebungen</em>. PhD thesis.
-Albert-Ludwigs-Universität Freiburg im Breisgau, 2017.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-diensthpc2016">
-<p>6.ESCIENCE TEAM. <em>Cluster betrieb: High performance computing</em>.
-technical report. Rechenzentrum der Universität Freiburg, 2016.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-bwhpc2018-sortinghat">
-<p>7.BAUER, Jonathan, MESSNER, Manuel, JANCZYK, Michael, SUCHODOLETZ,
-Dirk von, WIEBELT, Bernd and RASCHE, Helena. A sorting hat for
-clusters: Dynamic provisioning of compute nodes for colocated
-large scale computational research infrastructures. In : JANCZYK,
-Michael, SUCHODOLETZ, Dirk von and WIEBELT, Bernd (eds.),
-<em>Proceedings of the 5th bwHPC symposium: HPC activities in
-ba:raw-latex:`-`den-würt:raw-latex:`-`tem:raw-latex:`-`berg.
-Freiburg, september 2018</em>. TLP, Tübingen, 2019. p. 217–229.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-dienststor2019">
-<p>8.STORAGE UND VIRTUALISIERUNGSGRUPPE. <em>Speichersysteme für die
-universität</em>. technical report. Rechenzentrum der Universität
-Freiburg, 2019.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-vbo1981">
-<p>9.UNIVERSITÄT FREIBURG. <em>Verwaltungs- und benutzungsordnung:
-(VBO)</em>. technical report. Universität Freiburg, 1981.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-nbo1996">
-<p>10.UNIVERSITÄT FREIBURG. <em>Benutzungsordnung für die vom
-rechenzentrum der albert-ludwigs-universität angebotenen
-netzdienste: (NBO)</em>. technical report. Universität Freiburg, 1996.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-no1996">
-<p>11.UNIVERSITÄT FREIBURG. <em>Netzordnung für das freiburger
-universitäts netz: (NO)</em>. technical report. Universität Freiburg,
-1996.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-zki-aufwuchs-2016">
-<p>12.SUCHODOLETZ, Dirk von, WESNER, Stefan and SCHNEIDER, Gerhard.
-Überlegungen zu laufenden
-clus:raw-latex:<cite>-`ter-er:raw-latex:</cite>-<cite>wei:raw-latex:</cite>-<cite>te:raw-latex:</cite>-<cite>run:raw-latex:</cite>-<a class="reference external" href="https://worldcat.org/isbn/978-3-11-045888-6">gen
-in bwHPC. In : SUCHODOLETZ, Dirk von, SCHULZ, Janne Chr.,
-LEENDERTSE, Jan, HOTZEL, Hartmut and WIMMER, Martin (eds.),
-*Kooperation von rechenzentren: Governance und steuerung –
-organisation, rechtsgrundlagen, politik*. De Gruyter, 2016.
-p. 331–342.
-ISBN `978-3-11-045888-6</a>.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-msbo2020">
-<p>13.SCHULZ, Janne Chr., SUCHODOLETZ, Dirk von, GEHRING, Ulrich,
-MEYER, Willibald and LEENDERTSE, Jan.
-<em>Maschinensaalbenutzungsordnung des rechenzentrums der universität
-freiburg: Richtlinien für das hosting und housing von hardware in
-den räumen desRechenzentrums der universität freiburg</em>. technical
-report. Rechenzentrum der Universität Freiburg, 2020.</p>
-</div>
-<div class="csl-entry docutils container" id="ref-machhost2020">
-<p>14.SUCHODOLETZ, Dirk von, GEHRING, Ulrich and LEENDERTSE, Jan.
-<em>Machine-hosting: Bereitstellung von rackspace in den
-maschinensälen des RZ. Externe version</em>. technical report.
-Rechenzentrum der Universität Freiburg, 2020.</p>
 </div>
 </div>
+<div class="section" id="referenzen">
+<h2>Referenzen<a class="headerlink" href="#referenzen" title="Link zu dieser Überschrift">¶</a></h2>
 <dl class="footnote brackets">
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Hierzu entsteht derzeit das Dokument
-“Compute-Forschungsinfrastrukturen: HPC.”</p>
+“Compute-Forschungsinfrastrukturen: HPC”.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>(1–4).</p>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>BAUER, Jonathan, Dirk von SUCHODOLETZ, Jeannette VOLLMER und
+Helena RASCHE, 2019. Game of Templates: Deploying and (re-)using
+Virtualized Research Environments in High-Performance and
+High-Throughput Computing. In: Michael JANCZYK, Dirk von
+SUCHODOLETZ und Bernd WIEBELT (Hrsg.), <em>Proceedings of the 5th
+bwHPC Symposium: HPC Activities in Baden-Württemberg.
+Freiburg, September 2018</em>. TLP, Tübingen. 2019. S. 245–262</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>(1, 5).</p>
+<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>SUCHODOLETZ, Dirk von, Jonathan BAUER, Oleg ZHARKOV, Susanne
+MOCKEN und Björn GRÜNING, 2020. Lessons learned from Virtualized
+Research Environments in today’s scientific compute
+infrastructures. In: <em>E-Science-Tage 2019: Data to Knowledge</em>.
+Heidelberg: heiBOOKS. März 2020. S. 88–81.
+ISBN <a class="reference external" href="https://worldcat.org/isbn/978-3-948083-14-4">978-3-948083-14-4</a></p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>(6).</p>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>SUCHODOLETZ, Dirk von und Jonathan BAUER, 2020. ViCE – Creating
+Uniform Approach to Large-Scale Research Infrastructures. In:
+<em>E-Science-Tage 2019: Data to Knowledge</em>. Heidelberg: heiBOOKS.
+März 2020. S. 218–222.
+ISBN <a class="reference external" href="https://worldcat.org/isbn/978-3-948083-14-4">978-3-948083-14-4</a></p>
 </dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>MEIER, Konrad, Björn GRÜNING, Clemens BLANK, Michael JANCZYK und
+Dirk von SUCHODOLETZ, 2017. Virtualisierte wissenschaftliche
+Forschungsumgebungen und die zukünftige Rolle der Rechenzentren.
+In: <em>10. DFN-Forum Kommunikationstechnologien, 30.-31. Mai 2017,
+Berlin, Gesellschaft für Informatik eV (GI)</em>. 2017. S. 145–154</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>MEIER, Konrad, 2017. <em>Infrastrukturkonzepte für virtualisierte
+wissenschaftliche Forschungsumgebungen</em>. phdthesis.
+Albert-Ludwigs-Universität Freiburg im Breisgau</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>ESCIENCE TEAM, 2016. <em>Cluster Betrieb: High Performance Computing</em>
+[online]. techreport. Rechenzentrum der Universität Freiburg.
+Verfügbar unter:
+<a class="reference external" href="https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschreibung-hpc">https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschreibung-hpc</a></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
 <dd><p>Die aktuelle Hardware des bwForClusters NEMO im zentralen Wiki
 dokumentiert:
 <a class="reference external" href="https://wiki.bwhpc.de/e/BwForCluster_NEMO_Hardware_and_Architecture#Compute_and_Special_Purpose_Nodes">https://wiki.bwhpc.de/e/BwForCluster_NEMO_Hardware_and_Architecture#Compute_and_Special_Purpose_Nodes</a>,
 besucht am 19.04.2021.</p>
 </dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
 <dd><p>Der Zugriff ist auf die IPv4-Prefixe des Belwü-Netzes beschränkt:
 <a class="reference external" href="https://bgpview.io/asn/553">https://bgpview.io/asn/553</a>, besucht am 16.04.2021.</p>
 </dd>
-<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
 <dd><p>Webseite Infoblox: <a class="reference external" href="https://www.infoblox.com/">https://www.infoblox.com/</a>, besucht am 20.04.2021.</p>
 </dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
 <dd><p>Derzeit wird CentOS7 als Betriebssystem eingesetzt. Das
 Nachfolgecluster wird RHEL8 oder ein binärkompatibles Derivat
 einsetzen.</p>
 </dd>
-<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
-<dd><p>(7).</p>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dd><p>BAUER, Jonathan, Manuel MESSNER, Michael JANCZYK, Dirk von
+SUCHODOLETZ, Bernd WIEBELT und Helena RASCHE, 2019. A Sorting Hat
+For Clusters: Dynamic Provisioning of Compute Nodes for Colocated
+Large Scale Computational Research Infrastructures. In: Michael
+JANCZYK, Dirk von SUCHODOLETZ und Bernd WIEBELT (Hrsg.),
+<em>Proceedings of the 5th bwHPC Symposium: HPC Activities in
+Baden-Württemberg.
+Freiburg, September 2018</em>. TLP, Tübingen. 2019. S. 217–229</p>
 </dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
-<dd><p>(8).</p>
+<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id13">13</a></span></dt>
+<dd><p>STORAGE UND VIRTUALISIERUNGSGRUPPE, 2019. <em>Speichersysteme für die
+Universität</em> [online]. techreport. Rechenzentrum der Universität
+Freiburg. Verfügbar unter:
+<a class="reference external" href="https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme">https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme</a></p>
 </dd>
-<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id14">14</a></span></dt>
 <dd><p>Webseite zum Parallelspeicher BeeGFS: <a class="reference external" href="beegfs.io">beegfs.io</a>,
 besucht am 20.04.2021.</p>
 </dd>
-<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id15">15</a></span></dt>
 <dd><p>Die Dokumente zu bwSFS werden derzeit noch erarbeitet. Diese werden
 nachgereicht.</p>
 </dd>
-<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id13">13</a></span></dt>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id16">16</a></span></dt>
 <dd><p>Webseite von ATLAS-BFG: <a class="reference external" href="https://www.hpc.uni-freiburg.de/atlas-bfg">https://www.hpc.uni-freiburg.de/atlas-bfg</a>,
 besucht am 20.04.2021.</p>
 </dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id14">14</a></span></dt>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id17">17</a></span></dt>
 <dd><p>Github-Repo zu Workspaces:
 <a class="reference external" href="https://github.com/holgerBerger/hpc-workspace">https://github.com/holgerBerger/hpc-workspace</a>, besucht am 19.04.2021</p>
 </dd>
-<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id15">15</a></span></dt>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id18">18</a></span></dt>
 <dd><p>Wiki-Eintrag zu LACP: <a class="reference external" href="https://de.wikipedia.org/wiki/Link_Aggregation">https://de.wikipedia.org/wiki/Link_Aggregation</a>,
 besucht am 19.02.2021.</p>
 </dd>
-<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id16">16</a></span></dt>
+<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id19">19</a></span></dt>
 <dd><p>Eintrag zu Omni-Path: <a class="reference external" href="https://de.wikipedia.org/wiki/Intel_Omni-Path">https://de.wikipedia.org/wiki/Intel_Omni-Path</a>,
 besucht am 19.02.2021.</p>
 </dd>
-<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id17">17</a></span></dt>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id20">20</a></span></dt>
 <dd><p>Registrierungsprozedur im Wiki:
 <a class="reference external" href="https://wiki.bwhpc.de/e/BwForCluster_User_Access">https://wiki.bwhpc.de/e/BwForCluster_User_Access</a>, besucht am
 20.04.2021.</p>
 </dd>
-<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id18">18</a></span></dt>
-<dd><p>(9–11).</p>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id21">21</a></span></dt>
+<dd><p>UNIVERSITÄT FREIBURG, 1981. <em>Verwaltungs- und Benutzungsordnung:
+(VBO)</em> [online]. techreport. Universität Freiburg. Verfügbar
+unter: <a class="reference external" href="https://www.hpc.uni-freiburg.de/content/legalstuff/vbo.pdf">https://www.hpc.uni-freiburg.de/content/legalstuff/vbo.pdf</a></p>
 </dd>
-<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id19">19</a></span></dt>
-<dd><p>(12).</p>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id22">22</a></span></dt>
+<dd><p>UNIVERSITÄT FREIBURG, 1996. <em>Benutzungsordnung für die vom
+Rechenzentrum der Albert-Ludwigs-Universität angebotenen
+Netzdienste: (NBO)</em> [online]. techreport. Universität Freiburg.
+Verfügbar unter:
+<a class="reference external" href="https://www.hpc.uni-freiburg.de/content/legalstuff/nbo.pdf">https://www.hpc.uni-freiburg.de/content/legalstuff/nbo.pdf</a></p>
 </dd>
-<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id20">20</a></span></dt>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id23">23</a></span></dt>
+<dd><p>UNIVERSITÄT FREIBURG, 1996. <em>Netzordnung für das Freiburger
+Universitäts Netz: (NO)</em> [online]. techreport. Universität
+Freiburg. Verfügbar unter:
+<a class="reference external" href="https://www.hpc.uni-freiburg.de/content/legalstuff/no.pdf">https://www.hpc.uni-freiburg.de/content/legalstuff/no.pdf</a></p>
+</dd>
+<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id24">24</a></span></dt>
+<dd><p>SUCHODOLETZ, Dirk von, Stefan WESNER und Gerhard SCHNEIDER, 2016.
+Überlegungen zu laufenden Cluster-Erweiterungen
+in bwHPC. In: Dirk von SUCHODOLETZ, Janne Chr. SCHULZ, Jan
+LEENDERTSE, Hartmut HOTZEL und Martin WIMMER (Hrsg.), <em>Kooperation
+von Rechenzentren: Governance und Steuerung – Organisation,
+Rechtsgrundlagen, Politik</em>. De Gruyter. 2016. S. 331–342.
+ISBN <a class="reference external" href="https://worldcat.org/isbn/978-3-11-045888-6">978-3-11-045888-6</a></p>
+</dd>
+<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id25">25</a></span></dt>
 <dd><p>Erklärung des Fairshare-Mechanismus Anhand der Anleitung des
 Schedulers Moab:
 <a class="reference external" href="http://docs.adaptivecomputing.com/9-1-3/suite/help.htm#topics/moabWorkloadManager/fairness/fairnessoverview.html">http://docs.adaptivecomputing.com/9-1-3/suite/help.htm#topics/moabWorkloadManager/fairness/fairnessoverview.html</a>,
 besucht am 20.04.2021.</p>
 </dd>
-<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id22">21</a></span></dt>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id27">26</a></span></dt>
 <dd><p>Zabbix Monitoring-Lösung: <a class="reference external" href="https://www.zabbix.com">https://www.zabbix.com</a>, besucht am
 20.04.2021.</p>
 </dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id23">22</a></span></dt>
-<dd><p>(13).</p>
+<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id28">27</a></span></dt>
+<dd><p>SCHULZ, Janne Chr., Dirk von SUCHODOLETZ, Ulrich GEHRING,
+Willibald MEYER und Jan LEENDERTSE, 2020.
+<em>Maschinensaalbenutzungsordnung des Rechenzentrums der Universität
+Freiburg: Richtlinien für das Hosting und Housing von Hardware in
+den Räumen desRechenzentrums der Universität Freiburg</em> [online].
+techreport. Rechenzentrum der Universität Freiburg. Verfügbar
+unter: <a class="reference external" href="https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/msbo">https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/msbo</a></p>
 </dd>
-<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id24">23</a></span></dt>
-<dd><p>(14).</p>
+<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id29">28</a></span></dt>
+<dd><p>SUCHODOLETZ, Dirk von, Ulrich GEHRING und Jan LEENDERTSE, 2020.
+<em>Machine-Hosting: Bereitstellung von Rackspace in den
+Maschinensälen des RZ. externe Version</em> [online]. techreport.
+Rechenzentrum der Universität Freiburg. Verfügbar unter:
+<a class="reference external" href="https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschr-machine-hosting">https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschr-machine-hosting</a></p>
 </dd>
 </dl>
 </div>
 </div>
 
 
-              </div>
-              
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Betriebskonzept bwForCluster NEMO</a>
-
-        </div>
-        
-        </div>
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Betriebskonzept bwForCluster NEMO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          Durch Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)<br/>
-        
-            &copy; Urheberrechte © 2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg.
+
+    </p>
+  </div>
+    
+    
+    
+    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
       </div>
-    </div>
 
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+   
 
-
-    
-  </body>
+</body>
 </html>
