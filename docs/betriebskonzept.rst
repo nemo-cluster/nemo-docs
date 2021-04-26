@@ -1,21 +1,30 @@
+.. highlight:: bash
+
+=================================
 Betriebskonzept bwForCluster NEMO
 =================================
 
-eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg
-
-Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)
-
 ============= =====
-Vorlage an:
-Vorgelegt am:
 Gültig ab:
 Version:      0.4.0
 Datum:        20.04.2021
 ============= =====
 
-.. warning::
-  TLP:AMBER
-    Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+.. .. warning::
+..    TLP:RED
+..       Not for disclosure, restricted to participants only. Distribution outside this audience requires written permission from the originator.
+
+.. attention::
+   TLP:AMBER
+      Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+
+.. .. important::
+..    TLP:GREEN
+..       Limited disclosure, restricted to the community/sector. Distribution outside this audience requires written permission from the originator.
+
+.. .. note::
+..    TLP:WHITE
+..       Disclosure not limited.
 
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
@@ -55,7 +64,8 @@ Verarbeitungskontexten reproduzierbar zu halten, führte zu einer
 Komplementierung des traditionellen Betriebsmodells von HPC-Systemen um
 virtuelle Maschinen und Container. In diesen Virtualisierten (VFU) und
 Containerisieten (CFU) Forschungsumgebungen laufen die Anwendungen oder
-Umgebungen, die von den Wissenschafter*innen kontrolliert werden. [2]_
+Umgebungen, die von den Wissenschafter*innen kontrolliert
+werden [2]_ [3]_ [4]_.
 
 Innerhalb dieser Forschungsumgebungen haben Wissenschaftler*innen die
 Freiheit, Forschungsdaten und deren Kontext so zu abstrahieren, dass sie
@@ -64,22 +74,23 @@ Mit VFUs und CFUs werden Hardware, Software und Dienste so entkoppelt,
 dass für den bwForCluster NEMO ein verbessertes Management von
 Ressourcen erreicht wird. Ein Grundgedanke dieser konzeptionellen
 Vorüberlegungen ist die Aufteilung in Schichten. Der hier vorgestellte
-Dienst des bwForClusters NEMO deckt im Modell, das in [3]_ vorgestellt
-wurde, die Ebene der IT-Ressourcen ab. Für die Betriebsorganisation wird
-sie innerhalb des bwForClusters NEMO weiter differenziert in Schrank,
-Hardware und Dienste. Dieses Konzeptpapier beschreibt den Betrieb des
-bwForClusters NEMO.
+Dienst des bwForClusters NEMO deckt im Modell, das in [5]_ [6]_
+vorgestellt wurde, die Ebene der IT-Ressourcen ab. Für die
+Betriebsorganisation wird sie innerhalb des bwForClusters NEMO weiter
+differenziert in Schrank, Hardware und Dienste. Dieses Konzeptpapier
+beschreibt den Betrieb des bwForClusters NEMO.
 
 Ziele im Sinne der Informationssicherheit
 =========================================
 
-Kernanliegen von bwForcluster NEMO ist, Forscher*innen den Zugang zu
+Kernanliegen des bwForClusters NEMO ist, Forscher*innen den Zugang zu
 Rechen- und Speicherkapazitäten zu geben. Als Schutzziel betrachtet ist
 dies die Sicherstellung der *Verfügbarkeit* von Rechenressourcen, auf
 denen Forscher*innen ihre Rechenjobs ausführen. Als Dienstanbieter muss
-das bwForCluster NEMO eine Verfügbarkeit bieten, die Forscher*innen
-Big-Data-Analysen über das Maß selbst gemanagter oder dezentral in
-Forschungseinrichtung administrierten IT-Cluster hinaus ermöglicht.
+das bwForCluster NEMO eine Verfügbarkeit bieten, die
+Wissenschaftler*innen Big-Data-Analysen über das Maß selbst gemanagter
+oder dezentral in Forschungseinrichtung administrierten IT-Cluster
+hinaus ermöglicht.
 
 Für die Forscher*innen ist, um ihre Datenverarbeitung und Ergebnisse
 reproduzierbar zu halten, eine *Integrität* von Daten auf Speicherebene
@@ -134,7 +145,7 @@ Dienstbeschreibung HPC
 
 Es liegt eine Dienstbeschreibung für das HPC-Computing-Angebot des
 Rechenzentrums im Rahmen des allgemeinen Servicekatalogs vor. Diese kann
-online von den Seiten des Rechenzentrums abgerufen werden. [4]_ Diese
+online von den Seiten des Rechenzentrums abgerufen werden [7]_. Diese
 Dienstbeschreibung wird einem regelmäßigen Review-Prozess in der Runde
 der Abteilungsleiter*innen unterzogen.
 
@@ -151,34 +162,28 @@ Hardware und Dienste
 --------------------
 
 Die installierte Hardware des bwForClusters NEMO besteht aus über 900
-Rechenknoten und einigen dedizierten Servern für NEMO-Dienste. [5]_
+Rechenknoten und einigen dedizierten Servern für NEMO-Dienste [8]_.
 Virtuelle Maschinen als VFUs und Container (CFUs) werden ebenfalls auf
 diesen Rechenknoten ausgeführt, wie reguläre Cluster-Jobs. Auf den
-regulären Rechenknoten (ausgenommen Knoten für interaktive Nutzung)
-werden immer nur Jobs eines/einer Nutzers/Nutzerin ausgeführt. Zugang
-zum Cluster erfolgt über sogenannte Login-Knoten,
+Rechenknoten (ausgenommen Knoten für interaktive Nutzung) werden immer
+nur Jobs eines/einer Nutzers/Nutzerin ausgeführt. Zugang zum Cluster
+erfolgt über sogenannte Login-Knoten,
 
-::
+.. code-block::
 
-   [
-     language=bash,
-     ]
    login1.nemo.uni-freiburg.de (alias login.nemo.uni-freiburg.de)
    login2.nemo.uni-freiburg.de
 
 den Visualisierungsknoten (Vis),
 
-::
+.. code-block::
 
-   [
-     language=bash,
-     ]
    vis1.nemo.uni-freiburg.de
    vis2.nemo.uni-freiburg.de
 
 und über das Openstack-Dashboard. Die Zugangsknoten sind im öffentlichen
 Internet exponiert, welches jedoch auf das Belwü-Netz eingeschränkt
-wurde. [6]_ Der Zugriff erfolgt primär über den SSH-Dienst. Beim
+wurde. [9]_ Der Zugriff erfolgt primär über den SSH-Dienst. Beim
 Openstack-Dashboard wird der Transport mit HTTPS abgesichert.
 
 Ausgewählte Dienste
@@ -238,7 +243,7 @@ DHCP
 
 Die IP-Adressen werden bei Rechen-, Login-, sowie Visualisierungsknoten
 über DHCP verteilt. Dieser Dienst wird von der Abteilung “Netze und
-Kommunikationsdienste” mithilfe der Appliance Infoblox betrieben. [7]_
+Kommunikationsdienste” mithilfe der Appliance Infoblox betrieben. [10]_
 
 Monitoring
 ^^^^^^^^^^
@@ -262,7 +267,7 @@ durchgeführt werden.
 
 Die Rechenknoten werden ebenfalls mittels Ansible erzeugt. Hierzu wird
 das CentOS-Vorlagen-Image mit Ansible konfiguriert und in in ein
-lesbares QCOW2-Image konvertiert. [8]_ Mit dem in der Abteilung
+lesbares QCOW2-Image konvertiert. [11]_ Mit dem in der Abteilung
 “eScience” entwickelten Boot-Framework wird dann das Image über das
 Netzwerk gestartet. Das Image wird dabei über das nur lesbare
 Blockdevice DNBD3 eingebunden. Für Schreiboperationen wird eine
@@ -270,12 +275,12 @@ copy-on-write Schicht darüber gelegt, die bei jedem Boot eines Knotens
 frisch initialisiert wird. Alle neu generierten Images bekommen eine
 inkrementierte Revisionsnummer, so dass die Umgebung zum einen
 reproduzierbar ist, zum anderen bei Problemen mit einer Revision einfach
-auf eine ältere zurück gegriffen werden kann.
+auf eine Ältere zurück gegriffen werden kann.
 
 Die Entscheidung, welche Systemversion, Revision und Konfiguation
 geladen wird, trifft der sogenannte Bootauswahlserver anhand der
 Zugehörigkeit der MAC-Adresse der Netzwerkkarte, über die der initiale
-Start lief, zu einer Boot-Gruppe. [9]_ Diese Information wird jedesmal
+Start lief, zu einer Boot-Gruppe [12]_. Diese Information wird jedesmal
 beim Boot ausgewertet. Die Boot-Gruppe entscheidet über die
 Konfiguration des Knotens. Sie wird verwendet, um spezielle Knoten zu
 konfigurieren, beispielsweise bei GPU-Knoten. Bei neuer Hardware durch
@@ -308,26 +313,26 @@ Patches auf den reservierten Knoten durchgetestet wurden, werden diese
 Updates und Sicherheit
 ----------------------
 
-Bei allen Servern, die keinen direkten Zugriff durch die Nutzer*innen
-erlauben, werden Updates bei den größeren Wartungen eingespielt, die
-üblicherweise ein bis zwei Mal im Jahr statt finden. Sollte eine
-außerordentliche Sicherheitslücke bestimmte Dienste betreffen, wird das
-Update sobald es verfügbar ist, eingespielt. Sollte hierzu ein
-Herunterfahren des Clusters notwendig werden, kann sich das Update um
-bis zu vier Tage verzögern. Das Vorgehen wird dann im eScience-Team
-unter Zuhilfenahme zusätzlicher IT-Experten diskutiert. Diese Wartungen
-werden an die Wissenschaftler*innen vorab kommuniziert.
+Bei allen Servern, die keinen direkten Zugriff durch die
+Wissenschaftler*innen erlauben, werden Updates bei den größeren
+Wartungen eingespielt, die üblicherweise ein bis zwei Mal im Jahr statt
+finden. Sollte eine außerordentliche Sicherheitslücke bestimmte Dienste
+betreffen, wird das Update sobald es verfügbar ist, eingespielt. Sollte
+hierzu ein Herunterfahren des Clusters notwendig werden, kann sich das
+Update um bis zu vier Tage verzögern. Das Vorgehen wird dann im
+eScience-Team unter Zuhilfenahme zusätzlicher IT-Experten diskutiert.
+Diese Wartungen werden an die Wissenschaftler*innen vorab kommuniziert.
 
 Bei den Login-, Vis- und Rechenknoten werden monatliche Updates
 eingespielt. Dabei findet ein Rolling-Update statt. Das Cluster wird
 offline genommen und neue Jobs können erst wieder starten, wenn die
 Rechenknoten mit der neuen Systemversion gebootet sind. Damit können
 alte Jobs noch zu Ende laufen, neue Jobs jedoch nur noch in der neuen
-Umgebung starten. Durch das Deployment () und Changemanagement () kann
+Umgebung starten. Durch das `Deployment`_ und `Changemanagement`_ kann
 bei Problemen auf eine ältere Version gewechselt werden. Bei
 außerordentlichen Sicherheitslücken wird das Update, sobald es verfügbar
 ist, eingespielt und ausgerollt. Durch dieses Rolling-Update sind die
-Updates bei allen Knoten eingespielt, wenn der Job, der zum Zeitpunkt
+Patches bei allen Knoten eingespielt, wenn der Job, der zum Zeitpunkt
 des Ausrollens noch die längste Restlaufzeit besitzt, endet und die vom
 Job verwendeten Knoten neu booten können. Da die derzeitige maximale
 Laufzeit der Jobs vier Tage beträgt, ist ein reguläres Update spätestens
@@ -337,18 +342,18 @@ Parallel- und HOME-Speicher
 ---------------------------
 
 Die HOME-Verzeichnisse der Nutzer*innen liegen auf dem Isilon-Speicher
-der Universität. [10]_ Für die aktuell verarbeiteten wissenschaftlichen
+der Universität [13]_. Für die aktuell verarbeiteten wissenschaftlichen
 Daten dient ein zentraler Parallelspeicher, der auf BeeGFS
-aufsetzt. [11]_ Anders als der Isilon-Speicher ist der parallele
+aufsetzt. [14]_ Anders als der Isilon-Speicher ist der parallele
 Speicher nur durch ein RAID6 abgesichert und bietet keine weiteren
 Backups. Auf diesem Speicher sollten nur Daten liegen, die unmittelbar
 für Berechnungen benötigt werden. Für eine anschließende Speicherung der
 auf dem Cluster nicht mehr benötigten Daten wird bis Ende 2021 eine
-Lösung auf dem bwSFS angeboten. [12]_
+Lösung auf dem bwSFS angeboten. [15]_
 
 Der Parallelspeicher ist neben dem bwForCluster NEMO ebenfalls in der
 ATLAS-Umgebung eingebunden. Diese beinhaltet das ATLAS-Cluster und die
-ATLAS-VFU. [13]_ Dadurch können zusätzlich Nutzer*innen und
+ATLAS-VFU. [16]_ Dadurch können zusätzlich Nutzer*innen und
 Administrator*innen der Freiburger ATLAS-Gruppen auf diesen Speicher
 zugreifen.
 
@@ -360,14 +365,14 @@ bearbeiten. Beide Speicher werden nicht standardmäßig verschlüsselt.
 Workspaces
 ~~~~~~~~~~
 
-Die Daten auf dem parallelen Speicher werden für die Berechnungen der
-Wissenschaftler*innen benötigt. Das Management der Daten wird durch
-Wissenschaftler*innen in sogenannten “Workspaces” durchgeführt. [14]_
-Die Nutzer*innen müssen Workspaces anlegen, um den parallelen Speicher
-nutzen zu können. Dabei kann ein Workspace maximal gültig sein. Es
-besteht jedoch die Möglichkeit jeden Workspace 99 Mal zu verlängern. Die
-Wissenschaftler*innen werden vor Ablauf eines Workspaces per Mail
-informiert.
+Die Daten, die auf dem parallelen Speicher liegen, werden für die
+Berechnungen der Wissenschaftler*innen benötigt. Das Management der
+Daten wird durch die Forscher*innen in sogenannten “Workspaces”
+durchgeführt. [17]_ Die Nutzer*innen müssen Workspaces anlegen, um den
+parallelen Speicher verwenden zu können. Dabei kann ein Workspace
+maximal gültig sein. Es besteht jedoch die Möglichkeit jeden Workspace
+99 mal zu verlängern. Die Wissenschaftler*innen werden vor Ablauf eines
+Workspaces per Mail informiert.
 
 Es wird empfohlen für unterschiedliche Unterprojekte und separate
 Berechnungen eigene Workspaces anzulegen. Jeder Workspace kann damit in
@@ -394,11 +399,8 @@ sind, müssen vom jeweiligen Dienst erfragt werden.
 
 Das bwForCluster NEMO verwendet folgende Netze:
 
-::
+.. code-block::
 
-   [
-     language=bash,
-     ]
      10.16.0.0/16          NEMO: Rechenknoten, Server und Parallelspeicher
                                  Login- und Vis-Knoten über interne Netzwerkschnittstelle
      132.230.222.0/24      NEMO: Login- und Visualisierungsknoten
@@ -415,32 +417,32 @@ Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
 und ATLAS-TEST-VFU können zusätzlich auf das NEMO-Netz ``10.16.0.0/16``
 zugreifen. Das Cluster kann ansonsten nur über die öffentliche
 IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
-sind mit mindestens versorgt, Server, die Dienste anbieten, sind mit
+sind mit mindestens versorgt. Server, die Dienste anbieten, sind mit
 mindestens zwei Anschlüssen mit über das Link Aggregation Control
-Protocol (LACP) an zwei Top-Level-Switche angebunden. [15]_ Zusätzlich
+Protocol (LACP) an zwei Top-Level-Switche angebunden. [18]_ Zusätzlich
 sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
 mit miteinander und dem wissenschaftlichen Parallelspeicher
-verbunden. [16]_
+verbunden. [19]_
 
 Zugang zur Ressource
 --------------------
 
-Zugang zum bwForCluster NEMO haben lediglich registrierte Nutzer*innen
-des bwForClusters NEMO. Antragsberechtigt sind nur Wissenschaftler*innen
-aus Baden-Württemberg. Die genauen Zugangskriterien und die einzelnen
+Zugang zum bwForCluster NEMO haben lediglich registrierte
+Forscher*innen. Antragsberechtigt sind nur Wissenschaftler*innen aus
+Baden-Württemberg. Die genauen Zugangskriterien und die einzelnen
 Schritte der Registrierungsprozedur sind im bwHPC-Wiki
-beschreiben. [17]_ Für das bwForCluster NEMO muss von dem/der
-Wissenschaftler/in ein separates Dienst-Passwort angelegt werden.
+beschreiben. [20]_ Für das bwForCluster NEMO muss von dem/der
+Wissenschaftler*in ein separates Dienst-Passwort angelegt werden.
 
 Das Auslaufen und die Invalidierung von Accounts regelt jede Universität
 selbst. Der Nutzer hat danach keinen Zugriff mehr auf die Ressourcen.
 Die Daten der Nutzer*innen verbleiben jedoch so lange auf dem Cluster,
-bis die Ressource abgeschaltet wird oder die eine Anfrage einer
-berechtigten Person erfolgt. Es gibt derzeit keine festen Regeln
-diesbezüglich, so dass diese Frage einer genaueren Ausarbeitung Bedarf.
-Für das Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb
-gehen wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu
-die folgenden Ordnungen zur Verfügung:. [18]_
+bis die Ressource abgeschaltet wird oder die Anfrage einer berechtigten
+Person erfolgt. Es gibt derzeit keine festen Regeln diesbezüglich, so
+dass diese Frage einer genaueren Ausarbeitung Bedarf. Für das
+Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb gehen
+wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu die
+folgenden Ordnungen zur Verfügung: [21]_ [22]_ [23]_.
 
 Kontingentierung
 ----------------
@@ -448,10 +450,10 @@ Kontingentierung
 Die Wissenschaftler*innen sind im Sinne der gemeinschaftlichen
 DFG-Beantragung Stakeholder des bwForClusters NEMO. Zusätzlich gibt es
 Shareholder die mit eigenen Mitteln Teile des Clusters mitfininaziert
-haben. [19]_ Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
+haben [24]_. Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
 Die Regelung, wer wie viele Ressourcen des Clusters nutzen kann, wird
-über einen “Fairshare-Mechanismus” geregelt. [20]_ Dieser bestimmt wann
-ein Job eines/r Wissenschaftler*in starten kann. Hierzu wird von einer
+über einen “Fairshare-Mechanismus” geregelt [25]_. Dieser bestimmt wann
+ein Job eines/r Wissenschaftlers/in starten kann. Hierzu wird von einer
 Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem “Share”
 verglichen. Ist der Verbrauch höher als der Share, der der Arbeitsgruppe
 zur Verfügung steht, werden die Jobs niedriger priorisiert, ist er
@@ -488,12 +490,12 @@ zusätzlich bei Schränken die Luftfeuchtigkeit kontrolliert. Die
 Nachverfolgung des Netzwerks findet in der Netzwerkabteilung und bei
 Schränken in der Abteilung “Allgemeiner Betrieb” statt. Strom und
 Kühlung werden zudem vom “Technischen Gebäugemanagement” (TGM)
-überwacht. Zusätzlich misst der Monitoring-Server des Clusters mit Hilfe
-von Zabbix Hardwaredaten wie Temperatur und Defekte auf Knotenebene und
-schlägt per Mail Alarm beim Überschreiben von Grenzwerten. [21]_ Zabbix
-überprüft laufend, ob die Dienste, die auf den Servern laufen müssen,
-noch aktiv sind. Es wird allerdings nicht geprüft, ob die Dienste noch
-korrekt funktionieren.
+überwacht. Zusätzlich protokolliert der Monitoring-Server des Clusters
+mit Hilfe von Zabbix Hardwaredaten wie Temperatur und Defekte auf
+Knotenebene und schlägt beim Überschreiten von Grenzwerten per Mail
+Alarm. [26]_ Zabbix überprüft laufend, ob die Dienste, die auf den
+Servern laufen müssen, noch aktiv sind. Es wird allerdings nicht
+geprüft, ob die Dienste noch korrekt funktionieren.
 
 Außerdem werden Hardware- sowie Softwareprobleme, Login- und
 Zugriffsversuche über ``rsyslog`` lokal auf der SSD und für die von den
@@ -501,14 +503,14 @@ Wissenschaftler*innen erreichbaren Knoten wie Login-, Vis- und
 Rechenknoten zusätzlich auf dem Monitoringserver in Dateien gespeichert.
 
 Der Speicherverbrauch im parallelen Dateisystem und den
-Home-Verzeichnissen wird mittels Quotas durchgesetzt. Die Auslastung
-wird jeweils von den zuständigen Betreibern ermittelt. Bei Isilon ist
-das die Abteilung “Virtualisierung und Speichersysteme,” beim BeeGFS
-machen das die Administrator*innen des bwForClusters NEMO. “Workspaces”
-auf dem parallelen Wissenschaftsspeicher BeeGFS haben einen Laufzeit von
-und müssen von den Wissenschaftler*innen mit einem Kommando manuell
-verlängert werden. Erfolgt das nicht, werden die Daten endgültig nach
-einer Wartezeit von sieben Tagen gelöscht.
+Home-Verzeichnissen wird mittels Quotas auf Nutzerebene durchgesetzt.
+Die Auslastung wird jeweils von den zuständigen Betreibern ermittelt.
+Bei Isilon ist das die Abteilung “Virtualisierung und Speichersysteme”,
+beim BeeGFS machen das die Administrator*innen des bwForClusters NEMO.
+“Workspaces” auf dem parallelen Wissenschaftsspeicher BeeGFS haben einen
+Laufzeit von und müssen von den Wissenschaftler*innen mit einem Kommando
+manuell verlängert werden. Erfolgt das nicht, werden die Daten endgültig
+nach einer Wartezeit von sieben Tagen gelöscht.
 
 Verantwortlichkeiten
 ====================
@@ -520,226 +522,178 @@ Leiter*in des Rechenzentrums der Universität Freiburg.
 Maschinensaal II (MSII)
 -----------------------
 
-Der MSII sowie die darüber bereitgestellten Schränke werden innerhalb von
-der Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
+Der MSII sowie die darüber bereitgestellten Schränke werden von der
+Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
 sowie die organisatorischen Schnittstellen innerhalb des RZ sowie zu
 Nutzer*innen, die Ressourcen im Maschinensaal betreiben, werden in der
-“Maschinensaalbenutzungsordnung” [22]_ für den Maschinensaal
+“Maschinensaalbenutzungsordnung” [27]_ für den Maschinensaal
 beschrieben. Die Nutzung der Server-Schränke wird im Dienstkatalog
-“Machine-Hosting” [23]_ spezifiziert. Die Maschinensaalbenutzungsordnung
+“Machine-Hosting” [28]_ spezifiziert. Die Maschinensaalbenutzungsordnung
 bestimmt ebenfalls den physikalischen Zugriff der Administrator*innen
 des Clusters auf die Schränke und die darin eingebauten Maschinen.
 
-.. container:: references csl-bib-body
-   :name: refs
 
-   .. container:: csl-entry
-      :name: ref-dfn-forum-2017
-
-      1.MEIER, Konrad, GRÜNING, Björn, BLANK, Clemens, JANCZYK, Michael
-      and SUCHODOLETZ, Dirk von. Virtualisierte wissenschaftliche
-      forschungsumgebungen und die zukünftige rolle der rechenzentren.
-      In : *10. DFN-forum kommunikationstechnologien, 30.-31. Mai 2017,
-      berlin, gesellschaft für informatik eV (GI)*. 2017. p. 145–154.
-
-   .. container:: csl-entry
-      :name: ref-bwhpc2018:vicevre
-
-      2.BAUER, Jonathan, SUCHODOLETZ, Dirk von, VOLLMER, Jeannette and
-      RASCHE, Helena. Game of templates: Deploying and (re-)using
-      virtualized research environments in high-performance and
-      high-throughput computing. In : JANCZYK, Michael, SUCHODOLETZ,
-      Dirk von and WIEBELT, Bernd (eds.), *Proceedings of the 5th bwHPC
-      symposium: HPC activities in
-      ba:raw-latex:`\-`den-würt:raw-latex:`\-`tem:raw-latex:`\-`berg.
-      Freiburg, september 2018*. TLP, Tübingen, 2019. p. 245–262.
-
-   .. container:: csl-entry
-      :name: ref-ViCE2019
-
-      3.SUCHODOLETZ, Dirk von, BAUER, Jonathan, ZHARKOV, Oleg, MOCKEN,
-      Susanne and GRÜNING, Björn. Lessons learned from virtualized
-      research environments in today’s scientific compute
-      infrastructures. In : *E-science-tage 2019: Data to knowledge*.
-      Heidelberg : heiBOOKS, March 2020. p. 88–81.
-      ISBN `978-3-948083-14-4 <https://worldcat.org/isbn/978-3-948083-14-4>`__.
-
-   .. container:: csl-entry
-      :name: ref-ViCE2019a
-
-      4.SUCHODOLETZ, Dirk von and BAUER, Jonathan. ViCE – creating
-      uniform approach to large-scale research infrastructures. In :
-      *E-science-tage 2019: Data to knowledge*. Heidelberg : heiBOOKS,
-      March 2020. p. 218–222.
-      ISBN `978-3-948083-14-4 <https://worldcat.org/isbn/978-3-948083-14-4>`__.
-
-   .. container:: csl-entry
-      :name: ref-konrad-werk
-
-      5.MEIER, Konrad. *Infrastrukturkonzepte für virtualisierte
-      wissenschaftliche forschungsumgebungen*. PhD thesis.
-      Albert-Ludwigs-Universität Freiburg im Breisgau, 2017.
-
-   .. container:: csl-entry
-      :name: ref-DienstHPC2016
-
-      6.ESCIENCE TEAM. *Cluster betrieb: High performance computing*.
-      technical report. Rechenzentrum der Universität Freiburg, 2016.
-
-   .. container:: csl-entry
-      :name: ref-bwhpc2018:sortinghat
-
-      7.BAUER, Jonathan, MESSNER, Manuel, JANCZYK, Michael, SUCHODOLETZ,
-      Dirk von, WIEBELT, Bernd and RASCHE, Helena. A sorting hat for
-      clusters: Dynamic provisioning of compute nodes for colocated
-      large scale computational research infrastructures. In : JANCZYK,
-      Michael, SUCHODOLETZ, Dirk von and WIEBELT, Bernd (eds.),
-      *Proceedings of the 5th bwHPC symposium: HPC activities in
-      ba:raw-latex:`\-`den-würt:raw-latex:`\-`tem:raw-latex:`\-`berg.
-      Freiburg, september 2018*. TLP, Tübingen, 2019. p. 217–229.
-
-   .. container:: csl-entry
-      :name: ref-DienstStor2019
-
-      8.STORAGE UND VIRTUALISIERUNGSGRUPPE. *Speichersysteme für die
-      universität*. technical report. Rechenzentrum der Universität
-      Freiburg, 2019.
-
-   .. container:: csl-entry
-      :name: ref-VBO1981
-
-      9.UNIVERSITÄT FREIBURG. *Verwaltungs- und benutzungsordnung:
-      (VBO)*. technical report. Universität Freiburg, 1981.
-
-   .. container:: csl-entry
-      :name: ref-NBO1996
-
-      10.UNIVERSITÄT FREIBURG. *Benutzungsordnung für die vom
-      rechenzentrum der albert-ludwigs-universität angebotenen
-      netzdienste: (NBO)*. technical report. Universität Freiburg, 1996.
-
-   .. container:: csl-entry
-      :name: ref-NO1996
-
-      11.UNIVERSITÄT FREIBURG. *Netzordnung für das freiburger
-      universitäts netz: (NO)*. technical report. Universität Freiburg,
-      1996.
-
-   .. container:: csl-entry
-      :name: ref-ZKI-Aufwuchs:2016
-
-      12.SUCHODOLETZ, Dirk von, WESNER, Stefan and SCHNEIDER, Gerhard.
-      Überlegungen zu laufenden
-      clus:raw-latex:`\-`ter-er:raw-latex:`\-`wei:raw-latex:`\-`te:raw-latex:`\-`run:raw-latex:`\-`gen
-      in bwHPC. In : SUCHODOLETZ, Dirk von, SCHULZ, Janne Chr.,
-      LEENDERTSE, Jan, HOTZEL, Hartmut and WIMMER, Martin (eds.),
-      *Kooperation von rechenzentren: Governance und steuerung –
-      organisation, rechtsgrundlagen, politik*. De Gruyter, 2016.
-      p. 331–342.
-      ISBN `978-3-11-045888-6 <https://worldcat.org/isbn/978-3-11-045888-6>`__.
-
-   .. container:: csl-entry
-      :name: ref-MSBO2020
-
-      13.SCHULZ, Janne Chr., SUCHODOLETZ, Dirk von, GEHRING, Ulrich,
-      MEYER, Willibald and LEENDERTSE, Jan.
-      *Maschinensaalbenutzungsordnung des rechenzentrums der universität
-      freiburg: Richtlinien für das hosting und housing von hardware in
-      den räumen desRechenzentrums der universität freiburg*. technical
-      report. Rechenzentrum der Universität Freiburg, 2020.
-
-   .. container:: csl-entry
-      :name: ref-MachHost2020
-
-      14.SUCHODOLETZ, Dirk von, GEHRING, Ulrich and LEENDERTSE, Jan.
-      *Machine-hosting: Bereitstellung von rackspace in den
-      maschinensälen des RZ. Externe version*. technical report.
-      Rechenzentrum der Universität Freiburg, 2020.
+Referenzen
+==========
 
 .. [1]
    Hierzu entsteht derzeit das Dokument
-   “Compute-Forschungsinfrastrukturen: HPC.”
+   “Compute-Forschungsinfrastrukturen: HPC”.
 
 .. [2]
-   (1–4).
+   BAUER, Jonathan, Dirk von SUCHODOLETZ, Jeannette VOLLMER und
+   Helena RASCHE, 2019. Game of Templates: Deploying and (re-)using
+   Virtualized Research Environments in High-Performance and
+   High-Throughput Computing. In: Michael JANCZYK, Dirk von
+   SUCHODOLETZ und Bernd WIEBELT (Hrsg.), *Proceedings of the 5th
+   bwHPC Symposium: HPC Activities in Baden-Württemberg.
+   Freiburg, September 2018*. TLP, Tübingen. 2019. S. 245–262
 
 .. [3]
-   (1, 5).
+   SUCHODOLETZ, Dirk von, Jonathan BAUER, Oleg ZHARKOV, Susanne
+   MOCKEN und Björn GRÜNING, 2020. Lessons learned from Virtualized
+   Research Environments in today’s scientific compute
+   infrastructures. In: *E-Science-Tage 2019: Data to Knowledge*.
+   Heidelberg: heiBOOKS. März 2020. S. 88–81.
+   ISBN `978-3-948083-14-4 <https://worldcat.org/isbn/978-3-948083-14-4>`__
 
 .. [4]
-   (6).
+   SUCHODOLETZ, Dirk von und Jonathan BAUER, 2020. ViCE – Creating
+   Uniform Approach to Large-Scale Research Infrastructures. In:
+   *E-Science-Tage 2019: Data to Knowledge*. Heidelberg: heiBOOKS.
+   März 2020. S. 218–222.
+   ISBN `978-3-948083-14-4 <https://worldcat.org/isbn/978-3-948083-14-4>`__
 
 .. [5]
+   MEIER, Konrad, Björn GRÜNING, Clemens BLANK, Michael JANCZYK und
+   Dirk von SUCHODOLETZ, 2017. Virtualisierte wissenschaftliche
+   Forschungsumgebungen und die zukünftige Rolle der Rechenzentren.
+   In: *10. DFN-Forum Kommunikationstechnologien, 30.-31. Mai 2017,
+   Berlin, Gesellschaft für Informatik eV (GI)*. 2017. S. 145–154
+
+.. [6]
+   MEIER, Konrad, 2017. *Infrastrukturkonzepte für virtualisierte
+   wissenschaftliche Forschungsumgebungen*. phdthesis.
+   Albert-Ludwigs-Universität Freiburg im Breisgau
+
+.. [7]
+   ESCIENCE TEAM, 2016. *Cluster Betrieb: High Performance Computing*
+   [online]. techreport. Rechenzentrum der Universität Freiburg.
+   Verfügbar unter:
+   https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschreibung-hpc
+
+.. [8]
    Die aktuelle Hardware des bwForClusters NEMO im zentralen Wiki
    dokumentiert:
    https://wiki.bwhpc.de/e/BwForCluster_NEMO_Hardware_and_Architecture#Compute_and_Special_Purpose_Nodes,
    besucht am 19.04.2021.
 
-.. [6]
+.. [9]
    Der Zugriff ist auf die IPv4-Prefixe des Belwü-Netzes beschränkt:
    https://bgpview.io/asn/553, besucht am 16.04.2021.
 
-.. [7]
+.. [10]
    Webseite Infoblox: https://www.infoblox.com/, besucht am 20.04.2021.
 
-.. [8]
+.. [11]
    Derzeit wird CentOS7 als Betriebssystem eingesetzt. Das
    Nachfolgecluster wird RHEL8 oder ein binärkompatibles Derivat
    einsetzen.
 
-.. [9]
-   (7).
+.. [12]
+   BAUER, Jonathan, Manuel MESSNER, Michael JANCZYK, Dirk von
+   SUCHODOLETZ, Bernd WIEBELT und Helena RASCHE, 2019. A Sorting Hat
+   For Clusters: Dynamic Provisioning of Compute Nodes for Colocated
+   Large Scale Computational Research Infrastructures. In: Michael
+   JANCZYK, Dirk von SUCHODOLETZ und Bernd WIEBELT (Hrsg.),
+   *Proceedings of the 5th bwHPC Symposium: HPC Activities in
+   Baden-Württemberg.
+   Freiburg, September 2018*. TLP, Tübingen. 2019. S. 217–229
 
-.. [10]
-   (8).
+.. [13]
+   STORAGE UND VIRTUALISIERUNGSGRUPPE, 2019. *Speichersysteme für die
+   Universität* [online]. techreport. Rechenzentrum der Universität
+   Freiburg. Verfügbar unter:
+   https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme
 
-.. [11]
+.. [14]
    Webseite zum Parallelspeicher BeeGFS: `beegfs.io <beegfs.io>`__,
    besucht am 20.04.2021.
 
-.. [12]
+.. [15]
    Die Dokumente zu bwSFS werden derzeit noch erarbeitet. Diese werden
    nachgereicht.
 
-.. [13]
+.. [16]
    Webseite von ATLAS-BFG: https://www.hpc.uni-freiburg.de/atlas-bfg,
    besucht am 20.04.2021.
 
-.. [14]
+.. [17]
    Github-Repo zu Workspaces:
    https://github.com/holgerBerger/hpc-workspace, besucht am 19.04.2021
 
-.. [15]
+.. [18]
    Wiki-Eintrag zu LACP: https://de.wikipedia.org/wiki/Link_Aggregation,
    besucht am 19.02.2021.
 
-.. [16]
+.. [19]
    Eintrag zu Omni-Path: https://de.wikipedia.org/wiki/Intel_Omni-Path,
    besucht am 19.02.2021.
 
-.. [17]
+.. [20]
    Registrierungsprozedur im Wiki:
    https://wiki.bwhpc.de/e/BwForCluster_User_Access, besucht am
    20.04.2021.
 
-.. [18]
-   (9–11).
+.. [21]
+   UNIVERSITÄT FREIBURG, 1981. *Verwaltungs- und Benutzungsordnung:
+   (VBO)* [online]. techreport. Universität Freiburg. Verfügbar
+   unter: https://www.hpc.uni-freiburg.de/content/legalstuff/vbo.pdf
 
-.. [19]
-   (12).
+.. [22]
+   UNIVERSITÄT FREIBURG, 1996. *Benutzungsordnung für die vom
+   Rechenzentrum der Albert-Ludwigs-Universität angebotenen
+   Netzdienste: (NBO)* [online]. techreport. Universität Freiburg.
+   Verfügbar unter:
+   https://www.hpc.uni-freiburg.de/content/legalstuff/nbo.pdf
 
-.. [20]
+.. [23]
+   UNIVERSITÄT FREIBURG, 1996. *Netzordnung für das Freiburger
+   Universitäts Netz: (NO)* [online]. techreport. Universität
+   Freiburg. Verfügbar unter:
+   https://www.hpc.uni-freiburg.de/content/legalstuff/no.pdf
+
+.. [24]
+   SUCHODOLETZ, Dirk von, Stefan WESNER und Gerhard SCHNEIDER, 2016.
+   Überlegungen zu laufenden Cluster-Erweiterungen
+   in bwHPC. In: Dirk von SUCHODOLETZ, Janne Chr. SCHULZ, Jan
+   LEENDERTSE, Hartmut HOTZEL und Martin WIMMER (Hrsg.), *Kooperation
+   von Rechenzentren: Governance und Steuerung – Organisation,
+   Rechtsgrundlagen, Politik*. De Gruyter. 2016. S. 331–342.
+   ISBN `978-3-11-045888-6 <https://worldcat.org/isbn/978-3-11-045888-6>`__
+
+.. [25]
    Erklärung des Fairshare-Mechanismus Anhand der Anleitung des
    Schedulers Moab:
    http://docs.adaptivecomputing.com/9-1-3/suite/help.htm#topics/moabWorkloadManager/fairness/fairnessoverview.html,
    besucht am 20.04.2021.
 
-.. [21]
+.. [26]
    Zabbix Monitoring-Lösung: https://www.zabbix.com, besucht am
    20.04.2021.
 
-.. [22]
-   (13).
+.. [27]
+   SCHULZ, Janne Chr., Dirk von SUCHODOLETZ, Ulrich GEHRING,
+   Willibald MEYER und Jan LEENDERTSE, 2020.
+   *Maschinensaalbenutzungsordnung des Rechenzentrums der Universität
+   Freiburg: Richtlinien für das Hosting und Housing von Hardware in
+   den Räumen desRechenzentrums der Universität Freiburg* [online].
+   techreport. Rechenzentrum der Universität Freiburg. Verfügbar
+   unter: https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/msbo
 
-.. [23]
-   (14).
+.. [28]
+   SUCHODOLETZ, Dirk von, Ulrich GEHRING und Jan LEENDERTSE, 2020.
+   *Machine-Hosting: Bereitstellung von Rackspace in den
+   Maschinensälen des RZ. externe Version* [online]. techreport.
+   Rechenzentrum der Universität Freiburg. Verfügbar unter:
+   https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/dienstbeschr-machine-hosting
