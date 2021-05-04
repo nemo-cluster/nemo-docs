@@ -27,9 +27,9 @@ Datum:        04.05.2021
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
-0.3.0     04.05.2021  MJ,JL           Einleitung von JL kopiert und seine Korrekturen übernommen. Fußnoten vervollständigt.}
-0.2.0     22.04.2021  MJ              Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.}
-0.1.0     20.04.2021  MJ              Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts \nemo.}
+0.3.0     04.05.2021  MJ,JL           Einleitung von JL kopiert und seine Korrekturen übernommen. Fußnoten vervollständigt.
+0.2.0     22.04.2021  MJ              Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.
+0.1.0     20.04.2021  MJ              Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts NEMO.
 ========= ==========  =============== ==========================================
 
 
@@ -95,8 +95,6 @@ regelt folgende Aspekte:
    einem Sicherheitsdienst kontrolliert.
 
 -  Zutritt für Wartungen durch externe Parteien wird dokumentiert.
-
-.. _sub:zugang:
 
 Zugangskontrolle
 ~~~~~~~~~~~~~~~~
@@ -330,7 +328,7 @@ Datenschutzfreundliche Voreinstellungen
 
 Für die Registrierung beim bwForCluster NEMO werden nur so viele
 personenbezogene Daten erhoben, wie für den Dienst notwendig sind, siehe
-Abschnitt Zugangskontrolle `1.1.2 <#sub:zugang>`__.
+Abschnitt `Zugangskontrolle`_.
 
 
 Referenzen

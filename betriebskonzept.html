@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
   <head>
     <meta charset="utf-8" />
-    <title>Betriebskonzept &#8212; NEMO 0.4.0 Dokumentation</title>
+    <title>Betriebskonzept &#8212; bwForCluster NEMO</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -37,7 +37,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Technisch Organisatorische Maßnahmen" href="toms.html" />
-    <link rel="prev" title="Betriebskonzept bwForCluster NEMO" href="index.html" />
+    <link rel="prev" title="bwForCluster NEMO" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -54,12 +54,12 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="https://cluster.nemo.uni-freiburg.de">
       
       <img src="_static/nemo-logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">NEMO 0.4.0 Dokumentation</h1>
+      <h1 class="site-logo" id="site-title">bwForCluster NEMO</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -67,6 +67,8 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Durchsuchen Sie die Dokumente ..." aria-label="Durchsuchen Sie die Dokumente ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
+        <a href="https://cluster.nemo.uni-freiburg.de">bwForCluster NEMO</a>
+        <a href="index.html">Dokumentationsindex</a>
         <p class="caption">
  <span class="caption-text">
   Dokumente
@@ -139,7 +141,10 @@
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
-        
+        <a class="repository-button"
+            href="https://github.com/nemo-cluster/nemo-docs"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
         
         <a class="edit-button" href="https://github.com/nemo-cluster/nemo-docs/edit/main/docs/betriebskonzept.rst"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
@@ -293,7 +298,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#monitoring-1">
+    <a class="reference internal nav-link" href="#id26">
      Monitoring
     </a>
    </li>
@@ -497,7 +502,7 @@ Betriebsschicht, die durch Ereignisse auf der Ebene der
 Wissenschaftler*innen eröffnet werden.</p>
 </div>
 <div class="section" id="dienstbeschreibung-hpc">
-<span id="sec-hpc"></span><h2>Dienstbeschreibung HPC<a class="headerlink" href="#dienstbeschreibung-hpc" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Dienstbeschreibung HPC<a class="headerlink" href="#dienstbeschreibung-hpc" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es liegt eine Dienstbeschreibung für das HPC-Computing-Angebot des
 Rechenzentrums im Rahmen des allgemeinen Servicekatalogs vor. Diese kann
 online von den Seiten des Rechenzentrums abgerufen werden <a class="footnote-reference brackets" href="#id36" id="id7">7</a>. Diese
@@ -596,7 +601,7 @@ Clusters per Mail verständigt.</p>
 </div>
 </div>
 <div class="section" id="deployment">
-<span id="sub-deploy"></span><h3>Deployment<a class="headerlink" href="#deployment" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Deployment<a class="headerlink" href="#deployment" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Dienste beim bwForCluster NEMO werden über Ansible-Rollen auf den
 Serverknoten aufgesetzt. Das ermöglicht ein schnelles und einfaches
 ausrollen auf neuen Servern. Es müssen nur wenige Anpassungen
@@ -625,7 +630,7 @@ ebenfalls schnell eingerichtet werden, da nur die zur Basisgruppe
 unterschiedliche Konfiguration vorgenommen werden muss.</p>
 </div>
 <div class="section" id="changemanagement">
-<span id="sub-change"></span><h3>Changemanagement<a class="headerlink" href="#changemanagement" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Changemanagement<a class="headerlink" href="#changemanagement" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Deploymentprozess erleichtert das Changemanagement. Die
 Bereitstellung des Basissystems erlaubt schnelle Funktionstests, da beim
 Netzwerk-Boot lediglich die neuere Version angefahren werden muss. Die
@@ -791,8 +796,8 @@ die Administration entwickelt, das diesen Aspekt regelt. Die Einführung
 des Protokolls zum Ein- beziehungsweise Austritt von Administrator*innen
 ist für den Start des bwForClusters NEMO2 2022 geplant.</p>
 </div>
-<div class="section" id="monitoring-1">
-<span id="id26"></span><h3>Monitoring<a class="headerlink" href="#monitoring-1" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="id26">
+<h3>Monitoring<a class="headerlink" href="#id26" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das Monitoring überwacht den dauerhaften Betrieb mit Verfolgung der
 Ziele Verfügbarkeit, Vertraulichkeit und Integrität der Daten. Beim
 Monitoring werden Schränke, Infrastrukturkomponenten wie Netzwerk,
@@ -925,7 +930,7 @@ Freiburg. Verfügbar unter:
 <a class="reference external" href="https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme">https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme</a></p>
 </dd>
 <dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id14">14</a></span></dt>
-<dd><p>Webseite zum Parallelspeicher BeeGFS: <a class="reference external" href="beegfs.io">beegfs.io</a>,
+<dd><p>Webseite zum Parallelspeicher BeeGFS: <a class="reference external" href="https://www.beegfs.io/">https://www.beegfs.io/</a>,
 besucht am 20.04.2021.</p>
 </dd>
 <dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id15">15</a></span></dt>
@@ -1016,7 +1021,7 @@ Rechenzentrum der Universität Freiburg. Verfügbar unter:
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Betriebskonzept bwForCluster NEMO</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">bwForCluster NEMO</a>
     <a class='right-next' id="next-link" href="toms.html" title="next page">Technisch Organisatorische Maßnahmen</a>
 
         </div>
