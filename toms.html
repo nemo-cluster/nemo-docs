@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Technisch Organisatorische Maßnahmen &#8212; NEMO 0.4.0 Dokumentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="_static/nemo-favicon.png"/>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="prev" title="Betriebskonzept" href="betriebskonzept.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/nemo-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NEMO 0.4.0 Dokumentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Durchsuchen Sie die Dokumente ..." aria-label="Durchsuchen Sie die Dokumente ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Dokumente
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="betriebskonzept.html">
+   Betriebskonzept
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Technisch Organisatorische Maßnahmen
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/toms.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        
+        <a class="edit-button" href="https://github.com/nemo-cluster/nemo-docs/edit/main/docs/toms.rst"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Bearbeite diese Seite"><i class="fas fa-pencil-alt"></i>vorschlagen zu bearbeiten</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einleitung">
+   Einleitung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vertraulichkeit">
+   Vertraulichkeit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zutrittskontrolle">
+     Zutrittskontrolle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zugangskontrolle">
+     Zugangskontrolle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zugriffskontrolle">
+     Zugriffskontrolle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trennungskontrolle">
+     Trennungskontrolle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integritat">
+   Integrität
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#weitergabekontrolle">
+     Weitergabekontrolle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verfugbarkeit-belastbarkeit">
+   Verfügbarkeit, Belastbarkeit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verfugbarkeitskontrolle">
+     Verfügbarkeitskontrolle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regelmaszige-uberprufung-bewertung-evaluation">
+   Regelmäßige Überprüfung, Bewertung, Evaluation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datenschutz-und-informationssicherheits-management">
+     Datenschutz- und Informationssicherheits-Management
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incident-response-management">
+     Incident-Response-Management
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datenschutzfreundliche-voreinstellungen">
+     Datenschutzfreundliche Voreinstellungen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referenzen">
+   Referenzen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="technisch-organisatorische-masznahmen">
+<h1>Technisch Organisatorische Maßnahmen<a class="headerlink" href="#technisch-organisatorische-masznahmen" title="Link zu dieser Überschrift">¶</a></h1>
+<table class="table">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Gültig ab:</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Version:</p></td>
+<td><p>0.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Datum:</p></td>
+<td><p>04.05.2021</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<dl class="simple">
+<dt>TLP:AMBER</dt><dd><p>Limited disclosure, restricted to participants‘ organizations. Distribution outside this audience requires written permission from the originator.</p>
+</dd>
+</dl>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 13%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Datum</p></th>
+<th class="head"><p>Autor*innen</p></th>
+<th class="head"><p>Änderungen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.3.0</p></td>
+<td><p>04.05.2021</p></td>
+<td><p>MJ,JL</p></td>
+<td><p>Einleitung von JL kopiert und seine Korrekturen übernommen. Fußnoten vervollständigt.}</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.2.0</p></td>
+<td><p>22.04.2021</p></td>
+<td><p>MJ</p></td>
+<td><p>Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.}</p></td>
+</tr>
+<tr class="row-even"><td><p>0.1.0</p></td>
+<td><p>20.04.2021</p></td>
+<td><p>MJ</p></td>
+<td><p>Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts nemo.}</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="einleitung">
+<h2>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Auftragsverarbeiter – nachstehend Auftragnehmer genannt – ergreift
+in seinem Verantwortungsbereich alle erforderlichen
+technisch-organisatorische Maßnahmen gem. Art. 32 DS-GVO zum Schutz der
+personenbezogenen Daten und übergibt dem Auftraggeber die Dokumentation
+zur Prüfung. Bei Akzeptanz durch den Auftraggeber werden die
+dokumentierten Maßnahmen Grundlage des Vertrags. Soweit die Prüfung/ein
+Audit des Auftraggebers einen Anpassungsbedarf ergibt, ist dieser
+einvernehmlich umzusetzen.</p>
+<p>Die vereinbarten technischen und organisatorischen Maßnahmen unterliegen
+dem technischen Fortschritt und der Weiterentwicklung. Insoweit ist es
+dem Auftragnehmer zukünftig gestattet, alternative adäquate Maßnahmen
+umzusetzen. Dabei darf das Sicherheitsniveau der festgelegten Maßnahmen
+nicht unterschritten werden. Über wesentliche Änderungen, die durch den
+Auftragnehmer zu dokumentieren sind, ist der Auftraggeber unverzüglich
+in Kenntnis zu setzten.</p>
+<p>Der Auftragnehmer verarbeitet die Daten auf dem bwForCluster NEMO, das
+im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
+Hermann-Herder-Straße 10, 79104 Freiburg untergebracht ist. Für diesen
+Anwendungsbereich betreibt das Rechenzentrum ein
+Informationssicherheitsmanagementsystem (ISMS). Es ist in einem
+Informationssicherheitskonzept beschrieben. Es umfasst das Konzept, wie
+die technisch-organisatorischen Maßnahmen des Auftragnehmers in einem
+ganzheitlichen Management betrieben werden. Zusätzlich ist der Betrieb
+des bwForClusters NEMO in einem zusätzlichen Konzept beschreiben.</p>
+<p>Beschreibung der technisch-organisatorischen Maßnahmen des
+Auftragnehmers unter Berücksichtigung der Art, des Umfangs, der Umstände
+und der Zwecke der Verarbeitung sowie der unterschiedlichen
+Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und
+Freiheiten betroffener Personen.</p>
+</div>
+<div class="section" id="vertraulichkeit">
+<h2>Vertraulichkeit<a class="headerlink" href="#vertraulichkeit" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="zutrittskontrolle">
+<h3>Zutrittskontrolle<a class="headerlink" href="#zutrittskontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Zutrittskontrolle ist über die Maschinensaalbenutzungsordnung (MsBO)
+festgelegt <a class="footnote-reference brackets" href="#id18" id="id1">9</a>. Diese
+regelt folgende Aspekte:</p>
+<ul class="simple">
+<li><p>Zugang ist nur für berechtigte Personen mittels Transponder möglich.</p></li>
+<li><p>Die Vergabe der Schlüssel und Transponder ist dokumentiert.</p></li>
+<li><p>MSII ist alarmgesichert gegen Zutritt unbefugter Personen.</p></li>
+<li><p>MSII verfügt über Rauchmelder.</p></li>
+<li><p>Während der Öffnungszeiten ist Zutritt in MSII nur über eine
+Magnetkarte oder einen Schlüssel möglich.</p></li>
+<li><p>Außerhalb der Öffnungszeiten wird das Rechenzentrum regelmäßig von
+einem Sicherheitsdienst kontrolliert.</p></li>
+<li><p>Zutritt für Wartungen durch externe Parteien wird dokumentiert.</p></li>
+</ul>
+</div>
+<div class="section" id="zugangskontrolle">
+<span id="sub-zugang"></span><h3>Zugangskontrolle<a class="headerlink" href="#zugangskontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Zugangskontrolle zum bwForCluster NEMO erfolgt über mehrere Stufen.
+Das genauen Verfahren ist im bwHPC-Wiki beschrieben <a class="footnote-reference brackets" href="#id10" id="id2">1</a>. Die genauen
+Maßnahmen beinhalten:</p>
+<ul class="simple">
+<li><p>Wissenschaftler*innen müssen von der Universität berechtigt sein, die
+Ressource zu nutzen. Hierzu wird von den Universitäten das
+Entitlement “bwForCluster” vergeben <a class="footnote-reference brackets" href="#id11" id="id3">2</a>.</p></li>
+<li><p>Wissenschaftler*innen müssen einen Projektantrag stellen
+(Rechenvorhaben) oder sich einem bestehendem Projekt zuordnen <a class="footnote-reference brackets" href="#id12" id="id4">3</a>.</p></li>
+<li><p>Wissenschaftler*innen müssen sich beim Cluster registrieren, dazu
+werden Daten beim jeweiligen Identity-Provider (IdP) abgefragt <a class="footnote-reference brackets" href="#id13" id="id5">4</a>.
+Diese Daten können auch jederzeit von den Nutzer*innen abgefragt
+werden <a class="footnote-reference brackets" href="#id14" id="id6">5</a>. Hierzu gehören:</p>
+<ul>
+<li><p>Name</p></li>
+<li><p>E-Mail-Adresse</p></li>
+<li><p>EPPN <a class="footnote-reference brackets" href="#id15" id="id7">6</a></p></li>
+<li><p>Berechtigungen über “Entitlements”.</p></li>
+<li><p>Eine Unix-Gruppe, falls diese vom IdP ausgeliefert wird.</p></li>
+</ul>
+</li>
+<li><p>Der Zugang ist über eine Firewall auf Belwü-Netze beschränkt <a class="footnote-reference brackets" href="#id16" id="id8">7</a>.</p>
+<ul>
+<li><p>Außerhalb dieser Netze ist der Zugriff nur über Jump-Hosts
+(beispielsweise Proxy-Jump) oder VPN möglich.</p></li>
+</ul>
+</li>
+<li><p>Wissenschaftler*innen haben Zugriff von außen über SSH mit Nutzername
+und Dienst-Passwort beziehungsweise SSH-Schlüssel auf Login- und
+Visualisierungsknoten.</p></li>
+<li><p>Zugang über das Openstack-Dashboard über HTTPS mit Nutzername und
+Dienst-Passwort.</p></li>
+<li><p>Administrator*innen haben nur mit Nutzername und SSH-Schlüssel
+Zugriff.</p></li>
+<li><p>Eine Zwei-Faktor-Authentifizierung wird derzeit ausgerollt.</p></li>
+<li><p>Der Zugang wird über Log-Dateien lokal und im Monitoring-Server
+protokolliert.</p></li>
+</ul>
+</div>
+<div class="section" id="zugriffskontrolle">
+<h3>Zugriffskontrolle<a class="headerlink" href="#zugriffskontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Zugriffskontrolle erfolgt auf Ebene von Unix-Rechten und “Access
+Control Lists” (ACL). Folgende Regeln gelten:</p>
+<ul class="simple">
+<li><p>Wissenschaftler*innen haben nur auf ihre eigenen Daten Zugriff. Diese
+Berechtigungen können selbst für weitere Nutzer*innen, beispielsweise
+über ACLs, erweitert werden.</p></li>
+<li><p>Administratoren haben auf alle Daten und Bereiche Zugriff, wenn sie
+nicht von Client- oder Nutzerseite verschlüsselt werden.</p></li>
+<li><p>Externe Supportmitarbeiter haben nur Zugriff auf die von ihnen zu
+wartenden Komponenten.</p></li>
+<li><p>Testsysteme werden nur ausgewählten Personengruppen zur Verfügung
+gestellt und beeinträchtigen nicht den Produktivbetrieb.</p></li>
+<li><p>Zentrales Benutzer-/Berechtigungs-Management folgt dem
+Need-to-have-Prinzip für Wissenschaftler*innen, externen Support,
+Projektmitarbeiter*innen im bwHPC, Testnutzer*innen und
+Administrator*innen.</p></li>
+<li><p>Die Wissenschafler*innen verlieren ihren Zugriff, sobald dieser von
+der Universität entzogen wird beziehungsweise der Account nicht mehr
+gültig ist. Die Regeln, wann dies erfolgt, werden von den
+Universitäten festgelegt.</p></li>
+<li><p>Weitere zusätzliche Rechte, beispielsweise Administratorrechte,
+werden manuell entzogen. Derzeit wird ein Protokoll für die
+Administration entwickelt, das diesen Aspekt regelt. Die Einführung
+des Protokolls zum Ein- beziehungsweise Austritt von
+Administrator*innen ist für den Start des Nachfolgeclusters 2022
+geplant.</p></li>
+</ul>
+</div>
+<div class="section" id="trennungskontrolle">
+<h3>Trennungskontrolle<a class="headerlink" href="#trennungskontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Trennungskontrolle gewährleistet, dass zu unterschiedlichen Zwecken
+erhobene Daten getrennt verarbeitet werden können. Hierzu zählen
+folgende Maßnahmen:</p>
+<ul class="simple">
+<li><p>Physikalische und logische Trennung von Diensten, die nicht
+unmittelbar miteinander in Bezug stehen.</p></li>
+<li><p>Physikalische und logische Trennung von Diensten und Netzen, die
+nicht aufeinander zugreifen müssen.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="integritat">
+<h2>Integrität<a class="headerlink" href="#integritat" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="weitergabekontrolle">
+<h3>Weitergabekontrolle<a class="headerlink" href="#weitergabekontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Als Weitergabekontrolle werden Maßnahmen bezeichnet, die ein unbefugtes
+Lesen, Kopieren, Verändern oder Entfernen bei elektronischer Übertragung
+oder Transport verhindern. Das bwForCluster NEMO ist nur über folgende
+Protokolle und Wege erreichbar:</p>
+<ul class="simple">
+<li><p>Zugriff auf das Cluster ist auf das Belwü-Netz beschränkt.</p></li>
+<li><p>Außerhalb des Belwü-Netzes muss VPN oder ein Jump-Host im Belwü
+verwendet werden.</p></li>
+<li><p>Zugriffe werden auf Serverseite protokolliert.</p></li>
+<li><p>Zugriff kann nur über verschlüsselte Dienste wie SSH und HTTPS
+erfolgen.</p></li>
+<li><p>Die lokale Festplatte der Rechenknoten wird beim Booten verschlüsselt
+und kann nach Entfernen nicht ausgelesen werden.</p></li>
+<li><p>Die Platten im Parallelspeicher enthalten nur Teile von Blöcken und
+eine Rekonstruktion ist nur möglich, wenn Teile entwendet werden, aus
+denen Daten ausreichend vollständig zusammengesetzt werden können.
+Jedoch ist für das Nachfolgesystem evtl. eine Verschlüsselung
+geplant.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="verfugbarkeit-belastbarkeit">
+<h2>Verfügbarkeit, Belastbarkeit<a class="headerlink" href="#verfugbarkeit-belastbarkeit" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="verfugbarkeitskontrolle">
+<h3>Verfügbarkeitskontrolle<a class="headerlink" href="#verfugbarkeitskontrolle" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zur Verfügbarkeitskontrolle zählen Maßnahmen, die eine zufällige
+Zerstörung oder Verlust von Daten und die Nutzbarkeit der
+Rechenressourcen beschreiben. Das bwForCluster NEMO implementiert
+folgende Schutzmaßnahmen:</p>
+<ul class="simple">
+<li><p>Feuer- und Rauchmeldeanlagen in MSII und Infrastrukturräumen wie
+Kühlung und Strom.</p></li>
+<li><p>Redundante Kühlung bis zur Abschaltung für Cluster-kritische Dienste
+wie Parallelspeicher, HOME-Speicher und Server für Dienste.
+Rechenknoten sind nicht geschützt, können aber nach Behebung der
+Störung sofort wieder hochgefahren werden. Da im Desasterfall der
+Parallelspeicher und die Dienste vermutlich nicht benötigt werden,
+können diese unter Umständen vorsichtshalber sicher herunter gefahren
+werden.</p></li>
+<li><p>Für Server und Speicher des bwForClusters NEMO besteht
+unterbrechungsfreie Stromversorgung sowie Notstromversorgung.</p></li>
+<li><p>Die Temperatur, Feuchtigkeit und Stromverbrauch der Maschinen und der
+Datenschränke werden überwacht.</p></li>
+<li><p>Das HOME-Verzeichnis der Wissenschaftler*innen ist georedundant
+gespeichert und bietet automatische Snapshots <a class="footnote-reference brackets" href="#id17" id="id9">8</a>.</p></li>
+<li><p>Der Parallelspeicher ist mit RAID-6 abgesichert.</p></li>
+<li><p>Der Zugriff auf die Login- und Vis-Knoten ist durch eine Firewall und
+Fail2ban gesichert. Der Zugriff auf das Cloud-Dashboard über eine
+Firewall abgesichert. Die restlichen Komponenten sind nur
+Cluster-intern erreichbar. Ausfälle durch Angriffe externer Parteien
+können so minimiert werden.</p></li>
+<li><p>Der Zugriff auf das bwForCluster NEMO ist nur Wissenschaftler*innen
+aus baden-württembergischen Universitäten, wenigen
+Administrator*innen und Support-Mitarbeitern erlaubt, was den
+Angriffsvektor zusätzlich verkleinert.</p></li>
+<li><p>Die Verfügbarkeit des bwForClusters NEMO wird überwacht.</p></li>
+<li><p>Das Wiederanfahren des Systems kann nach “Ausfällen ohne
+Datenverlust” innerhalb weniger Stunden erfolgen.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="regelmaszige-uberprufung-bewertung-evaluation">
+<h2>Regelmäßige Überprüfung, Bewertung, Evaluation<a class="headerlink" href="#regelmaszige-uberprufung-bewertung-evaluation" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="datenschutz-und-informationssicherheits-management">
+<h3>Datenschutz- und Informationssicherheits-Management<a class="headerlink" href="#datenschutz-und-informationssicherheits-management" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Universität Freiburg nimmt den Schutz der ihr anvertrauten
+personenbezogenen Daten sehr ernst und behandelt diese vertraulich und
+entsprechend der gesetzlichen Vorschriften. Neben den Regelungen der
+Europäischen Datenschutz-Grundverordnung (DSGVO) richtet sich die
+Verarbeitung personenbezogener Daten an der Universität nach dem
+Landesdatenschutzgesetz (LDSG) sowie den einschlägigen Regelungen des
+Landeshochschulgesetzes (LHG).</p>
+<p>Die Datenschutzbeauftragte Person der Universität Freiburg kann unter
+der E-Mail-Adresse</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datenschutzbeauftragter@uni-freiburg.de
+</pre></div>
+</div>
+<p>sowie unter der Postadresse der Universität mit dem Zusatz “Der
+Datenschutzbeauftragte” erreicht werden. Allgemeinen Fragen zum Thema
+Datenschutz können an die E-Mail-Adresse</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datenschutz@uni-freiburg.de
+</pre></div>
+</div>
+<p>gerichtet werden.</p>
+<p>Dazu arbeitet die Universität weiterhin mit der Zentralen
+Datenschutzstelle der baden-württembergischen Universitäten (ZENDAS)
+zusammen.</p>
+</div>
+<div class="section" id="incident-response-management">
+<h3>Incident-Response-Management<a class="headerlink" href="#incident-response-management" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das Incident-Response-Management unterstützt bei der Reaktion auf
+Sicherheitsverletzungen. Hierzu zählen beim bwForCluster NEMO:</p>
+<ul class="simple">
+<li><p>Meldung von Sicherheitsvorfällen beim Sicherheitsbeauftragten und
+Datenschutzbeauftragten der Universität, bei den Projektpatrnern im
+bwHPC und dem DFNCert.</p></li>
+<li><p>Das DFNCert untersucht Angriffe durch externe Parteien.</p></li>
+</ul>
+</div>
+<div class="section" id="datenschutzfreundliche-voreinstellungen">
+<h3>Datenschutzfreundliche Voreinstellungen<a class="headerlink" href="#datenschutzfreundliche-voreinstellungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Für die Registrierung beim bwForCluster NEMO werden nur so viele
+personenbezogene Daten erhoben, wie für den Dienst notwendig sind, siehe
+Abschnitt Zugangskontrolle <a class="reference external" href="#sub:zugang">1.1.2</a>.</p>
+</div>
+</div>
+<div class="section" id="referenzen">
+<h2>Referenzen<a class="headerlink" href="#referenzen" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Registrierungsprozedur im zentralen HPC-Wiki:
+<a class="reference external" href="https://wiki.bwhpc.de/e/BwForCluster_User_Access">https://wiki.bwhpc.de/e/BwForCluster_User_Access</a>, besucht am
+20.04.2021.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>Beschreibung des Attributs Entitlement:
+<a class="reference external" href="https://www.bwidm.de/attribute.php#Berechtigung">https://www.bwidm.de/attribute.php#Berechtigung</a>, besucht am
+04.05.2021.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>Hierzu werden an der “Zentralen Antragsseite” (ZAS) folgende
+Attribute abgefragt: <a class="reference external" href="https://www.bwidm.de/dienste.php">https://www.bwidm.de/dienste.php</a>, besucht am
+04.05.2021.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
+<dd><p>Siehe Dienst bwForCluster für genaue Beschreibung der abgefragten
+Daten: <a class="reference external" href="https://www.bwidm.de/dienste.php">https://www.bwidm.de/dienste.php</a>, besucht am 04.05.2021.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dd><p>Wissenschaftler*innen aus Baden-Württemberg können sich registrieren
+und danach ihre gespeicherten Daten auf der Registrierungsseite
+überprüfen: <a class="reference external" href="https://bwservices.uni-freiburg.de/user/index.xhtml">https://bwservices.uni-freiburg.de/user/index.xhtml</a>,
+besucht am 20.04.2021.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dd><p>Beschreibung des Attributs EPPN:
+<a class="reference external" href="https://www.bwidm.de/attribute.php#Principal%20Name">https://www.bwidm.de/attribute.php#Principal%20Name</a>, besucht am
+04.05.2021.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id8">7</a></span></dt>
+<dd><p>Der Zugriff ist auf die IPv4-Prefixe des Belwü-Netzes beschränkt:
+<a class="reference external" href="https://bgpview.io/asn/553">https://bgpview.io/asn/553</a>, besucht am 16.04.2021.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id9">8</a></span></dt>
+<dd><p>Snapshots sind regelmäßige Speicherstände des HOME-Verzeichnisses zum
+Zeitpunkt der Aufnahme.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id1">9</a></span></dt>
+<dd><p>SCHULZ, Janne Chr., Dirk von SUCHODOLETZ, Ulrich GEHRING,
+Willibald MEYER und Jan LEENDERTSE, 2020.
+<em>Maschinensaalbenutzungsordnung des Rechenzentrums der Universität
+Freiburg: Richtlinien für das Hosting und Housing von Hardware in
+den Räumen des Rechenzentrums der Universität Freiburg</em>.
+techreport. Rechenzentrum der Universität Freiburg</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="betriebskonzept.html" title="previous page">Betriebskonzept</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Durch Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)<br/>
+        
+            &copy; Urheberrechte © 2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
