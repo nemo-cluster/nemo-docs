@@ -54,7 +54,7 @@ Auftragnehmer zu dokumentieren sind, ist der Auftraggeber unverzüglich
 in Kenntnis zu setzten.
 
 Der Auftragnehmer verarbeitet die Daten auf dem bwForCluster NEMO, das
-im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
+im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
 Hermann-Herder-Straße 10, 79104 Freiburg untergebracht ist. Für diesen
 Anwendungsbereich betreibt das Rechenzentrum ein
 Informationssicherheitsmanagementsystem (ISMS). Es ist in einem
@@ -84,11 +84,11 @@ regelt folgende Aspekte:
 
 -  Die Vergabe der Schlüssel und Transponder ist dokumentiert.
 
--  MS  ist alarmgesichert gegen Zutritt unbefugter Personen.
+-  MSII ist alarmgesichert gegen Zutritt unbefugter Personen.
 
--  MS  verfügt über Rauchmelder.
+-  MSII verfügt über Rauchmelder.
 
--  Während der Öffnungszeiten ist Zutritt in MS  nur über eine
+-  Während der Öffnungszeiten ist Zutritt in MSII nur über eine
    Magnetkarte oder einen Schlüssel möglich.
 
 -  Außerhalb der Öffnungszeiten wird das Rechenzentrum regelmäßig von
@@ -102,20 +102,20 @@ Zugangskontrolle
 ~~~~~~~~~~~~~~~~
 
 Die Zugangskontrolle zum bwForCluster NEMO erfolgt über mehrere Stufen.
-Das genauen Verfahren ist im bwHPC-Wiki beschrieben. [1]_ Die genauen
+Das genauen Verfahren ist im bwHPC-Wiki beschrieben [1]_. Die genauen
 Maßnahmen beinhalten:
 
 -  Wissenschaftler*innen müssen von der Universität berechtigt sein, die
    Ressource zu nutzen. Hierzu wird von den Universitäten das
-   Entitlement “bwForCluster” vergeben. [2]_
+   Entitlement “bwForCluster” vergeben [2]_.
 
 -  Wissenschaftler*innen müssen einen Projektantrag stellen
-   (Rechenvorhaben) oder sich einem bestehendem Projekt zuordnen. [3]_
+   (Rechenvorhaben) oder sich einem bestehendem Projekt zuordnen [3]_.
 
 -  Wissenschaftler*innen müssen sich beim Cluster registrieren, dazu
-   werden Daten beim jeweiligen Identity-Provider (IdP) abgefragt. [4]_
+   werden Daten beim jeweiligen Identity-Provider (IdP) abgefragt [4]_.
    Diese Daten können auch jederzeit von den Nutzer*innen abgefragt
-   werden. [5]_ Hierzu gehören:
+   werden [5]_. Hierzu gehören:
 
    -  Name
 
@@ -127,7 +127,7 @@ Maßnahmen beinhalten:
 
    -  Eine Unix-Gruppe, falls diese vom IdP ausgeliefert wird.
 
--  Der Zugang ist über eine Firewall auf Belwü-Netze beschränkt. [7]_
+-  Der Zugang ist über eine Firewall auf Belwü-Netze beschränkt [7]_.
 
    -  Außerhalb dieser Netze ist der Zugriff nur über Jump-Hosts
       (beispielsweise Proxy-Jump) oder VPN möglich.
@@ -239,7 +239,7 @@ Zerstörung oder Verlust von Daten und die Nutzbarkeit der
 Rechenressourcen beschreiben. Das bwForCluster NEMO implementiert
 folgende Schutzmaßnahmen:
 
--  Feuer- und Rauchmeldeanlagen in MS  und Infrastrukturräumen wie
+-  Feuer- und Rauchmeldeanlagen in MSII und Infrastrukturräumen wie
    Kühlung und Strom.
 
 -  Redundante Kühlung bis zur Abschaltung für Cluster-kritische Dienste
@@ -257,7 +257,7 @@ folgende Schutzmaßnahmen:
    Datenschränke werden überwacht.
 
 -  Das HOME-Verzeichnis der Wissenschaftler*innen ist georedundant
-   gespeichert und bietet automatische Snapshots. [8]_
+   gespeichert und bietet automatische Snapshots [8]_.
 
 -  Der Parallelspeicher ist mit RAID-6 abgesichert.
 
@@ -295,7 +295,7 @@ Landeshochschulgesetzes (LHG).
 Die Datenschutzbeauftragte Person der Universität Freiburg kann unter
 der E-Mail-Adresse
 
-.. code-block::
+.. code-block:: bash
 
    datenschutzbeauftragter@uni-freiburg.de
 
@@ -303,7 +303,7 @@ sowie unter der Postadresse der Universität mit dem Zusatz “Der
 Datenschutzbeauftragte” erreicht werden. Allgemeinen Fragen zum Thema
 Datenschutz können an die E-Mail-Adresse
 
-.. code-block::
+.. code-block:: bash
 
    datenschutz@uni-freiburg.de
 
@@ -379,5 +379,5 @@ Referenzen
    Willibald MEYER und Jan LEENDERTSE, 2020.
    *Maschinensaalbenutzungsordnung des Rechenzentrums der Universität
    Freiburg: Richtlinien für das Hosting und Housing von Hardware in
-   den Räumen desRechenzentrums der Universität Freiburg*.
+   den Räumen des Rechenzentrums der Universität Freiburg*.
    techreport. Rechenzentrum der Universität Freiburg
