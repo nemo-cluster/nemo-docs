@@ -136,8 +136,6 @@ getrennt. Die Abstraktion reduziert Angriffsvektoren auf die
 Betriebsschicht, die durch Ereignisse auf der Ebene der
 Wissenschaftler*innen eröffnet werden.
 
-.. _sec:hpc:
-
 Dienstbeschreibung HPC
 ======================
 
@@ -253,8 +251,6 @@ einfache Parameter wie die Temperatur eines Knotens sind Grenzwerte
 definiert. Bei Überschreitung dieser werden die Administrator*innen des
 Clusters per Mail verständigt.
 
-.. _sub:deploy:
-
 Deployment
 ----------
 
@@ -286,8 +282,6 @@ Neubeschaffungen oder Ersatz bei Reparaturen muss lediglich die
 MAC-Adresse einer Gruppe zugeordnet werden. Neue Konfigurationen können
 ebenfalls schnell eingerichtet werden, da nur die zur Basisgruppe
 unterschiedliche Konfiguration vorgenommen werden muss.
-
-.. _sub:change:
 
 Changemanagement
 ----------------
@@ -474,8 +468,6 @@ die Administration entwickelt, das diesen Aspekt regelt. Die Einführung
 des Protokolls zum Ein- beziehungsweise Austritt von Administrator*innen
 ist für den Start des bwForClusters NEMO2 2022 geplant.
 
-.. _monitoring-1:
-
 Monitoring
 ----------
 
@@ -615,7 +607,7 @@ Referenzen
    https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/speichersysteme
 
 .. [14]
-   Webseite zum Parallelspeicher BeeGFS: `beegfs.io <beegfs.io>`__,
+   Webseite zum Parallelspeicher BeeGFS: https://www.beegfs.io/,
    besucht am 20.04.2021.
 
 .. [15]
