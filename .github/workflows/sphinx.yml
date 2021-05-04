@@ -12,30 +12,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    # Standard drop-in approach that should work for most people.
+    ## Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
       with:
         pre-build-command: "pip install myst-parser sphinx-rtd-theme sphinx-book-theme"
         docs-folder: "docs/"
-    # Grabbing custom dependencies and building as a pdf.
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && pip install myst-parser sphinx-rtd-theme sphinx-book-theme"
-        build-command: "make latexpdf"
-        docs-folder: "docs/"
-    # Great extra actions to compose with:
-    # Create an artifact of the html output.
-    - uses: actions/upload-artifact@v1
-      with:
-        name: DocumentationHTML
-        path: docs/_build/html/
-    # Create an artifact out of the previously built pdf.
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Documentation
-        path: docs/_build/latex/nemo.pdf
-    # Publish built docs to gh-pages branch.
-    # ===============================
+    ## Grabbing custom dependencies and building as a pdf.
+    #- uses: ammaraskar/sphinx-action@master
+    #  with:
+    #    pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && pip install myst-parser sphinx-rtd-theme sphinx-book-theme"
+    #    build-command: "make latexpdf"
+    #    docs-folder: "docs/"
+    ## Great extra actions to compose with:
+    ## Create an artifact of the html output.
+    #- uses: actions/upload-artifact@v1
+    #  with:
+    #    name: DocumentationHTML
+    #    path: docs/_build/html/
+    ## Create an artifact out of the previously built pdf.
+    #- uses: actions/upload-artifact@v1
+    #  with:
+    #    name: Documentation
+    #    path: docs/_build/latex/nemo.pdf
+    ## Publish built docs to gh-pages branch.
+    ## ===============================
     - name: Commit documentation changes
       run: |
         git clone https://github.com/nemo-cluster/nemo-docs.git --branch gh-pages --single-branch gh-pages
@@ -54,4 +54,4 @@ jobs:
         branch: gh-pages
         directory: gh-pages
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    # ===============================
+    ## ===============================
