@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NEMO'
+project = 'bwForCluster NEMO'
 copyright = '2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg'
 author = 'Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)'
 
@@ -56,11 +56,20 @@ language = 'de'
 html_theme = 'sphinx_book_theme'
 html_favicon = 'img/nemo-favicon.png'
 html_logo = 'img/nemo-logo.png'
+html_title = 'bwForCluster NEMO'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# HTML sidebars
+html_sidebars = {
+    "**": ["my-sidebar-logo.html",
+           "search-field.html",
+           "my-sidebar-nav.html",
+           "sbt-sidebar-footer.html"]
+}
 
 # Theme options
 html_theme_options = {
@@ -68,7 +77,7 @@ html_theme_options = {
     "repository_branch": "main",
     "path_to_docs": "docs",
     "toc_title": "Inhalt",
+    "use_repository_button": True,
     "use_edit_page_button": True,
     "use_download_button": True,
 }
-
