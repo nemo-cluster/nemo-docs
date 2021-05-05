@@ -27,7 +27,7 @@ Datum:        04.05.2021
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
-0.3.0     04.05.2021  MJ,JL           Einleitung von JL kopiert und seine Korrekturen übernommen. Fußnoten vervollständigt.
+0.3.0     04.05.2021  MJ,JL           Einleitung besteht aus Textpassagen aus dem ADV-Vertragsentwurf von JL. Zusätzliche Korrekturen von JL eingearbeitet. Fußnoten vervollständigt.
 0.2.0     22.04.2021  MJ              Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.
 0.1.0     20.04.2021  MJ              Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts NEMO.
 ========= ==========  =============== ==========================================
