@@ -4,8 +4,8 @@ Betriebskonzept
 
 ============= =====
 Gültig ab:
-Version:      0.4.0
-Datum:        20.04.2021
+Version:      0.4.1
+Datum:        21.05.2021
 ============= =====
 
 .. .. warning::
@@ -27,6 +27,7 @@ Datum:        20.04.2021
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
+0.4.1     21.05.2021  JL              Kleinere Korrekturen
 0.4.0     20.04.2021  MJ              Einleitung gestrafft, theoretische Sicherheitszonen entfernt, zusätzliche Dokumente und Fußnoten, TOMs ausgelagert, Ziele und Ergebnisse nach vorne gezogen, neue Abschnitte zu Updates und Workspaces.
 0.3.2     25.03.2021  MJ              Korrekturen, Ergänzungen.
 0.3.1     19.03.2021  DvS             Korrekturen, Ergänzungen.
