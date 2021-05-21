@@ -4,7 +4,7 @@ Betriebskonzept
 
 ============= =====
 Gültig ab:
-Version:      0.4.1
+Version:      0.4.2
 Datum:        21.05.2021
 ============= =====
 
@@ -27,6 +27,7 @@ Datum:        21.05.2021
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
+0.4.2     21.05.2021  MJ              Weitere Korrekturen, die durch die Konversion von Latex zu rST notwendig wurden. Fußnoten nach Punkt. Testweise Glossar erstellt.
 0.4.1     21.05.2021  JL              Kleinere Korrekturen
 0.4.0     20.04.2021  MJ              Einleitung gestrafft, theoretische Sicherheitszonen entfernt, zusätzliche Dokumente und Fußnoten, TOMs ausgelagert, Ziele und Ergebnisse nach vorne gezogen, neue Abschnitte zu Updates und Workspaces.
 0.3.2     25.03.2021  MJ              Korrekturen, Ergänzungen.
@@ -64,7 +65,7 @@ Komplementierung des traditionellen Betriebsmodells von HPC-Systemen um
 virtuelle Maschinen und Container. In diesen Virtualisierten (VFU) und
 Containerisieten (CFU) Forschungsumgebungen laufen die Anwendungen oder
 Umgebungen, die von den Wissenschafter*innen kontrolliert
-werden [2]_ [3]_ [4]_.
+werden. [2]_ [3]_ [4]_
 
 Innerhalb dieser Forschungsumgebungen haben Wissenschaftler*innen die
 Freiheit, Forschungsdaten und deren Kontext so zu abstrahieren, dass sie
@@ -142,7 +143,7 @@ Dienstbeschreibung HPC
 
 Es liegt eine Dienstbeschreibung für das HPC-Computing-Angebot des
 Rechenzentrums im Rahmen des allgemeinen Servicekatalogs vor. Diese kann
-online von den Seiten des Rechenzentrums abgerufen werden [7]_. Diese
+online von den Seiten des Rechenzentrums abgerufen werden. [7]_ Diese
 Dienstbeschreibung wird einem regelmäßigen Review-Prozess in der Runde
 der Abteilungsleiter*innen unterzogen.
 
@@ -159,7 +160,7 @@ Hardware und Dienste
 --------------------
 
 Die installierte Hardware des bwForClusters NEMO besteht aus über 900
-Rechenknoten und einigen dedizierten Servern für NEMO-Dienste [8]_.
+Rechenknoten und einigen dedizierten Servern für NEMO-Dienste. [8]_
 Virtuelle Maschinen als VFUs und Container (CFUs) werden ebenfalls auf
 diesen Rechenknoten ausgeführt, wie reguläre Cluster-Jobs. Auf den
 Rechenknoten (ausgenommen Knoten für interaktive Nutzung) werden immer
@@ -258,9 +259,7 @@ Serverknoten aufgesetzt. Das ermöglicht ein schnelles und einfaches
 Ausrollen auf neuen Servern. Es müssen nur wenige Anpassungen
 durchgeführt werden.
 
-.. Sind Rechenknoten virtualisiert? Wenn nicht, passt der Satz nicht.
-
-Die Rechenknoten werden ebenfalls mittels Ansible erzeugt. Hierzu wird
+Das Boot- und Betriebssystem der Rechenknoten wird ebenfalls über Ansible generiert. Hierzu wird
 das CentOS-Vorlagen-Image mit Ansible konfiguriert und in in ein
 lesbares QCOW2-Image konvertiert. [11]_ Mit dem in der Abteilung
 “eScience” entwickelten Boot-Framework wird dann das Image über das
@@ -275,7 +274,7 @@ auf eine ältere zurück gegriffen werden kann.
 Die Entscheidung, welche Systemversion, Revision und Konfiguation
 geladen wird, trifft der sogenannte Bootauswahlserver anhand der
 Zugehörigkeit der MAC-Adresse der Netzwerkkarte, über die der initiale
-Start lief, zu einer Boot-Gruppe [12]_. Diese Information wird jedesmal
+Start lief, zu einer Boot-Gruppe. [12]_ Diese Information wird jedesmal
 beim Boot ausgewertet. Die Boot-Gruppe entscheidet über die
 Konfiguration des Knotens. Sie wird verwendet, um spezielle Knoten zu
 konfigurieren, beispielsweise bei GPU-Knoten. Bei neuer Hardware durch
@@ -335,7 +334,7 @@ Parallel- und HOME-Speicher
 ---------------------------
 
 Die HOME-Verzeichnisse der Nutzer*innen liegen auf dem Isilon-Speicher
-der Universität [13]_. Für die aktuell verarbeiteten wissenschaftlichen
+der Universität. [13]_ Für die aktuell verarbeiteten wissenschaftlichen
 Daten dient ein zentraler Parallelspeicher, der auf BeeGFS
 aufsetzt. [14]_ Anders als der Isilon-Speicher ist der parallele
 Speicher nur durch ein RAID6 abgesichert und bietet keine weiteren
@@ -363,8 +362,8 @@ Berechnungen der Wissenschaftler*innen benötigt. Das Management der
 Daten wird durch die Forscher*innen in sogenannten “Workspaces”
 durchgeführt. [17]_ Die Nutzer*innen müssen Workspaces anlegen, um den
 parallelen Speicher verwenden zu können. Dabei kann ein Workspace
-maximal gültig sein. Es besteht jedoch die Möglichkeit, jeden Workspace
-99 mal zu verlängern. Die Wissenschaftler*innen werden vor Ablauf eines
+maximal 100 Tage gültig sein. Es besteht jedoch die Möglichkeit, jeden Workspace
+99 mal 100 Tage zu verlängern. Die Wissenschaftler*innen werden 7 Tage vor Ablauf eines
 Workspaces per Mail informiert.
 
 Es wird empfohlen, für unterschiedliche Unterprojekte und separate
@@ -406,17 +405,15 @@ Das bwForCluster NEMO verwendet folgende Netze:
      10.20.32.0/21         NEMO: NEMO-VFU (unused)
      10.20.40.0/21         NEMO: ATLAS-TEST-VFU
 
-.. Im folgenden Absatz fehlt bei "mindestens versorgt" etwas.
-
 Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
 und ATLAS-TEST-VFU können zusätzlich auf das NEMO-Netz ``10.16.0.0/16``
 zugreifen. Das Cluster kann ansonsten nur über die öffentliche
 IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
-sind mit mindestens versorgt. Server, die Dienste anbieten, sind mit
-mindestens zwei Anschlüssen über das Link Aggregation Control
+sind mit mindestens 1 :term:`GbE` versorgt. Server, die Dienste anbieten, sind mit
+mindestens zwei Anschlüssen mit 10 :term:`GbE` über das Link Aggregation Control
 Protocol (LACP) an zwei Top-Level-Switche angebunden. [18]_ Zusätzlich
 sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
-untereinander und dem wissenschaftlichen Parallelspeicher
+mit 100 :term:`Gbit/s` untereinander und dem wissenschaftlichen Parallelspeicher
 verbunden. [19]_
 
 Zugang zur Ressource
@@ -437,9 +434,11 @@ Person erfolgt. Es gibt derzeit keine festen Regeln diesbezüglich, so
 dass diese Frage einer genaueren Ausarbeitung Bedarf. Für das
 Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb gehen
 wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu die
-folgenden Ordnungen zur Verfügung: [21]_ [22]_ [23]_.
+folgenden Ordnungen zur Verfügung:
 
-.. Ordnungen nennen, dann erst die Fußnoten
+- Verwaltungs- und Benutzungsordnung (VBO). [21]_
+- Benutzungsordnung für die vom Rechenzentrum der Albert-Ludwigs-Universität angebotenen Netzdienste: (NBO). [22]_
+- Netzordnung für das Freiburger Universitäts Netz: (NO). [23]_
 
 Kontingentierung
 ----------------
@@ -447,9 +446,9 @@ Kontingentierung
 Die Wissenschaftler*innen sind im Sinne der gemeinschaftlichen
 DFG-Beantragung Stakeholder des bwForClusters NEMO. Zusätzlich gibt es
 Shareholder, die mit eigenen Mitteln Teile das Clusters mitfinanziert
-haben [24]_. Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
+haben. [24]_ Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
 Die Regelung, wer wie viele Ressourcen des Clusters nutzen kann, wird
-über einen “Fairshare-Mechanismus” geregelt [25]_. Dieser bestimmt, wann
+über einen “Fairshare-Mechanismus” geregelt. [25]_ Dieser bestimmt, wann
 ein Job eines/r Wissenschaftlers/in starten kann. Hierzu wird von einer
 Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem “Share”
 verglichen. Ist der Verbrauch höher als der Share, der der Arbeitsgruppe
@@ -497,15 +496,13 @@ Zugriffsversuche über ``rsyslog`` lokal auf der SSD und für die von den
 Wissenschaftler*innen erreichbaren Knoten wie Login-, Vis- und
 Rechenknoten zusätzlich auf dem Monitoringserver in Dateien gespeichert.
 
-.. Zwischen "von und" fehlt etwas
-
 Der Speicherverbrauch im parallelen Dateisystem und den
 Home-Verzeichnissen wird mittels Quotas auf Nutzerebene durchgesetzt.
 Die Auslastung wird jeweils von den zuständigen Betreibern ermittelt.
 Bei Isilon ist das die Abteilung “Virtualisierung und Speichersysteme”,
 beim BeeGFS machen das die Administrator*innen des bwForClusters NEMO.
-“Workspaces” auf dem parallelen Wissenschaftsspeicher BeeGFS haben einen
-Laufzeit von und müssen von den Wissenschaftler*innen mit einem Kommando
+“Workspaces” auf dem parallelen Wissenschaftsspeicher BeeGFS haben eine
+Laufzeit von 100 Tagen und müssen von den Wissenschaftler*innen mit einem Kommando
 manuell verlängert werden. Erfolgt das nicht, werden die Daten endgültig
 nach einer Wartezeit von sieben Tagen gelöscht.
 
@@ -529,6 +526,17 @@ beschrieben. Die Nutzung der Server-Schränke wird im Dienstkatalog
 bestimmt ebenfalls den physikalischen Zugriff der Administrator*innen
 des Clusters auf die Schränke und die darin eingebauten Maschinen.
 
+
+Glossar
+=======
+
+.. glossary::
+
+   GbE
+      Gigabit Ethernet
+
+   Gbit/s
+      Gigabit pro Sekunde
 
 Referenzen
 ==========
