@@ -188,9 +188,8 @@ Ausgewählte Dienste
 SSH
 ^^^
 
-Dieser Dienst läuft auf allen Knoten und Servern und erlaubt den Login
-von Wisschenschaftler*innen und Administrator*innen auf diesen über
-Nutzername und Dienst-Passwort oder SSH-Key.
+Dieser Dienst läuft auf allen Knoten und Servern. Mit ihm ist ein Login
+von Wissenschaftler*innen und Administrator*innen über die Eingabe von Nutzername und Dienst-Passwort oder einen SSH-Key möglich.
 
 Scheduler
 ^^^^^^^^^
@@ -207,7 +206,7 @@ HTTP(S)
 Das OpenStack-Dashboard ist als Webschnittstelle umgesetzt und setzt für
 den Zugriff auf HTTPS, um eine Absicherung bei der Nutzung über das
 öffentliche Belwü-Netz zu erreichen. Der Zugang erfolgt über Nutzername
-und Dienst-Passwort. Auf dem Deployment-Server wird HTTP verwendet um
+und Dienst-Passwort. Auf dem Deployment-Server wird HTTP verwendet, um
 Konfigurationen zu den Rechenknoten zu verteilen (Teil des
 iPXE-basierten Boot-Ablaufs und der individuellen Knotenkonfiguration).
 Die Deployment-Server sind nur im internen NEMO-Netz erreichbar.
@@ -218,8 +217,7 @@ DNBD3
 Auf den Deployment-Servern laufen zwei
 Distributed-Network-Block-Device-3-Instanzen. Dieser Dienst stellt das
 Betriebssystem für Login-, Vis- und Rechenknoten zur Verfügung. Eine
-redundante Auslegung stellt sicher, dass wenn einer dieser Server
-ausfällt, das Cluster weiterhin mit dem Betriebssystem-Image versorgt
+redundante Auslegung stellt sicher, dass bei Ausfall eine Servers das Cluster weiterhin mit dem Betriebssystem-Image versorgt
 wird.
 
 Ansible
@@ -256,8 +254,10 @@ Deployment
 
 Die Dienste beim bwForCluster NEMO werden über Ansible-Rollen auf den
 Serverknoten aufgesetzt. Das ermöglicht ein schnelles und einfaches
-ausrollen auf neuen Servern. Es müssen nur wenige Anpassungen
+Ausrollen auf neuen Servern. Es müssen nur wenige Anpassungen
 durchgeführt werden.
+
+.. Sind Rechenknoten virtualisiert? Wenn nicht, passt der Satz nicht.
 
 Die Rechenknoten werden ebenfalls mittels Ansible erzeugt. Hierzu wird
 das CentOS-Vorlagen-Image mit Ansible konfiguriert und in in ein
@@ -265,11 +265,11 @@ lesbares QCOW2-Image konvertiert. [11]_ Mit dem in der Abteilung
 “eScience” entwickelten Boot-Framework wird dann das Image über das
 Netzwerk gestartet. Das Image wird dabei über das nur lesbare
 Blockdevice DNBD3 eingebunden. Für Schreiboperationen wird eine
-copy-on-write Schicht darüber gelegt, die bei jedem Boot eines Knotens
+Copy-on-write-Schicht darüber gelegt, die bei jedem Boot eines Knotens
 frisch initialisiert wird. Alle neu generierten Images bekommen eine
 inkrementierte Revisionsnummer, so dass die Umgebung zum einen
 reproduzierbar ist, zum anderen bei Problemen mit einer Revision einfach
-auf eine Ältere zurück gegriffen werden kann.
+auf eine ältere zurück gegriffen werden kann.
 
 Die Entscheidung, welche Systemversion, Revision und Konfiguation
 geladen wird, trifft der sogenannte Bootauswahlserver anhand der
@@ -362,11 +362,11 @@ Berechnungen der Wissenschaftler*innen benötigt. Das Management der
 Daten wird durch die Forscher*innen in sogenannten “Workspaces”
 durchgeführt. [17]_ Die Nutzer*innen müssen Workspaces anlegen, um den
 parallelen Speicher verwenden zu können. Dabei kann ein Workspace
-maximal gültig sein. Es besteht jedoch die Möglichkeit jeden Workspace
+maximal gültig sein. Es besteht jedoch die Möglichkeit, jeden Workspace
 99 mal zu verlängern. Die Wissenschaftler*innen werden vor Ablauf eines
 Workspaces per Mail informiert.
 
-Es wird empfohlen für unterschiedliche Unterprojekte und separate
+Es wird empfohlen, für unterschiedliche Unterprojekte und separate
 Berechnungen eigene Workspaces anzulegen. Jeder Workspace kann damit in
 einem späteren Schritt als separate Einheit oder Objekt mit Metadaten
 versehen in einem Wissenschaftsspeicher wie bwSFS gesichert werden.
@@ -405,15 +405,17 @@ Das bwForCluster NEMO verwendet folgende Netze:
      10.20.32.0/21         NEMO: NEMO-VFU (unused)
      10.20.40.0/21         NEMO: ATLAS-TEST-VFU
 
+.. Im folgenden Absatz fehlt bei "mindestens versorgt" etwas.
+
 Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
 und ATLAS-TEST-VFU können zusätzlich auf das NEMO-Netz ``10.16.0.0/16``
 zugreifen. Das Cluster kann ansonsten nur über die öffentliche
 IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
 sind mit mindestens versorgt. Server, die Dienste anbieten, sind mit
-mindestens zwei Anschlüssen mit über das Link Aggregation Control
+mindestens zwei Anschlüssen über das Link Aggregation Control
 Protocol (LACP) an zwei Top-Level-Switche angebunden. [18]_ Zusätzlich
 sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
-mit miteinander und dem wissenschaftlichen Parallelspeicher
+untereinander und dem wissenschaftlichen Parallelspeicher
 verbunden. [19]_
 
 Zugang zur Ressource
@@ -436,15 +438,17 @@ Nachfolgecluster, das voraussichtlich im Jahr 2022 in Betrieb gehen
 wird, wird eine Lösung erarbeitet. Die Universität stellt hierzu die
 folgenden Ordnungen zur Verfügung: [21]_ [22]_ [23]_.
 
+.. Ordnungen nennen, dann erst die Fußnoten
+
 Kontingentierung
 ----------------
 
 Die Wissenschaftler*innen sind im Sinne der gemeinschaftlichen
 DFG-Beantragung Stakeholder des bwForClusters NEMO. Zusätzlich gibt es
-Shareholder die mit eigenen Mitteln Teile des Clusters mitfininaziert
+Shareholder, die mit eigenen Mitteln Teile das Clusters mitfinanziert
 haben [24]_. Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
 Die Regelung, wer wie viele Ressourcen des Clusters nutzen kann, wird
-über einen “Fairshare-Mechanismus” geregelt [25]_. Dieser bestimmt wann
+über einen “Fairshare-Mechanismus” geregelt [25]_. Dieser bestimmt, wann
 ein Job eines/r Wissenschaftlers/in starten kann. Hierzu wird von einer
 Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem “Share”
 verglichen. Ist der Verbrauch höher als der Share, der der Arbeitsgruppe
@@ -491,6 +495,8 @@ Außerdem werden Hardware- sowie Softwareprobleme, Login- und
 Zugriffsversuche über ``rsyslog`` lokal auf der SSD und für die von den
 Wissenschaftler*innen erreichbaren Knoten wie Login-, Vis- und
 Rechenknoten zusätzlich auf dem Monitoringserver in Dateien gespeichert.
+
+.. Zwischen "von und" fehlt etwas
 
 Der Speicherverbrauch im parallelen Dateisystem und den
 Home-Verzeichnissen wird mittels Quotas auf Nutzerebene durchgesetzt.
