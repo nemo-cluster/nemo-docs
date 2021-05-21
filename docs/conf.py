@@ -22,8 +22,8 @@ copyright = '2021, eScience, Rechenzentrum, Albert-Ludwigs-Universität Freiburg
 author = 'Michael Janczyk (MJ), Jan Leendertse (JL), Dirk von Suchodoletz (DvS), Bernd Wiebelt (BW)'
 
 # The full version, including alpha/beta/rc tags
-release = '0.4.0'
-version = '0.4.0'
+release = '0.4.2'
+version = '0.4.2'
 
 
 # -- General configuration ---------------------------------------------------
