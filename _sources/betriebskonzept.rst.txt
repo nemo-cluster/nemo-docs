@@ -27,6 +27,7 @@ Datum:        21.05.2021
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
+0.4.3     25.05.2021  MJ,DvS          Kleinere Textkorrekturen. Testglossar zu Tooltipps geändert.
 0.4.2     21.05.2021  MJ              Weitere Korrekturen, die durch die Konversion von Latex zu rST notwendig wurden. Fußnoten nach Punkt. Testweise Glossar erstellt.
 0.4.1     21.05.2021  JL              Kleinere Korrekturen
 0.4.0     20.04.2021  MJ              Einleitung gestrafft, theoretische Sicherheitszonen entfernt, zusätzliche Dokumente und Fußnoten, TOMs ausgelagert, Ziele und Ergebnisse nach vorne gezogen, neue Abschnitte zu Updates und Workspaces.
@@ -84,7 +85,7 @@ Ziele im Sinne der Informationssicherheit
 =========================================
 
 Kernanliegen des bwForClusters NEMO ist, Forscher*innen den Zugang zu
-Rechen- und Speicherkapazitäten zu geben. Als Schutzziel betrachtet ist
+Rechen- und Speicherkapazitäten zu geben. Als Schutzziel betrachtet, ist
 dies die Sicherstellung der *Verfügbarkeit* von Rechenressourcen, auf
 denen Forscher*innen ihre Rechenjobs ausführen. Als Dienstanbieter muss
 das bwForCluster NEMO eine Verfügbarkeit bieten, die
@@ -98,7 +99,7 @@ notwendig. Für Integrität von Daten auf der von ihnen betriebenen
 Verarbeitungsschicht sind sie selbst verantwortlich.
 
 Das Schutzziel *Vertraulichkeit* bezieht sich auf die Kontrolle des
-Zutritts, Zugangs und Zugriffs und die Trennung von Umgebungen. Mit der
+Zutritts, Zugangs und Zugriffs sowie die Trennung von Umgebungen. Mit der
 Abstraktion der Dienstschichten – Konzentration auf der Ebene der
 physischen und netztechnischen Infrastrukturen, der
 Clusteradministration in HPC, der Entkoppelung von logischen
@@ -409,11 +410,11 @@ Obige Netze sind jeweils voneinander getrennt. Lediglich die ATLAS-VFU
 und ATLAS-TEST-VFU können zusätzlich auf das NEMO-Netz ``10.16.0.0/16``
 zugreifen. Das Cluster kann ansonsten nur über die öffentliche
 IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
-sind mit mindestens 1 :term:`GbE` versorgt. Server, die Dienste anbieten, sind mit
-mindestens zwei Anschlüssen mit 10 :term:`GbE` über das Link Aggregation Control
+sind mit mindestens 1 :abbr:`GbE (Gigabit Ethernet)` versorgt. Server, die Dienste anbieten, sind mit
+mindestens zwei Anschlüssen mit 10 :abbr:`GbE (Gigabit Ethernet)` über das Link Aggregation Control
 Protocol (LACP) an zwei Top-Level-Switche angebunden. [18]_ Zusätzlich
 sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
-mit 100 :term:`Gbit/s` untereinander und dem wissenschaftlichen Parallelspeicher
+mit 100 :abbr:`Gbit/s (Gigabit pro Sekunde)` untereinander und dem wissenschaftlichen Parallelspeicher
 verbunden. [19]_
 
 Zugang zur Ressource
@@ -525,18 +526,6 @@ beschrieben. Die Nutzung der Server-Schränke wird im Dienstkatalog
 “Machine-Hosting” [28]_ spezifiziert. Die Maschinensaalbenutzungsordnung
 bestimmt ebenfalls den physikalischen Zugriff der Administrator*innen
 des Clusters auf die Schränke und die darin eingebauten Maschinen.
-
-
-Glossar
-=======
-
-.. glossary::
-
-   GbE
-      Gigabit Ethernet
-
-   Gbit/s
-      Gigabit pro Sekunde
 
 Referenzen
 ==========
