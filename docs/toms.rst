@@ -36,38 +36,41 @@ Version   Datum       Autor*innen     Änderungen
 Einleitung
 ==========
 
-Der Auftragsverarbeiter – nachstehend Auftragnehmer genannt – ergreift
-in seinem Verantwortungsbereich alle erforderlichen
-technisch-organisatorische Maßnahmen gem. Art. 32 DS-GVO zum Schutz der
-personenbezogenen Daten und übergibt dem Auftraggeber die Dokumentation
-zur Prüfung. Bei Akzeptanz durch den Auftraggeber werden die
-dokumentierten Maßnahmen Grundlage des Vertrags. Soweit die Prüfung/ein
-Audit des Auftraggebers einen Anpassungsbedarf ergibt, ist dieser
-einvernehmlich umzusetzen.
+Einleitung wird vermutlich nicht benötigt und der Text steht bereits im ADV-Vertrag.
+Würde den Abschnitt löschen.
 
-Die vereinbarten technischen und organisatorischen Maßnahmen unterliegen
-dem technischen Fortschritt und der Weiterentwicklung. Insoweit ist es
-dem Auftragnehmer zukünftig gestattet, alternative adäquate Maßnahmen
-umzusetzen. Dabei darf das Sicherheitsniveau der festgelegten Maßnahmen
-nicht unterschritten werden. Über wesentliche Änderungen, die durch den
-Auftragnehmer zu dokumentieren sind, ist der Auftraggeber unverzüglich
-in Kenntnis zu setzten.
+   Der Auftragsverarbeiter – nachstehend Auftragnehmer genannt – ergreift
+   in seinem Verantwortungsbereich alle erforderlichen
+   technisch-organisatorische Maßnahmen gem. Art. 32 DS-GVO zum Schutz der
+   personenbezogenen Daten und übergibt dem Auftraggeber die Dokumentation
+   zur Prüfung. Bei Akzeptanz durch den Auftraggeber werden die
+   dokumentierten Maßnahmen Grundlage des Vertrags. Soweit die Prüfung/ein
+   Audit des Auftraggebers einen Anpassungsbedarf ergibt, ist dieser
+   einvernehmlich umzusetzen.
 
-Der Auftragnehmer verarbeitet die Daten auf dem bwForCluster NEMO, das
-im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
-Hermann-Herder-Straße 10, 79104 Freiburg untergebracht ist. Für diesen
-Anwendungsbereich betreibt das Rechenzentrum ein
-Informationssicherheitsmanagementsystem (ISMS). Es ist in einem
-Informationssicherheitskonzept beschrieben. Es umfasst das Konzept, wie
-die technisch-organisatorischen Maßnahmen des Auftragnehmers in einem
-ganzheitlichen Management betrieben werden. Zusätzlich ist der Betrieb
-des bwForClusters NEMO in einem zusätzlichen Konzept beschreiben.
+   Die vereinbarten technischen und organisatorischen Maßnahmen unterliegen
+   dem technischen Fortschritt und der Weiterentwicklung. Insoweit ist es
+   dem Auftragnehmer zukünftig gestattet, alternative adäquate Maßnahmen
+   umzusetzen. Dabei darf das Sicherheitsniveau der festgelegten Maßnahmen
+   nicht unterschritten werden. Über wesentliche Änderungen, die durch den
+   Auftragnehmer zu dokumentieren sind, ist der Auftraggeber unverzüglich
+   in Kenntnis zu setzten.
 
-Beschreibung der technisch-organisatorischen Maßnahmen des
-Auftragnehmers unter Berücksichtigung der Art, des Umfangs, der Umstände
-und der Zwecke der Verarbeitung sowie der unterschiedlichen
-Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und
-Freiheiten betroffener Personen.
+   Der Auftragnehmer verarbeitet die Daten auf dem bwForCluster NEMO, das
+   im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
+   Hermann-Herder-Straße 10, 79104 Freiburg untergebracht ist. Für diesen
+   Anwendungsbereich betreibt das Rechenzentrum ein
+   Informationssicherheitsmanagementsystem (ISMS). Es ist in einem
+   Informationssicherheitskonzept beschrieben. Es umfasst das Konzept, wie
+   die technisch-organisatorischen Maßnahmen des Auftragnehmers in einem
+   ganzheitlichen Management betrieben werden. Zusätzlich ist der Betrieb
+   des bwForClusters NEMO in einem zusätzlichen Konzept beschreiben.
+
+   Beschreibung der technisch-organisatorischen Maßnahmen des
+   Auftragnehmers unter Berücksichtigung der Art, des Umfangs, der Umstände
+   und der Zwecke der Verarbeitung sowie der unterschiedlichen
+   Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und
+   Freiheiten betroffener Personen.
 
 
 Vertraulichkeit
