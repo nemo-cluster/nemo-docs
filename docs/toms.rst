@@ -1,76 +1,47 @@
+.. set doc variables
+
+.. |ver| replace:: 0.4.0
+
+.. |date| replace:: 26.05.2021
+
 ====================================
 Technisch Organisatorische Maßnahmen
 ====================================
 
 ============= =====
 Gültig ab:
-Version:      0.3.0
-Datum:        04.05.2021
+Version:      |ver|
+Datum:        |date|
 ============= =====
 
-.. .. warning::
-..    TLP:RED
-..       Not for disclosure, restricted to participants only. Distribution outside this audience requires written permission from the originator.
+.. .. admonition:: TLP:RED
+..    :class: error
 
-.. attention::
-   TLP:AMBER
-      Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+..    Not for disclosure, restricted to participants only. Distribution outside this audience requires written permission from the originator.
 
-.. .. important::
-..    TLP:GREEN
-..       Limited disclosure, restricted to the community/sector. Distribution outside this audience requires written permission from the originator.
+.. admonition:: TLP:AMBER
+   :class: attention
 
-.. .. note::
-..    TLP:WHITE
-..       Disclosure not limited.
+   Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+
+.. .. admonition:: TLP:GREEN
+..    :class: important
+
+..    Limited disclosure, restricted to the community/sector. Distribution outside this audience requires written permission from the originator.
+
+.. .. admonition:: TLP:WHITE
+..    :class: note
+
+..    Disclosure not limited.
 
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
+|ver|     |date|      MJ,JL           Einleitung gelöscht. Text entspricht Passagen aus ADV-Vertragsentwurf.
 0.3.0     04.05.2021  MJ,JL           Einleitung besteht aus Textpassagen aus dem ADV-Vertragsentwurf von JL. Zusätzliche Korrekturen von JL eingearbeitet. Fußnoten vervollständigt.
 0.2.0     22.04.2021  MJ              Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.
 0.1.0     20.04.2021  MJ              Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts NEMO.
 ========= ==========  =============== ==========================================
-
-
-Einleitung
-==========
-
-Einleitung wird vermutlich nicht benötigt und der Text steht bereits im ADV-Vertrag.
-Würde den Abschnitt löschen.
-
-   Der Auftragsverarbeiter – nachstehend Auftragnehmer genannt – ergreift
-   in seinem Verantwortungsbereich alle erforderlichen
-   technisch-organisatorische Maßnahmen gem. Art. 32 DS-GVO zum Schutz der
-   personenbezogenen Daten und übergibt dem Auftraggeber die Dokumentation
-   zur Prüfung. Bei Akzeptanz durch den Auftraggeber werden die
-   dokumentierten Maßnahmen Grundlage des Vertrags. Soweit die Prüfung/ein
-   Audit des Auftraggebers einen Anpassungsbedarf ergibt, ist dieser
-   einvernehmlich umzusetzen.
-
-   Die vereinbarten technischen und organisatorischen Maßnahmen unterliegen
-   dem technischen Fortschritt und der Weiterentwicklung. Insoweit ist es
-   dem Auftragnehmer zukünftig gestattet, alternative adäquate Maßnahmen
-   umzusetzen. Dabei darf das Sicherheitsniveau der festgelegten Maßnahmen
-   nicht unterschritten werden. Über wesentliche Änderungen, die durch den
-   Auftragnehmer zu dokumentieren sind, ist der Auftraggeber unverzüglich
-   in Kenntnis zu setzten.
-
-   Der Auftragnehmer verarbeitet die Daten auf dem bwForCluster NEMO, das
-   im Maschinensaal II (MSII) im Rechenzentrum der Universität Freiburg,
-   Hermann-Herder-Straße 10, 79104 Freiburg untergebracht ist. Für diesen
-   Anwendungsbereich betreibt das Rechenzentrum ein
-   Informationssicherheitsmanagementsystem (ISMS). Es ist in einem
-   Informationssicherheitskonzept beschrieben. Es umfasst das Konzept, wie
-   die technisch-organisatorischen Maßnahmen des Auftragnehmers in einem
-   ganzheitlichen Management betrieben werden. Zusätzlich ist der Betrieb
-   des bwForClusters NEMO in einem zusätzlichen Konzept beschreiben.
-
-   Beschreibung der technisch-organisatorischen Maßnahmen des
-   Auftragnehmers unter Berücksichtigung der Art, des Umfangs, der Umstände
-   und der Zwecke der Verarbeitung sowie der unterschiedlichen
-   Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und
-   Freiheiten betroffener Personen.
 
 
 Vertraulichkeit
