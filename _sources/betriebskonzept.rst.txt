@@ -1,33 +1,43 @@
+.. set doc variables
+
+.. |ver| replace:: 0.4.3
+
+.. |date| replace:: 25.05.2021
+
 ===============
 Betriebskonzept
 ===============
 
 ============= =====
 Gültig ab:
-Version:      0.4.2
-Datum:        21.05.2021
+Version:      |ver|
+Datum:        |date|
 ============= =====
 
-.. .. warning::
-..    TLP:RED
-..       Not for disclosure, restricted to participants only. Distribution outside this audience requires written permission from the originator.
+.. .. admonition:: TLP:RED
+..    :class: error
 
-.. attention::
-   TLP:AMBER
-      Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+..    Not for disclosure, restricted to participants only. Distribution outside this audience requires written permission from the originator.
 
-.. .. important::
-..    TLP:GREEN
-..       Limited disclosure, restricted to the community/sector. Distribution outside this audience requires written permission from the originator.
+.. admonition:: TLP:AMBER
+   :class: attention
 
-.. .. note::
-..    TLP:WHITE
-..       Disclosure not limited.
+   Limited disclosure, restricted to participants' organizations. Distribution outside this audience requires written permission from the originator.
+
+.. .. admonition:: TLP:GREEN
+..    :class: important
+
+..    Limited disclosure, restricted to the community/sector. Distribution outside this audience requires written permission from the originator.
+
+.. .. admonition:: TLP:WHITE
+..    :class: note
+
+..    Disclosure not limited.
 
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
-0.4.3     25.05.2021  MJ,DvS          Kleinere Textkorrekturen. Testglossar zu Tooltipps geändert.
+|ver|     |date|      MJ,DvS          Kleinere Textkorrekturen. Testglossar zu Tooltipps geändert.
 0.4.2     21.05.2021  MJ              Weitere Korrekturen, die durch die Konversion von Latex zu rST notwendig wurden. Fußnoten nach Punkt. Testweise Glossar erstellt.
 0.4.1     21.05.2021  JL              Kleinere Korrekturen
 0.4.0     20.04.2021  MJ              Einleitung gestrafft, theoretische Sicherheitszonen entfernt, zusätzliche Dokumente und Fußnoten, TOMs ausgelagert, Ziele und Ergebnisse nach vorne gezogen, neue Abschnitte zu Updates und Workspaces.
