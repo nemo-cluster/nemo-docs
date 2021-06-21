@@ -1,8 +1,8 @@
 .. set doc variables
 
-.. |ver| replace:: 0.4.0
+.. |ver| replace:: 0.4.1
 
-.. |date| replace:: 26.05.2021
+.. |date| replace:: 21.06.2021
 
 ====================================
 Technisch Organisatorische Maßnahmen
@@ -37,12 +37,15 @@ Datum:        |date|
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
-|ver|     |date|      MJ,JL           Einleitung gelöscht. Text entspricht Passagen aus ADV-Vertragsentwurf.
+|ver|     |date|      MJ              Buchstabendreher und Anführungszeichen korrigiert. eduPersonPrincipalName statt EPPN und eduPersonEntitlement statt Entitlement verwendet.
+0.4.0     26.05.2021  MJ,JL           Einleitung gelöscht. Text entspricht Passagen aus ADV-Vertragsentwurf.
 0.3.0     04.05.2021  MJ,JL           Einleitung besteht aus Textpassagen aus dem ADV-Vertragsentwurf von JL. Zusätzliche Korrekturen von JL eingearbeitet. Fußnoten vervollständigt.
 0.2.0     22.04.2021  MJ              Kleinere Korrekturen, Anpassungen und Entfernen von Redundanzen.
 0.1.0     20.04.2021  MJ              Erster Entwurf basierend auf Version 0.3.2 des Betriebskonzepts NEMO.
 ========= ==========  =============== ==========================================
 
+.. contents::
+   :depth: 3
 
 Vertraulichkeit
 ===============
@@ -79,7 +82,7 @@ Maßnahmen beinhalten:
 
 -  Wissenschaftler*innen müssen von der Universität berechtigt sein, die
    Ressource zu nutzen. Hierzu wird von den Universitäten das
-   Entitlement “bwForCluster” vergeben [2]_.
+   "Entitlement" ``http://bwidm.de/entitlement/bwForCluster`` vergeben [2]_.
 
 -  Wissenschaftler*innen müssen einen Projektantrag stellen
    (Rechenvorhaben) oder sich einem bestehendem Projekt zuordnen [3]_.
@@ -93,9 +96,9 @@ Maßnahmen beinhalten:
 
    -  E-Mail-Adresse
 
-   -  EPPN [6]_
+   -  ``eduPersonPrincipalName`` (EPPN) [6]_
 
-   -  Berechtigungen über “Entitlements”.
+   -  Berechtigungen über "Entitlements" (``eduPersonEntitlement``).
 
    -  Eine Unix-Gruppe, falls diese vom IdP ausgeliefert wird.
 
@@ -122,8 +125,8 @@ Maßnahmen beinhalten:
 Zugriffskontrolle
 ~~~~~~~~~~~~~~~~~
 
-Die Zugriffskontrolle erfolgt auf Ebene von Unix-Rechten und “Access
-Control Lists” (ACL). Folgende Regeln gelten:
+Die Zugriffskontrolle erfolgt auf Ebene von Unix-Rechten und "Access
+Control Lists" (ACL). Folgende Regeln gelten:
 
 -  Wissenschaftler*innen haben nur auf ihre eigenen Daten Zugriff. Diese
    Berechtigungen können selbst für weitere Nutzer*innen, beispielsweise
@@ -246,8 +249,8 @@ folgende Schutzmaßnahmen:
 
 -  Die Verfügbarkeit des bwForClusters NEMO wird überwacht.
 
--  Das Wiederanfahren des Systems kann nach “Ausfällen ohne
-   Datenverlust” innerhalb weniger Stunden erfolgen.
+-  Das Wiederanfahren des Systems kann nach "Ausfällen ohne
+   Datenverlust" innerhalb weniger Stunden erfolgen.
 
 
 Regelmäßige Überprüfung, Bewertung, Evaluation
@@ -271,8 +274,8 @@ der E-Mail-Adresse
 
    datenschutzbeauftragter@uni-freiburg.de
 
-sowie unter der Postadresse der Universität mit dem Zusatz “Der
-Datenschutzbeauftragte” erreicht werden. Allgemeinen Fragen zum Thema
+sowie unter der Postadresse der Universität mit dem Zusatz "Der
+Datenschutzbeauftragte" erreicht werden. Allgemeinen Fragen zum Thema
 Datenschutz können an die E-Mail-Adresse
 
 .. code-block:: bash
@@ -292,7 +295,7 @@ Das Incident-Response-Management unterstützt bei der Reaktion auf
 Sicherheitsverletzungen. Hierzu zählen beim bwForCluster NEMO:
 
 -  Meldung von Sicherheitsvorfällen beim Sicherheitsbeauftragten und
-   Datenschutzbeauftragten der Universität, bei den Projektpatrnern im
+   Datenschutzbeauftragten der Universität, bei den Projektpartnern im
    bwHPC und dem DFNCert.
 
 -  Das DFNCert untersucht Angriffe durch externe Parteien.
@@ -314,12 +317,12 @@ Referenzen
    20.04.2021.
 
 .. [2]
-   Beschreibung des Attributs Entitlement:
+   Beschreibung des Attributs ``eduPersonEntitlement``:
    https://www.bwidm.de/attribute.php#Berechtigung, besucht am
    04.05.2021.
 
 .. [3]
-   Hierzu werden an der “Zentralen Antragsseite” (ZAS) folgende
+   Hierzu werden an der "Zentralen Antragsseite" (ZAS) folgende
    Attribute abgefragt: https://www.bwidm.de/dienste.php, besucht am
    04.05.2021.
 
@@ -334,7 +337,7 @@ Referenzen
    besucht am 20.04.2021.
 
 .. [6]
-   Beschreibung des Attributs EPPN:
+   Beschreibung des Attributs ``eduPersonPrincipalName``:
    https://www.bwidm.de/attribute.php#Principal%20Name, besucht am
    04.05.2021.
 
@@ -351,5 +354,6 @@ Referenzen
    Willibald MEYER und Jan LEENDERTSE, 2020.
    *Maschinensaalbenutzungsordnung des Rechenzentrums der Universität
    Freiburg: Richtlinien für das Hosting und Housing von Hardware in
-   den Räumen des Rechenzentrums der Universität Freiburg*.
-   techreport. Rechenzentrum der Universität Freiburg
+   den Räumen desRechenzentrums der Universität Freiburg* [online].
+   techreport. Rechenzentrum der Universität Freiburg. Verfügbar
+   unter: https://www.rz.uni-freiburg.de/inhalt/dokumente/pdfs/msbo
