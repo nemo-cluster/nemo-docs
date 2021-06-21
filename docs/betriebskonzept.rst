@@ -1,8 +1,8 @@
 .. set doc variables
 
-.. |ver| replace:: 0.4.3
+.. |ver| replace:: 0.4.4
 
-.. |date| replace:: 25.05.2021
+.. |date| replace:: 21.06.2021
 
 ===============
 Betriebskonzept
@@ -37,7 +37,8 @@ Datum:        |date|
 ========= ==========  =============== ==========================================
 Version   Datum       Autor*innen     Änderungen
 ========= ==========  =============== ==========================================
-|ver|     |date|      MJ,DvS          Kleinere Textkorrekturen. Testglossar zu Tooltipps geändert.
+|ver|     |date|      MJ              Anführungszeichen korrigiert.
+0.4.3     25.05.2021  MJ,DvS          Kleinere Textkorrekturen. Testglossar zu Tooltipps geändert.
 0.4.2     21.05.2021  MJ              Weitere Korrekturen, die durch die Konversion von Latex zu rST notwendig wurden. Fußnoten nach Punkt. Testweise Glossar erstellt.
 0.4.1     21.05.2021  JL              Kleinere Korrekturen
 0.4.0     20.04.2021  MJ              Einleitung gestrafft, theoretische Sicherheitszonen entfernt, zusätzliche Dokumente und Fußnoten, TOMs ausgelagert, Ziele und Ergebnisse nach vorne gezogen, neue Abschnitte zu Updates und Workspaces.
@@ -49,6 +50,8 @@ Version   Datum       Autor*innen     Änderungen
 0.1.0     06.03.2021  MJ              Erster Entwurf basierend auf Informationen des Betriebskonzepts de.NBI-FR und einer Vorlage von TOMs aus Tübingen.
 ========= ==========  =============== ==========================================
 
+.. contents::
+   :depth: 3
 
 Einleitung
 ==========
@@ -127,8 +130,8 @@ organisatorischen und operativen Aspekte bezogen.
 
 Das bwForCluster NEMO ist mit diesen Überlegungen in der Lage, die aus
 den strategischen Zielen abgeleiteten Schutzziele mit eigenen Maßnahmen
-wirtschaftlich tragen und erreichen zu können. Das Dokument “Technisch
-Organisatorische Maßnahmen – bwForCluster NEMO” geht auf die einzelnen
+wirtschaftlich tragen und erreichen zu können. Das Dokument "Technisch
+Organisatorische Maßnahmen – bwForCluster NEMO" geht auf die einzelnen
 Schutzziele detaillierter ein.
 
 Erwartete Ergebnisse
@@ -141,7 +144,7 @@ Informationssicherheit gewahrt werden. Die Gliederung der Schichten
 erlaubt es, die Arbeitsbereiche zu trennen und die Risiken im Betrieb
 einzelner Schichten besser zu isolieren. Besonders die im
 Wissenschaftsbereich hohe Erwartung an Verfügbarkeit lässt sich besser
-erreichen. Die Zahl der “Single Points of Failures” ist besser
+erreichen. Die Zahl der "Single Points of Failures" ist besser
 kontrollierbar. Die Standardisierung in der Steuerung der Hardware
 reduziert die Komplexität im Betrieb, die den Wissenschaftler*innen
 gebotene Freiheit ist praktisch vollständig von der Betriebsschicht
@@ -208,7 +211,7 @@ Scheduler
 ^^^^^^^^^
 
 Dieser Dienst ist auf dem Management-Server von NEMO aktiv und dient zum
-“Scheduling” (Verteilen nach vorgegebenem Algorithmus) von Jobs auf dem
+"Scheduling" (Verteilen nach vorgegebenem Algorithmus) von Jobs auf dem
 Cluster. Dazu sind auf den Rechenknoten Clients installiert, die Jobs
 und Ressourcenverbrauch protokollieren und diese Information an den
 Scheduler zurückmelden.
@@ -249,8 +252,8 @@ DHCP
 ^^^^
 
 Die IP-Adressen werden bei Rechen-, Login-, sowie Visualisierungsknoten
-über DHCP verteilt. Dieser Dienst wird von der Abteilung “Netze und
-Kommunikationsdienste” mithilfe der Appliance Infoblox betrieben. [10]_
+über DHCP verteilt. Dieser Dienst wird von der Abteilung "Netze und
+Kommunikationsdienste" mithilfe der Appliance Infoblox betrieben. [10]_
 
 Monitoring
 ^^^^^^^^^^
@@ -273,7 +276,7 @@ durchgeführt werden.
 Das Boot- und Betriebssystem der Rechenknoten wird ebenfalls über Ansible generiert. Hierzu wird
 das CentOS-Vorlagen-Image mit Ansible konfiguriert und in in ein
 lesbares QCOW2-Image konvertiert. [11]_ Mit dem in der Abteilung
-“eScience” entwickelten Boot-Framework wird dann das Image über das
+"eScience" entwickelten Boot-Framework wird dann das Image über das
 Netzwerk gestartet. Das Image wird dabei über das nur lesbare
 Blockdevice DNBD3 eingebunden. Für Schreiboperationen wird eine
 Copy-on-write-Schicht darüber gelegt, die bei jedem Boot eines Knotens
@@ -370,7 +373,7 @@ Workspaces
 
 Die Daten, die auf dem parallelen Speicher liegen, werden für die
 Berechnungen der Wissenschaftler*innen benötigt. Das Management der
-Daten wird durch die Forscher*innen in sogenannten “Workspaces”
+Daten wird durch die Forscher*innen in sogenannten "Workspaces"
 durchgeführt. [17]_ Die Nutzer*innen müssen Workspaces anlegen, um den
 parallelen Speicher verwenden zu können. Dabei kann ein Workspace
 maximal 100 Tage gültig sein. Es besteht jedoch die Möglichkeit, jeden Workspace
@@ -388,8 +391,8 @@ Netze
 -----
 
 Die Netzwerkanbindung der Serverschränke im Maschinensaal und der
-zentralen Switche wird von der Abteilung “eScience” in Zusammenarbeit
-mit der Abteilung “Netze und Kommunikationsdienste” (Netzwerkabteilung)
+zentralen Switche wird von der Abteilung "eScience" in Zusammenarbeit
+mit der Abteilung "Netze und Kommunikationsdienste" (Netzwerkabteilung)
 im RZ durchgeführt. Diese Anbindung erlaubt eine Administration der
 Knoten in den Schränken von festgelegten IP-Adressen aus, die nur in
 Räumen der Universität Freiburg sowie über VPN-Verbindungen zugewiesen
@@ -423,7 +426,7 @@ IP-Adressen der Login- und Vis-Knoten erreicht werden. Die Rechenknoten
 sind mit mindestens 1 :abbr:`GbE (Gigabit Ethernet)` versorgt. Server, die Dienste anbieten, sind mit
 mindestens zwei Anschlüssen mit 10 :abbr:`GbE (Gigabit Ethernet)` über das Link Aggregation Control
 Protocol (LACP) an zwei Top-Level-Switche angebunden. [18]_ Zusätzlich
-sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk “Omni-Path”
+sind alle Rechenknoten mit dem Hochgeschwindigkeitsnetzwerk "Omni-Path"
 mit 100 :abbr:`Gbit/s (Gigabit pro Sekunde)` untereinander und dem wissenschaftlichen Parallelspeicher
 verbunden. [19]_
 
@@ -459,9 +462,9 @@ DFG-Beantragung Stakeholder des bwForClusters NEMO. Zusätzlich gibt es
 Shareholder, die mit eigenen Mitteln Teile das Clusters mitfinanziert
 haben. [24]_ Diesen stehen zusätzliche Anteile am Cluster zur Verfügung.
 Die Regelung, wer wie viele Ressourcen des Clusters nutzen kann, wird
-über einen “Fairshare-Mechanismus” geregelt. [25]_ Dieser bestimmt, wann
+über einen "Fairshare-Mechanismus" geregelt. [25]_ Dieser bestimmt, wann
 ein Job eines/r Wissenschaftlers/in starten kann. Hierzu wird von einer
-Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem “Share”
+Gruppe jeweils der Verbrauch der letzten drei Monate mit ihrem "Share"
 verglichen. Ist der Verbrauch höher als der Share, der der Arbeitsgruppe
 zur Verfügung steht, werden die Jobs niedriger priorisiert, ist er
 niedriger als der verfügbare Share, werden die Jobs höher priorisiert.
@@ -493,8 +496,8 @@ Speichersysteme, Server und Rechenknoten überwacht. Neben der
 Überwachung der Hardware wird die Temperatur, Stromaufnahme und
 zusätzlich bei Schränken die Luftfeuchtigkeit kontrolliert. Die
 Nachverfolgung des Netzwerks findet in der Netzwerkabteilung und bei
-Schränken in der Abteilung “Allgemeiner Betrieb” statt. Strom und
-Kühlung werden zudem vom “Technischen Gebäugemanagement” (TGM)
+Schränken in der Abteilung "Allgemeiner Betrieb" statt. Strom und
+Kühlung werden zudem vom "Technischen Gebäugemanagement" (TGM)
 überwacht. Zusätzlich protokolliert der Monitoring-Server des Clusters
 mit Hilfe von Zabbix Hardwaredaten wie Temperatur und Defekte auf
 Knotenebene und schlägt beim Überschreiten von Grenzwerten per Mail
@@ -510,9 +513,9 @@ Rechenknoten zusätzlich auf dem Monitoringserver in Dateien gespeichert.
 Der Speicherverbrauch im parallelen Dateisystem und den
 Home-Verzeichnissen wird mittels Quotas auf Nutzerebene durchgesetzt.
 Die Auslastung wird jeweils von den zuständigen Betreibern ermittelt.
-Bei Isilon ist das die Abteilung “Virtualisierung und Speichersysteme”,
+Bei Isilon ist das die Abteilung "Virtualisierung und Speichersysteme",
 beim BeeGFS machen das die Administrator*innen des bwForClusters NEMO.
-“Workspaces” auf dem parallelen Wissenschaftsspeicher BeeGFS haben eine
+"Workspaces" auf dem parallelen Wissenschaftsspeicher BeeGFS haben eine
 Laufzeit von 100 Tagen und müssen von den Wissenschaftler*innen mit einem Kommando
 manuell verlängert werden. Erfolgt das nicht, werden die Daten endgültig
 nach einer Wartezeit von sieben Tagen gelöscht.
@@ -528,12 +531,12 @@ Maschinensaal II (MSII)
 -----------------------
 
 Der MSII sowie die darüber bereitgestellten Schränke werden von der
-Abteilung “Allgemeiner Betrieb” verantwortet. Das operative Geschäft
+Abteilung "Allgemeiner Betrieb" verantwortet. Das operative Geschäft
 sowie die organisatorischen Schnittstellen innerhalb des RZ sowie zu
 Nutzer*innen, die Ressourcen im Maschinensaal betreiben, werden in der
-“Maschinensaalbenutzungsordnung” [27]_ für den Maschinensaal
+"Maschinensaalbenutzungsordnung" [27]_ für den Maschinensaal
 beschrieben. Die Nutzung der Server-Schränke wird im Dienstkatalog
-“Machine-Hosting” [28]_ spezifiziert. Die Maschinensaalbenutzungsordnung
+"Machine-Hosting" [28]_ spezifiziert. Die Maschinensaalbenutzungsordnung
 bestimmt ebenfalls den physikalischen Zugriff der Administrator*innen
 des Clusters auf die Schränke und die darin eingebauten Maschinen.
 
@@ -542,7 +545,7 @@ Referenzen
 
 .. [1]
    Hierzu entsteht derzeit das Dokument
-   “Compute-Forschungsinfrastrukturen: HPC”.
+   "Compute-Forschungsinfrastrukturen: HPC".
 
 .. [2]
    BAUER, Jonathan, Dirk von SUCHODOLETZ, Jeannette VOLLMER und
