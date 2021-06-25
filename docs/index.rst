@@ -7,12 +7,18 @@ bwForCluster NEMO
 =================
 
 .. toctree::
-   :caption: Dokumente
+   :caption: Dokumente rST
    :titlesonly:
 
    betriebskonzept
    toms
 
+.. toctree::
+   :caption: Dokumente MyST
+   :titlesonly:
+
+   MD/betriebskonzept
+   MD/toms
 
 Indizes und Tabellen
 ====================
