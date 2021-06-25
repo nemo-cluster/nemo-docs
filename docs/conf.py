@@ -38,13 +38,20 @@ extensions = [
     'sphinx_book_theme'
 ]
 
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+    "smartquotes",
+    "substitution",
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_includes/*.rst']
 
 language = 'de'
 
@@ -62,6 +69,12 @@ html_title = 'bwForCluster NEMO'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = [
+    'css/custom.css',
+]
 
 # HTML sidebars
 html_sidebars = {
